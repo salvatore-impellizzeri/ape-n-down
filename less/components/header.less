@@ -12,17 +12,17 @@
 
         &__logo {
             display: flex;
-            max-width: 118px; 
-            height: 100%; 
+            max-height: 62px;
     
             a {
+                max-height: 100%;
                 display: flex; 
                 justify-content: center;
                 align-items: center;
             }
     
             svg {
-                max-width: 100%;
+                max-height: 100%;
                 height: auto;
                 display: block;
             }
@@ -33,21 +33,6 @@
             border-radius: 10px;
             padding: 8px 16px;
             color: white;
+            font-family: @second-font;
         }
-    
-        &__toggler{
-            .font-12();
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: @text-color;
-            cursor: pointer;
-        }
-
-    &__menu{
-        display: flex;
-        align-items: center;
-        gap: 40vw * @px2vw;
-        justify-content: flex-end;
-    }
 }

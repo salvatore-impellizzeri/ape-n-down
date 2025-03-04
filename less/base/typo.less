@@ -76,3 +76,8 @@ blockquote{
 .font-10{
     font-size: 10px;
 }
+
+.px-rem(@sizeValue) {
+    @remValue: round(@sizeValue / 15, 2);
+    font-size: ~"@{remValue}rem";
+}

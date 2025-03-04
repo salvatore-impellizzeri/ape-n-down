@@ -3,7 +3,7 @@
 ?>
 
 <header class="header">
-    <button class="header__menu">
+    <button>
         Menu
     </button>
     <div class="header__logo">
@@ -11,7 +11,7 @@
             <?= file_get_contents('img/logo.svg') ?>
         </a>
     </div>
-    <button class="header__donate">
+    <button>
         Dona ora
     </button>
 

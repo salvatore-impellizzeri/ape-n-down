@@ -10,5 +10,7 @@ $pageTitle = 'Home';
 
     <body class="body">
         <?= element('header') ?>
+        <?= element('main') ?>
+        <?= element('footer') ?>
     </body>
 </html>

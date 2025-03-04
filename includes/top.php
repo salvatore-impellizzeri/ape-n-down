@@ -9,7 +9,6 @@ $pageTitle = 'Home';
     <?php require('element/head.php') ?>
 
     <body class="body">
-
         <?= element('header') ?>
-
-        <main>
+    </body>
+</html>

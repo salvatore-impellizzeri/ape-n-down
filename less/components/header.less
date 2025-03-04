@@ -1,0 +1,31 @@
+.header{
+    height: 60px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 20px;
+    align-items: center;
+    border-bottom: 1px solid @main-color;
+
+    &__search{
+        display: flex;
+        align-items: center;
+        gap: 40vw * @px2vw;
+        justify-content: center;
+
+        &__toggler{
+            .font-12();
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: @text-color;
+            cursor: pointer;
+        }
+    }
+
+    &__menu{
+        display: flex;
+        align-items: center;
+        gap: 40vw * @px2vw;
+        justify-content: flex-end;
+    }
+}

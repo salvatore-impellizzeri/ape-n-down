@@ -89,14 +89,30 @@
                 Ci hanno scelto:
             </p>
             <div class="others__card-container">
-                <div class="others__card-container__card others__card-container__card--small">
-                    <img src="img/person-smaller.png" alt="Nome e Cognome"> 
+                <div>
+                    <div class="others__card-container__card others__card-container__card--small">
+                        <img src="img/person-smaller.png" alt="Nome e Cognome"> 
+                    </div>
+                    <p>
+                        Nome Cognome
+                    </p>
                 </div>
-                <div class="others__card-container__card others__card-container__card--large">
-                    <img src="img/person.png" alt="Nome e Cognome"> 
+                <div>
+                    <div class="others__card-container__card others__card-container__card--large">
+                        <img src="img/person.png" alt="Nome e Cognome"> 
+                    </div>
+                    <p>
+                        Nome Cognome
+                    </p>
                 </div>
-                <div class="others__card-container__card others__card-container__card--small">
-                    <img src="img/person-smaller.png" alt="Nome e Cognome"> 
+
+                <div>
+                    <div class="others__card-container__card others__card-container__card--small">
+                        <img src="img/person-smaller.png" alt="Nome e Cognome"> 
+                    </div>
+                    <p>
+                        Nome Cognome
+                    </p>
                 </div>
             </div>
         </div>

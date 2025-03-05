@@ -11,6 +11,59 @@ body{
     overflow-x: hidden;
 }
 
+.others{
+    position: relative;
+    margin-top: 473vw * @px2vw;
+    display: flex;
+    flex-direction: column;
+    gap: 180vw * @px2vw;
+    align-items: center;
+    .px-rem(44);
+    background-color: @bg-light-yellow;
+
+    p{
+        text-align: center;
+        margin-bottom: 0;
+        font-weight: 500;
+    }
+}
+
+.others__section{
+    display: flex;
+    flex-direction: column;
+    gap: 60vw * @px2vw;
+}
+
+.others__section__icons{
+    display: flex;
+    gap: 120vw * @px2vw;
+}
+
+.others__vector{
+    background-color: @bg-light-yellow;
+    width: 2668vw * @px2vw;
+    height: 473px;
+    position: absolute;
+    top: -143vw * @px2vw;
+    border-radius: 50%;
+}
+
+.others__card{
+    width: 530vw * @px2vw;
+    height: 620vw * @px2vw;
+    background-color: white;
+    border-radius: 40vw * @px2vw;
+    overflow: visible;
+    position: relative;
+
+    img{
+        height: 681vw * @px2vw;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
 main{
     padding: 180vw * @px2vw 0;
     height: auto;
@@ -77,8 +130,15 @@ dd{
 // CONTAINER
 
 .container-L{
-    margin-bottom: 180vw * @px2vw;
     text-align: center; 
     padding: 0px 140vw * @px2vw;
     height: auto;
+    position: relative;
+}
+
+.container-M{
+    text-align: center; 
+    padding: 0px 268vw * @px2vw;
+    height: auto;
+    position: relative;
 }

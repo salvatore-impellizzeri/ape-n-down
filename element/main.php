@@ -1,10 +1,13 @@
 <main>
+    <!-- TITLE -->
     <section class="container-L">
         <p class="title text-shadow">
             ape'ndown: un progetto per l'inclusione e l'opportunità
         </p>
     </section>
-    <section class="container-L">
+
+    <!-- CARDS -->
+    <section class="container-L my-180">
         <div class="card card--medium card--rotation-l card--darker">
             <h1 class="text-shadow">
                 Cos'è?
@@ -31,5 +34,75 @@
             </p>
         </div>
     </section>
+
+    <!-- SECOND BIG TITLE -->
+    <section class="container-M mt-74 inline">
+        <p class="title">
+            scopri i nostri eventi passati e futuri
+        </p>
+    </section>
+
+    <!-- OTHERS -->
+    <section class="others my-180">
+        
+        <!-- VECTOR -->
+        <div class="others__vector">
+        </div>
+
+        <!-- SPONSORS -->
+        <div class="z-10 others__section">
+            <p>
+                Main sponsor:
+            </p>
+            <div class="others__section__icons">
+                <?php 
+                    for ($i = 0; $i < 3; $i++) { 
+                ?>
+                       <img src="img/sponsor-1.png" alt="Hellas Verona">
+                       <img src="img/sponsor-2.png" alt="Fiera Cavalli">
+                <?php
+                    } 
+                ?>
+            </div>
+        </div>
+
+        <!-- SOSTENITORI -->
+        <div class="z-10 others__section">
+            <p>
+                I nostri sostenitori:
+            </p>
+            <div class="others__section__icons">
+                <?php 
+                    for ($i = 0; $i < 3; $i++) { 
+                ?>
+                       <img src="img/sponsor-1.png" alt="Hellas Verona">
+                       <img src="img/sponsor-2.png" alt="Fiera Cavalli">
+                <?php
+                    } 
+                ?>
+            </div>
+        </div>
+
+        <!-- SCELTO -->
+        <div class="z-10 others__section">
+            <p>
+                Ci hanno scelto:
+            </p>
+            <div>
+                <?php 
+                    for ($i = 0; $i < 3; $i++) { 
+                ?>
+                    <div class="others__card">
+                        <!-- <img src="img/person.png" alt="Nome e Cognome">  -->
+                    </div>
+                <?php
+                    } 
+                ?>
+            </div>
+        </div>
+        <div>
+
+        </div>
+    </section>
     
-</main>
+</main> 

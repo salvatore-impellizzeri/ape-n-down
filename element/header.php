@@ -2,7 +2,7 @@
     $extraClass = $extraClass ?? '';
 ?>
 
-<header class="header">
+<header class="header z-100">
     <button>
         Menu
     </button>

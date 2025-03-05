@@ -4,7 +4,6 @@
 
     <link rel="stylesheet/less" type="text/css" href="less/main.less" />
     <script src="https://cdn.jsdelivr.net/npm/less" data-env="development"></script>
-    <link rel="preload" href="/fonts/Baustraev08-Black.woff2" as="font" type="font/woff2" crossorigin>
 
     <script
         src="https://code.jquery.com/jquery-3.6.0.min.js"

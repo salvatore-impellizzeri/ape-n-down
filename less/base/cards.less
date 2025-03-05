@@ -1,6 +1,7 @@
 .card{
     border-radius: 40px;
-    box-shadow: 0px 4px 4px black;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
 
     h1{
         .px-rem(69);
@@ -9,12 +10,42 @@
     h2{
         .px-rem(44);
     }
+
+    h1, h2{
+        text-transform: uppercase;
+        font-family: @title-font;
+        max-width: 900vw * @px2vw;
+        margin: 0 auto 20vw * @px2vw;
+    }
+
+    p{
+        margin: 0 auto;
+        max-width: 900vw * @px2vw;
+    }
 }
 
-.card--rotate
+.card--rotation-l{
+    transform: rotate(-2deg);
+}
 
-.card--text{
-    padding: 120vw * @px2vw, 277vw * @px2vw;
+.card--rotation-r{
+    transform: rotate(2deg);
+}
+
+.card--medium{
+    max-width: 1200vw * @px2vw;
+    margin: 0 auto;
+    padding: 120vw * @px2vw 0;
+}
+
+.card--larger{
+    max-width: 1400vw * @px2vw;
+    margin: 0 auto;
+    padding: 120vw * @px2vw 0;
+}
+
+.card--border{
+    border: 1px solid black;
 }
 
 .card--darker{
@@ -23,10 +54,18 @@
 
 .card--lighter{
     background-color: @bg-light-yellow;
-    border: 1px solid black;
 }
 
 .card--black{
     background-color: black;
     color: @yellow;
+}
+
+.card--translate-1{
+    transform: translateY((-92vw / 2) * @px2vw);
+}
+
+.card--translate-2{
+    transform: rotate(2deg) translateY((-92vw) * @px2vw);
+
 }

@@ -88,16 +88,16 @@
             <p>
                 Ci hanno scelto:
             </p>
-            <div>
-                <?php 
-                    for ($i = 0; $i < 3; $i++) { 
-                ?>
-                    <div class="others__card">
-                        <!-- <img src="img/person.png" alt="Nome e Cognome">  -->
-                    </div>
-                <?php
-                    } 
-                ?>
+            <div class="others__card-container">
+                <div class="others__card-container__card others__card-container__card--small">
+                    <img src="img/person-smaller.png" alt="Nome e Cognome"> 
+                </div>
+                <div class="others__card-container__card others__card-container__card--large">
+                    <img src="img/person.png" alt="Nome e Cognome"> 
+                </div>
+                <div class="others__card-container__card others__card-container__card--small">
+                    <img src="img/person-smaller.png" alt="Nome e Cognome"> 
+                </div>
             </div>
         </div>
         <div>
@@ -105,4 +105,4 @@
         </div>
     </section>
     
-</main> 
+</main>

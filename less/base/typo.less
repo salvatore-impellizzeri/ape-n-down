@@ -78,6 +78,6 @@ blockquote{
 }
 
 .px-rem(@sizeValue) {
-    @remValue: round(@sizeValue / 15, 2);
+    @remValue: (@sizeValue / 15);
     font-size: ~"@{remValue}rem";
 }

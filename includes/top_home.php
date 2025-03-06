@@ -8,7 +8,7 @@ $pageTitle = 'Home';
 <html lang="it" dir="ltr">
     <?php require('element/head.php') ?>
 
-    <body class="body">
+    <body class="body index">
         <?= element('header') ?>
         <?= element('main') ?>
         <?= element('footer') ?>

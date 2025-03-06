@@ -9,7 +9,7 @@
     <!-- TITLE -->
     <?php 
         Title(
-            "ape'ndown: un progetto per l'inclusione e l'opportunità", 
+            "apen'down: un progetto per l'inclusione e l'opportunità", 
             "container-L", 
             "text-shadow"
         )

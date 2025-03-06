@@ -25,25 +25,25 @@
 
         <?php
             Project(
-                "16.02.2024",
-                "Evento Afad",
-                "img/project1.png"
+                "18.02.2024",
+                "Fiera Cavalli",
+                "img/project2.png"
             )
         ?>
 
         <?php
             Project(
-                "16.02.2024",
-                "Evento Afad",
-                "img/project1.png"
+                "18.02.2024",
+                "Oasi San Giacomo",
+                "img/project3.png"
             )
         ?>
 
         <?php
             Project(
-                "16.02.2024",
-                "Evento Afad",
-                "img/project1.png"
+                "18.02.2024",
+                "Evento Hellas",
+                "img/project4.png"
             )
         ?>
     </div>

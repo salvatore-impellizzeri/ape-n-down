@@ -1,0 +1,118 @@
+.others{
+    position: relative;
+    width: 100vw;
+    margin-top: (180vw + ((143vw + 203vw)/2)) * @px2vw;
+    display: flex;
+    flex-direction: column;
+    gap: 180vw * @px2vw;
+    align-items: center;
+    font-size: 44vw * @px2vw;
+    background-color: @bg-light-yellow;
+    padding-top: (143vw / 2) * @px2vw;
+    padding-bottom: 180vw * @px2vw;
+
+    p{
+        text-align: center;
+        margin-bottom: 0;
+        font-weight: 500;
+    }
+}
+
+.others__section{
+    display: flex;
+    flex-direction: column;
+    gap: 60vw * @px2vw;
+}
+
+.others__section__icons{
+    display: flex;
+    gap: 120vw * @px2vw;
+}
+
+.others__vector{
+    background-color: @bg-light-yellow;
+    width: 100vw;
+    height: (143vw + 203vw) * @px2vw; 
+    position: absolute;
+    top: -143vw * @px2vw;
+    clip-path: ellipse(60% 50% at 50% 50%);
+}
+
+.others__card-container {
+    display: flex;
+    align-items: center;
+    gap: 86vw * @px2vw;
+}
+
+.others__card-container__card{
+    display: flex;
+    justify-content: center;
+    width: 530vw * @px2vw;
+    height: 620vw * @px2vw;
+    background-color: white;
+    border-radius: 40vw * @px2vw;
+    position: relative;
+    margin-bottom: 20vw * @px2vw;
+}
+
+.others__card-container__card--small {
+    width: 400vw * @px2vw; 
+    height: 490vw * @px2vw;
+
+    img {
+        width: 333.34vw * @px2vw;
+        height: 510vw * @px2vw;
+        position: absolute;
+        bottom: -2vw * @px2vw;
+    }
+
+    button{
+        width: 45vw * @px2vw;
+        aspect-ratio: 1/1;
+        border-radius: 6px;
+        position: absolute;
+        top: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translate(0, -50%);
+        background-color: @bg-color;
+
+        svg{
+            width: 13.75vw * @px2vw;
+            height: 20vw * @px2vw;
+            transform: translateX(1vw * @px2vw);
+        }
+    }
+}
+
+.others__card-container__card--large {
+    width: 530vw * @px2vw;
+    height: 650vw * @px2vw;
+
+    img {
+        width: 444.45vw * @px2vw;
+        height: 681vw * @px2vw;
+        position: absolute;
+        bottom: -8vw * @px2vw;
+    }
+
+    button{
+        width: 60vw * @px2vw;
+        aspect-ratio: 1/1;
+        border-radius: 6px;
+        position: absolute;
+        top: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translate(0, -50%);
+        background-color: @bg-color;
+
+        svg{
+            width: 18.33vw * @px2vw;
+            height: 26.67vw * @px2vw;
+            transform: translateX(1vw * @px2vw);
+        }
+    }
+}

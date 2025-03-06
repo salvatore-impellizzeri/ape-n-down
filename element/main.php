@@ -1,8 +1,8 @@
 <?php 
-    include 'title.php';
-    include 'card.php';
-    include 'sponsors.php';
-    include 'person_card.php';
+    include 'components/title.php';
+    include 'components/card.php';
+    include 'components/sponsors.php';
+    include 'components/person_card.php';
 ?>
 
 <main>

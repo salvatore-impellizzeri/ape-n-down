@@ -13,13 +13,14 @@ body{
 
 .others{
     position: relative;
-    margin-top: 473vw * @px2vw;
+    margin-top: (180vw + ((143vw + 203vw)/2)) * @px2vw;
     display: flex;
     flex-direction: column;
     gap: 180vw * @px2vw;
     align-items: center;
     .px-rem(44);
     background-color: @bg-light-yellow;
+    padding-top: (143vw / 2) * @px2vw;
 
     p{
         text-align: center;
@@ -41,11 +42,11 @@ body{
 
 .others__vector{
     background-color: @bg-light-yellow;
-    width: 2668vw * @px2vw;
-    height: 473px;
+    width: 100vw;
+    height: (143vw + 203vw) * @px2vw; 
     position: absolute;
     top: -143vw * @px2vw;
-    border-radius: 50%;
+    clip-path: ellipse(60% 50% at 50% 50%);
 }
 
 .others__card-container {
@@ -75,6 +76,25 @@ body{
         position: absolute;
         bottom: -2vw * @px2vw;
     }
+
+    button{
+        width: 45vw * @px2vw;
+        aspect-ratio: 1/1;
+        border-radius: 6px;
+        position: absolute;
+        top: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translate(0, -50%);
+        background-color: @bg-color;
+
+        svg{
+            width: 13.75vw * @px2vw;
+            height: 20vw * @px2vw;
+            transform: translateX(1vw * @px2vw);
+        }
+    }
 }
 
 .others__card-container__card--large {
@@ -86,6 +106,25 @@ body{
         height: 681vw * @px2vw;
         position: absolute;
         bottom: -8vw * @px2vw;
+    }
+
+    button{
+        width: 60vw * @px2vw;
+        aspect-ratio: 1/1;
+        border-radius: 6px;
+        position: absolute;
+        top: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translate(0, -50%);
+        background-color: @bg-color;
+
+        svg{
+            width: 18.33vw * @px2vw;
+            height: 26.67vw * @px2vw;
+            transform: translateX(1vw * @px2vw);
+        }
     }
 }
 

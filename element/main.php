@@ -43,7 +43,7 @@
     </section>
 
     <!-- OTHERS -->
-    <section class="others my-180">
+    <section class="others">
         
         <!-- VECTOR -->
         <div class="others__vector">
@@ -58,8 +58,12 @@
                 <?php 
                     for ($i = 0; $i < 3; $i++) { 
                 ?>
-                       <img src="img/sponsor-1.png" alt="Hellas Verona">
-                       <img src="img/sponsor-2.png" alt="Fiera Cavalli">
+                <div>
+                    <img src="img/sponsor-1.png" alt="Hellas Verona">
+                </div>
+                <div>
+                    <img src="img/sponsor-2.png" alt="Fiera Cavalli">
+                </div>
                 <?php
                     } 
                 ?>
@@ -73,10 +77,14 @@
             </p>
             <div class="others__section__icons">
                 <?php 
-                    for ($i = 0; $i < 3; $i++) { 
+                    for ($i = 0; $i < 3; $i++) {
                 ?>
-                       <img src="img/sponsor-1.png" alt="Hellas Verona">
-                       <img src="img/sponsor-2.png" alt="Fiera Cavalli">
+                    <div>
+                        <img src="img/sponsor-1.png" alt="Hellas Verona">
+                    </div>
+                    <div>
+                        <img src="img/sponsor-2.png" alt="Fiera Cavalli">
+                    </div>
                 <?php
                     } 
                 ?>
@@ -92,6 +100,9 @@
                 <div>
                     <div class="others__card-container__card others__card-container__card--small">
                         <img src="img/person-smaller.png" alt="Nome e Cognome"> 
+                        <button>
+                            <?= file_get_contents('img/play.svg') ?>
+                        </button>
                     </div>
                     <p>
                         Nome Cognome
@@ -100,6 +111,9 @@
                 <div>
                     <div class="others__card-container__card others__card-container__card--large">
                         <img src="img/person.png" alt="Nome e Cognome"> 
+                        <button>
+                            <?= file_get_contents('img/play.svg') ?>
+                        </button>
                     </div>
                     <p>
                         Nome Cognome
@@ -108,7 +122,10 @@
 
                 <div>
                     <div class="others__card-container__card others__card-container__card--small">
-                        <img src="img/person-smaller.png" alt="Nome e Cognome"> 
+                        <img src="img/person-smaller.png" alt="Nome e Cognome">
+                        <button>
+                            <?= file_get_contents('img/play.svg') ?>
+                        </button> 
                     </div>
                     <p>
                         Nome Cognome

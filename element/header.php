@@ -4,7 +4,7 @@
 
 <header class="header z-100">
     <button>
-        Menu
+        <?= file_get_contents('img/icons/menu.svg') ?> Menu
     </button>
     <div class="header__logo">
         <a href="/">
@@ -12,7 +12,7 @@
         </a>
     </div>
     <button>
-        Dona ora
+    <?= file_get_contents('img/icons/heart.svg') ?> Dona ora
     </button>
 
 </header>

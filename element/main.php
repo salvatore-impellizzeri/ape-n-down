@@ -101,7 +101,7 @@
                     <div class="others__card-container__card others__card-container__card--small">
                         <img src="img/person-smaller.png" alt="Nome e Cognome"> 
                         <button>
-                            <?= file_get_contents('img/play.svg') ?>
+                            <?= file_get_contents('img/icons/play.svg') ?>
                         </button>
                     </div>
                     <p>
@@ -112,7 +112,7 @@
                     <div class="others__card-container__card others__card-container__card--large">
                         <img src="img/person.png" alt="Nome e Cognome"> 
                         <button>
-                            <?= file_get_contents('img/play.svg') ?>
+                            <?= file_get_contents('img/icons/play.svg') ?>
                         </button>
                     </div>
                     <p>
@@ -124,7 +124,7 @@
                     <div class="others__card-container__card others__card-container__card--small">
                         <img src="img/person-smaller.png" alt="Nome e Cognome">
                         <button>
-                            <?= file_get_contents('img/play.svg') ?>
+                            <?= file_get_contents('img/icons/play.svg') ?>
                         </button> 
                     </div>
                     <p>

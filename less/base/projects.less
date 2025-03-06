@@ -1,0 +1,42 @@
+.projects {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 59vw * @px2vw;
+    row-gap: 99vw * @px2vw;
+
+    &__single-project{
+        // background: transparent;
+        // box-shadow: @shadow;
+        // overflow: hidden;
+        // background-color: black;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        gap: 28vw * @px2vw;
+
+        &__img{
+            position: relative;
+            
+            img{
+                width: 780vw * @px2vw;
+                height: 600vw * @px2vw;
+            }
+        }
+    }
+
+
+    & p:first-of-type{
+        font-size: 18vw * @px2vw;
+        margin-bottom: 4vw * @px2vw;
+    }
+
+    & p:last-of-type{
+        font-size: 55vw * @px2vw;
+    }
+
+    p{
+        text-shadow: @shadow;
+    }
+}

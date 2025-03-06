@@ -1,8 +1,98 @@
 .footer{
-    padding: 25px 0;
-    border-top: 1px solid @main-color;
-    margin-top: 60px;
+    position: relative;
+    height: auto;
+    background-color: @bg-black;
+    border-top-left-radius: 40vw * @px2vw;
+    border-top-right-radius: 40vw * @px2vw;
+    padding-top: 100vw * @px2vw;
 
+    &::before {
+        height: 50%;
+        width: 100%;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-color: @bg-light-yellow; 
+    }
+
+    .container-L{
+        display: flex;
+        flex-direction: column;
+        gap: 242vw * @px2vw;
+
+        .footer__upper{
+            display: flex;
+            flex-direction: column;
+            gap: 76vw * @px2vw;
+
+            .title{
+                color: @yellow;
+                text-align: left;
+                width: 1471vw * @px2vw;
+                .px-rem(134);
+                margin-bottom: 20vw * @px2vw;
+            }
+        
+            p{
+                text-align: left;
+                color: @white;
+                .px-rem(35);
+            }
+
+            .footer__upper__socials{
+                display: flex;
+                gap: 20vw * @px2vw;
+
+                a{
+                    button{
+                        cursor: pointer;
+                        border: 1vw * @px2vw solid @yellow;
+                        background-color: transparent;
+                        color: @yellow;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        svg {
+                            width: 33.33vw * @px2vw;
+                            height: 33.33vw * @px2vw;
+                        }                        
+                    }
+
+                    .button--pill{
+                        border-radius: 100px;
+                        width: 296vw * @px2vw;
+                        height: 72vw * @px2vw;
+                        font-family: 'Clash Display', sans-serif;
+                        font-size: 23vw * @px2vw;
+                        padding: 22vw * @px2vw 32vw * @px2vw;
+                    }
+    
+                    .button--icon{
+                        border-radius: 50%;
+                        width: 72vw * @px2vw;
+                        aspect-ratio: 1/1;
+                    }
+                }
+            }
+        }
+
+        .footer__lower{
+            border-top: 1vw * @px2vw solid @yellow;
+            height: 93vw * @px2vw;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+
+            p{
+                color: @yellow;
+                margin: 0;
+            }
+        }
+    }
 
     &__menus, &__legal{
         display: flex;
@@ -37,21 +127,6 @@
             a{
                 color: inherit;
             }
-        }
-    }
-
-    &--fixed{
-        position: fixed;
-        bottom: 0;
-        left: 40px;
-        right: 40px;
-        z-index: 20;
-        border: none;
-        .footer__menus{
-            display: none;
-        }
-        .footer__legal{
-            margin: 0;
         }
     }
 }

@@ -8,7 +8,7 @@
     <?php 
         Title(
             "tutti i nostri eventi passati e futuri",
-            "container-L",
+            "container-L justify",
             "text-shadow"
         )
     ?>

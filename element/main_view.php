@@ -24,6 +24,23 @@
         Title("gallery","container-M mt-223", "font-69")
     ?>
     <div class="view__carousel">
-        <?php Carousel("img/project1.png", "Prima Pagina", "img_class") ?>
+        <?php Carousel(
+            "img/project1.png", 
+            "Prima Pagina", 
+            "view__carousel__img--small"
+            ) 
+        ?>
+        <?php Carousel(
+            "img/project1.png", 
+            "Seconda Pagina", 
+            "view__carousel__img--large"
+            ) 
+        ?>
+        <?php Carousel(
+            "img/project1.png", 
+            "Terza Pagina",
+            "view__carousel__img--small"
+            ) 
+        ?>
     </div>
 </main>

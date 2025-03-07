@@ -10,7 +10,7 @@
     <?php 
         Title(
             "apen'down: un progetto per l'inclusione e l'opportunità", 
-            "container-L", 
+            "container-L justify", 
             "text-shadow"
         )
     ?>
@@ -43,7 +43,7 @@
 
     <!-- SECOND BIG TITLE -->
     <?php 
-        Title("scopri i nostri eventi passati e futuri", "container-M mt-74 inline", "")
+        Title("scopri i nostri eventi passati e futuri", "container-M mt-74 inline justify", "")
     ?>
 
     <!-- OTHERS -->

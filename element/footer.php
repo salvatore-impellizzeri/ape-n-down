@@ -3,7 +3,7 @@ $extraClass = $extraClass ?? null;
 ?>
 
 <footer class="footer <?= $extraClass ?>">
-    <div class="container-L">
+    <div class="container-L m-0">
         <div class="footer__upper">
             <div>
                 <h1 class="title">

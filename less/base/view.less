@@ -34,7 +34,20 @@
 
     .view__carousel {
         display: flex;
+        justify-content: center;
+        align-items: center;
         gap: 140vw * @px2vw;
         overflow-x: hidden;
+        margin: 83vw * @px2vw auto 180vw * @px2vw;
+
+        .view__carousel__img--large{
+            width: 780vw * @px2vw;
+            height: 600vw * @px2vw;
+        }
+
+        .view__carousel__img--small{
+            width: 624vw * @px2vw;
+            height: 480vw * @px2vw;
+        }
     }
 }

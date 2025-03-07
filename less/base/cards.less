@@ -1,7 +1,5 @@
 .card{
-    border-radius: 40px;
-    box-shadow: @shadow;
-    text-align: center;
+    border-radius: 40vw * @px2vw;
 
     h1{
         font-size: 69vw * @px2vw
@@ -34,12 +32,14 @@
 }
 
 .card--medium{
+    text-align: center;
     max-width: 1200vw * @px2vw;
     margin: 0 auto;
     padding: 120vw * @px2vw 0;
 }
 
 .card--larger{
+    text-align: center;
     max-width: 1400vw * @px2vw;
     margin: 0 auto;
     padding: 120vw * @px2vw 0;
@@ -69,4 +69,38 @@
 .card--translate-2{
     transform: rotate(2deg) translateY((-92vw) * @px2vw);
 
+}
+
+.card--about{
+    text-align: left;
+
+    p:last-of-type{
+        font-size: 18vw * @px2vw;
+        letter-spacing: 0.02em;
+        margin: 32vw * @px2vw 0 40vw * @px2vw;
+    }
+
+    > * {
+        width: 900vw * @px2vw;
+    }
+
+    button{
+        font-size: 18vw * @px2vw;
+        background-color: @black;
+        padding: 8vw * @px2vw 16vw * @px2vw;
+        color: white;
+        border-radius: 12vw * @px2vw;
+    }
+}
+
+.card--about--lighter{
+    width: 1540vw * @px2vw;
+    background: @bg-light-yellow;
+    padding: 100vw * @px2vw 320vw * @px2vw;
+}
+
+.card--about--darker{
+    background: @bg-darker-yellow;
+    padding: 113vw * @px2vw 373vw * @px2vw;
+    transform: rotate(-2deg);
 }

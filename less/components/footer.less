@@ -93,40 +93,4 @@
             }
         }
     }
-
-    &__menus, &__legal{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .menu {
-            display: flex;
-            align-items: center;
-        }
-    }
-    &__menus{
-
-        .menu{
-
-            gap: 35vw * @px2vw;
-            a{
-                color: @text-color;
-                &.highlight{
-                    color: @main-color;
-                }
-            }
-        }
-    }
-    &__legal{
-        margin-top: 25px;
-        color: @shaded-text-color;
-        .font-10();
-
-        .menu{
-            gap: 20vw * @px2vw;
-
-            a{
-                color: inherit;
-            }
-        }
-    }
 }

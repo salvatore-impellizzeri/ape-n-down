@@ -20,6 +20,8 @@
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque at expedita quam porro beatae sequi corporis nostrum explicabo rerum ipsum nesciunt neque officia cumque error, ea fugiat laborum blanditiis magnam?'
         )
     ?>
+    
+    <!-- CAROUSEL -->
     <?php 
         Title("gallery","container-M mt-223", "font-69")
     ?>

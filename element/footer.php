@@ -4,7 +4,10 @@ $extraClass = $extraClass ?? null;
 
 <footer class="footer <?= $extraClass ?>">
     <div class="container-L m-0">
+
+        <!-- UPPER FOOTER -->
         <div class="footer__upper">
+            <!-- TITLE & PARAGRAPH -->
             <div>
                 <h1 class="title">
                     uniscti con noi nel cambiare vite
@@ -13,6 +16,8 @@ $extraClass = $extraClass ?? null;
                     Contattaci per maggiori informazioni e donazioni.
                 </p>
             </div>
+
+            <!-- SOCIALS & INFO -->
             <div class="footer__upper__socials">
                 <a href="#">
                     <button class="button--icon">
@@ -31,6 +36,8 @@ $extraClass = $extraClass ?? null;
                 </a>
             </div>
         </div>
+
+        <!-- LOWER FOOTER -->
         <div class="footer__lower">
             <p>
                 Copyright © Apen’Down

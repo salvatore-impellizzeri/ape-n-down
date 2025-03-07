@@ -29,7 +29,7 @@
             Card(
                 "il progetto", 
                 "Il progetto Apen'Down vuole proporsi come possibilità di formazione e di occupazione lavorativa, credendo che l'occupazione lavorativa sia un percorso consigliabile e praticabile per le persone con disabilità e che sia altresì un diritto di tutti.", 
-                "card--larger card--lighter card--border card--translate-1 z-10",
+                "card--larger card--lighter card--border card--translate-1 z-10 ",
             )
         ?>
          <?php 

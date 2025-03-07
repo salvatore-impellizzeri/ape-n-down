@@ -1,7 +1,40 @@
-.view p{
-    text-align: center;
-}
+.view {
 
-& :first-child{
-    font-size: 28vw * @px2vw; 
+    > :first-child,
+    .title{
+        text-align: center;
+    }
+
+    > :first-child {
+        font-size: 28vw * @px2vw;
+    }
+
+    article {
+        margin-top: 103vw * @px2vw;
+        display: flex;
+        flex-direction: column;
+
+        p{
+            text-align: left;
+        }
+
+        p:first-of-type { 
+            font-size: 55vw * @px2vw;
+            width: 1225vw * @px2vw;
+            font-weight: 500;
+        }
+
+        p:last-of-type {
+            display: grid;
+            align-self: flex-end;
+            font-size: 28vw * @px2vw;
+            width: 671vw * @px2vw;
+        }
+    }
+
+    .view__carousel {
+        display: flex;
+        gap: 140vw * @px2vw;
+        overflow-x: hidden;
+    }
 }

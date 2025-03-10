@@ -8,7 +8,7 @@
                 <?= file_get_contents("img/icons/play.svg") ?>
             </button>
         </div>
-        <p>
+        <p class="name">
             <?= $name ?>
         </p>
     </div>

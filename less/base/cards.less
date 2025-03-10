@@ -2,7 +2,7 @@
     border-radius: 40vw * @px2vw;
 
     h1{
-        font-size: clamp(25px, 69vw * @px2vw, 69px);
+        font-size: clamp(23px, 69vw * @px2vw, 69px);
     }
 
     h2{
@@ -12,12 +12,12 @@
     h1, h2{
         text-transform: uppercase;
         font-family: @title-font;
-        max-width: 900vw * @px2vw;
-        margin: 0 auto 20vw * @px2vw;
+        max-width: clamp(800px, 900vw * @px2vw, 900px);
+        margin: 0 auto clamp(12px, 20vw * @px2vw, 20px);
     }
 
     p{
-        font-size: clamp(14px, 28vw * @px2vw, 28px);
+        font-size: clamp(13px, 28vw * @px2vw, 28px);
         margin: 0 auto;
         max-width: 900vw * @px2vw;
     }

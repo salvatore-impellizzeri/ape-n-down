@@ -4,7 +4,7 @@
     background-color: @bg-black;
     border-top-left-radius: 40vw * @px2vw;
     border-top-right-radius: 40vw * @px2vw;
-    padding-top: 100vw * @px2vw;
+    padding-top: clamp(40px, 100vw * @px2vw, 100px);
 
     .index &::before {
         height: 100%;
@@ -43,7 +43,7 @@
 
             .footer__upper__socials{
                 display: flex;
-                gap: 20vw * @px2vw;
+                gap: clamp(10px, 20vw * @px2vw, 20px);
 
                 a{
                     button{
@@ -64,7 +64,7 @@
                     .button--pill{
                         border-radius: 100px;
                         width: clamp(150px, 296vw * @px2vw, 296px);
-                        height: clamp(40px, 72vw * @px2vw, 72px);
+                        height: clamp(35px, 72vw * @px2vw, 72px);
                         font-family: 'Clash Display', sans-serif;
                         font-size: clamp(12px, 23vw * @px2vw, 23px);
                         padding: clamp(8px, 22vw * @px2vw, 22px) clamp(12px, 32vw * @px2vw, 32px);
@@ -72,7 +72,7 @@
     
                     .button--icon{
                         border-radius: 50%;
-                        width: clamp(40px, 72vw * @px2vw, 72px);
+                        width: clamp(35px, 72vw * @px2vw, 72px);
                         aspect-ratio: 1/1;
                     }
                 }
@@ -91,7 +91,7 @@
                 color: @yellow;
                 margin: 0;
                 line-height: 0.01em;
-                font-size: clamp(7px, 12vw * @px2vw, 12px);
+                font-size: clamp(6px, 12vw * @px2vw, 12px);
             }
         }
     }

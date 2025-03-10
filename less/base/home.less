@@ -6,7 +6,6 @@
     flex-direction: column;
     gap: 180vw * @px2vw;
     align-items: center;
-    font-size: 44vw * @px2vw;
     background-color: @bg-light-yellow;
     padding-top: (143vw / 2) * @px2vw;
     padding-bottom: 180vw * @px2vw;
@@ -16,12 +15,17 @@
         margin-bottom: 0;
         font-weight: 500;
     }
+
+    .name{
+        font-size: clamp(10px, 23vw * @px2vw, 23px);
+    }
 }
 
 .others__section{
     display: flex;
     flex-direction: column;
     gap: 60vw * @px2vw;
+    font-size: clamp(16px, 44vw * @px2vw, 44px);
 }
 
 .others__section__icons{

@@ -4,7 +4,9 @@
 
 <header class="header z-100">
     <button>
-        <?= file_get_contents('img/icons/menu.svg') ?> Menu
+        <a href="/menu.php">
+            <?= file_get_contents('img/icons/menu.svg') ?> Menu
+        </a>
     </button>
     <div class="header__logo">
         <a href="/">
@@ -12,7 +14,9 @@
         </a>
     </div>
     <button>
-    <?= file_get_contents('img/icons/heart.svg') ?> Dona ora
+        <a href="/donation.php">
+            <?= file_get_contents('img/icons/heart.svg') ?> Dona ora
+        </a>
     </button>
 
 </header>

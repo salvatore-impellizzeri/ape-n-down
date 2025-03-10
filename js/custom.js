@@ -1,16 +1,20 @@
-new Swiper('[data-product-slider]', {
-    slidesPerView: 4,
-    spaceBetween: 20,
-    navigation: {
-        nextEl: '[data-product-slider-next]',
-        prevEl: '[data-product-slider-prev]',
-    },
-    pagination: {
-        el: '.swiper-pagination',
-    },
+document.addEventListener("DOMContentLoaded", function() {
+    const swiper = new Swiper(".others__card-container", {
+        loop: true,
+        slidesPerView: 3, 
+        spaceBetween: 20, 
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            768: { slidesPerView: 2, spaceBetween: 30 }, 
+            1024: { slidesPerView: 3, spaceBetween: 40 } 
+        }
+    });
 });
 
-new Swiper('[data-account-product-slider]', {
+const secondSwiper = new Swiper('[data-account-product-slider]', {
     slidesPerView: 3,
     spaceBetween: 20,
     navigation: {

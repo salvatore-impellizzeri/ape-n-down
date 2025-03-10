@@ -17,15 +17,21 @@
     }
 
     .name{
-        font-size: clamp(10px, 23vw * @px2vw, 23px);
+        font-size: clamp(14px, 23vw * @px2vw, 23px);
+    }
+
+    .swiper{
+        width: 100vw;
+        height: auto;
     }
 }
+
 
 .others__section{
     display: flex;
     flex-direction: column;
     gap: 60vw * @px2vw;
-    font-size: clamp(16px, 44vw * @px2vw, 44px);
+    font-size: clamp(18px, 44vw * @px2vw, 44px);
 }
 
 .others__section__icons{
@@ -60,18 +66,19 @@
 }
 
 .others__card-container__card--small {
-    width: 400vw * @px2vw; 
-    height: 490vw * @px2vw;
+    width: clamp(115px, 400vw * @px2vw, 400px); 
+    height: clamp(150px, 490vw * @px2vw, 490px);
+    overflow-y: visible;
 
     img {
-        width: 333.34vw * @px2vw;
-        height: 510vw * @px2vw;
+        width: clamp(105px, 333.34vw * @px2vw, 333.34px);
+        height: clamp(160px, 510vw * @px2vw, 510px);
         position: absolute;
         bottom: -2vw * @px2vw;
     }
 
     button{
-        width: 45vw * @px2vw;
+        width: clamp(16px, 45vw * @px2vw, 45px);
         aspect-ratio: 1/1;
         border-radius: 6px;
         position: absolute;
@@ -83,26 +90,26 @@
         background-color: @bg-color;
 
         svg{
-            width: 13.75vw * @px2vw;
-            height: 20vw * @px2vw;
+            width: clamp(4px, 13.75vw * @px2vw, 13.75px);
+            height: clamp(9px, 20vw * @px2vw, 20px);
             transform: translateX(1vw * @px2vw);
         }
     }
 }
 
 .others__card-container__card--large {
-    width: 530vw * @px2vw;
-    height: 650vw * @px2vw;
+    width: clamp(150px, 530vw * @px2vw, 530px);
+    height: clamp(200px, 650vw * @px2vw, 650px);
 
     img {
-        width: 444.45vw * @px2vw;
-        height: 681vw * @px2vw;
+        width: clamp(140px, 444.45vw * @px2vw, 444.45px);
+        height: clamp(212px, 681vw * @px2vw, 681px);
         position: absolute;
         bottom: -8vw * @px2vw;
     }
 
     button{
-        width: 60vw * @px2vw;
+        width: clamp(20px, 60vw * @px2vw, 60px);
         aspect-ratio: 1/1;
         border-radius: 6px;
         position: absolute;

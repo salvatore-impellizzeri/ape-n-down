@@ -76,28 +76,33 @@
             <p>
                 Ci hanno scelto:
             </p>
-            <div class="others__card-container">
-                <?php 
-                    Person_card(
-                        "img/person-smaller.png",
-                        "Nome Cognome",
-                        "others__card-container__card--small"
-                    )
-                ?>
-                <?php 
-                    Person_card(
-                        "img/person.png",
-                        "Nome Cognome",
-                        "others__card-container__card--large"
-                    )
-                ?>
-                <?php 
-                    Person_card(
-                        "img/person-smaller.png",
-                        "Nome Cognome",
-                        "others__card-container__card--small"
-                    )
-                ?>
+            <div class="swiper others__card-container">
+                <div class="swiper-wrapper">
+                    <?php 
+                        Person_card(
+                            "img/person-smaller.png",
+                            "Nome Cognome",
+                            "others__card-container__card--small"
+                        )
+                    ?>
+                    <?php 
+                        Person_card(
+                            "img/person.png",
+                            "Nome Cognome",
+                            "others__card-container__card--large"
+                        )
+                    ?>
+                    <?php 
+                        Person_card(
+                            "img/person-smaller.png",
+                            "Nome Cognome",
+                            "others__card-container__card--small"
+                        )
+                    ?>
+                </div>
+                <!-- Navigazione Swiper -->
+                <div class="swiper-button-prev">Prev</div>
+                <div class="swiper-button-next">Next</div>
             </div>
         </div>
     </section>

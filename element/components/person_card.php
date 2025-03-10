@@ -1,7 +1,7 @@
 <?php
     function Person_card($img, $name, $container_class) {
 ?>
-    <div>
+    <swiper-slide class="swiper-slide">
         <div class="others__card-container__card <?= $container_class ?>">
             <img src="<?= $img ?>" alt="<?= $name ?>"> 
             <button>
@@ -11,7 +11,7 @@
         <p class="name">
             <?= $name ?>
         </p>
-    </div>
+    </swiper-slide>
 <?php
     }
 ?>

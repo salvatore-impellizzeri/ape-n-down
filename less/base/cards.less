@@ -13,13 +13,13 @@
         text-transform: uppercase;
         font-family: @title-font;
         max-width: clamp(800px, 900vw * @px2vw, 900px);
-        margin: 0 auto clamp(12px, 20vw * @px2vw, 20px);
+        margin: 0 auto clamp(7px, 20vw * @px2vw, 20px);
     }
 
     p{
         font-size: clamp(13px, 28vw * @px2vw, 28px);
         margin: 0 auto;
-        max-width: 900vw * @px2vw;
+        max-width: clamp(90%, 900vw * @px2vw, 900px);
     }
 }
 
@@ -33,16 +33,16 @@
 
 .card--medium{
     text-align: center;
-    max-width: 1200vw * @px2vw;
+    max-width: clamp(90%, 1200vw * @px2vw, 1200px);
     margin: 0 auto;
     padding: 120vw * @px2vw 0;
 }
 
 .card--larger{
     text-align: center;
-    width: 1400vw * @px2vw;
+    width: clamp(100%, 1400vw * @px2vw, 1400px);
     margin: 0 auto;
-    padding: 120vw * @px2vw 277vw * @px2vw;
+    padding: 120vw * @px2vw 0;
 
     > *{
         .no-shadow;

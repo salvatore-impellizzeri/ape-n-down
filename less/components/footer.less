@@ -38,7 +38,7 @@
             p{
                 text-align: left;
                 color: @white;
-                font-size: 35vw * @px2vw;
+                font-size: clamp(12px, 35vw * @px2vw, 35px);
             }
 
             .footer__upper__socials{
@@ -56,23 +56,23 @@
                         justify-content: center;
 
                         svg {
-                            width: 33.33vw * @px2vw;
-                            height: 33.33vw * @px2vw;
+                            width: clamp(16px, 33.33vw * @px2vw, 33.33px);
+                            height: auto;
                         }                        
                     }
 
                     .button--pill{
                         border-radius: 100px;
-                        width: 296vw * @px2vw;
-                        height: 72vw * @px2vw;
+                        width: clamp(150px, 296vw * @px2vw, 296px);
+                        height: clamp(40px, 72vw * @px2vw, 72px);
                         font-family: 'Clash Display', sans-serif;
-                        font-size: 23vw * @px2vw;
-                        padding: 22vw * @px2vw 32vw * @px2vw;
+                        font-size: clamp(12px, 23vw * @px2vw, 23px);
+                        padding: clamp(8px, 22vw * @px2vw, 22px) clamp(12px, 32vw * @px2vw, 32px);
                     }
     
                     .button--icon{
                         border-radius: 50%;
-                        width: 72vw * @px2vw;
+                        width: clamp(40px, 72vw * @px2vw, 72px);
                         aspect-ratio: 1/1;
                     }
                 }
@@ -81,7 +81,7 @@
 
         .footer__lower{
             border-top: 1vw * @px2vw solid @yellow;
-            height: 93vw * @px2vw;
+            height: clamp(50px, 93vw * @px2vw, 93px);
             display: flex;
             flex-wrap: nowrap;
             justify-content: space-between;
@@ -91,7 +91,7 @@
                 color: @yellow;
                 margin: 0;
                 line-height: 0.01em;
-                font-size: 12vw * @px2vw;
+                font-size: clamp(7px, 12vw * @px2vw, 12px);
             }
         }
     }

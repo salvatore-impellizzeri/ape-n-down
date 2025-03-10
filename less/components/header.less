@@ -11,7 +11,7 @@
 
         &__logo {
             display: flex;
-            height: clamp(60px, 62vw * @px2vw, 62px);
+            height: clamp(40px, 62vw * @px2vw, 62px);
     
             a {
                 max-height: 100%;
@@ -33,23 +33,23 @@
             font-weight: 500;
 
             svg{
-                width: clamp(18px, 22vw * @px2vw, 22px);
+                width: clamp(15px, 22vw * @px2vw, 22px);
                 height: auto;
             }
 
             a{
-                padding: clamp(8px, 8vw * @px2vw, 8px) clamp(16px, 16vw * @px2vw, 16px);
-                font-size: clamp(18px, 18vw * @px2vw, 18px);
+                padding: clamp(6px, 8vw * @px2vw, 8px) clamp(8px, 16vw * @px2vw, 16px);
+                font-size: clamp(15px, 18vw * @px2vw, 18px);
                 color: white;
                 font-family: @second-font;
                 letter-spacing: 0.02em;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                gap: 8vw * @px2vw;
+                gap: clamp(5px, 8vw * @px2vw, 8px);
 
                 svg{
-                    width: clamp(22px, 22vw * @px2vw, 22px);
+                    width: clamp(15px, 22vw * @px2vw, 22px);
                     height: auto;
                 }
             }

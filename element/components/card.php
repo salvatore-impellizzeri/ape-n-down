@@ -14,11 +14,11 @@
                 <p>
                     - <?= $writer ?>, <?= $articleName ?>
                 </p>
-                <a href="<?= $link ?>">
-                    <button>
+                <button>
+                    <a href="<?= $link ?>">
                         Leggi l'articolo completo
-                    </button>
-                </a>
+                    </a>
+                </button>
         <?php 
             }
         ?>

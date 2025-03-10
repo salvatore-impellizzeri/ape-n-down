@@ -2,9 +2,8 @@
     position: fixed;
     left: 0;
     top: 0;
-    width: 100%;
-    margin: 0 auto;
-    max-height: 120vw * @px2vw;
+    width: 100vw;
+    height: clamp(80px, 10vh, 120vw * @px2vw);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,7 +11,7 @@
 
         &__logo {
             display: flex;
-            max-height: 62vw * @px2vw;
+            height: clamp(40px, 8vh, 62vw * @px2vw);
     
             a {
                 max-height: 100%;
@@ -30,24 +29,29 @@
 
         button{
             background-color: black;
-            border-radius: 10vw * @px2vw;
-            font-weight: 500;            
+            border-radius: clamp(8px, 2vw, 12vw * @px2vw);
+            font-weight: 500;
 
             svg{
-                width: 22vw * @px2vw;
-                height: 22vw * @px2vw;
+                width: clamp(16px, 3vw, 22vw * @px2vw);
+                height: auto;
             }
 
             a{
-                padding: 8vw * @px2vw 16vw * @px2vw;
+                padding: clamp(4px, 2vh, 8vw * @px2vw) clamp(8px, 4vw, 16vw * @px2vw);
+                font-size: clamp(12px, 2vw, 18vw * @px2vw);
                 color: white;
                 font-family: @second-font;
-                font-size: 18vw * @px2vw;
                 letter-spacing: 0.02em;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 gap: 8vw * @px2vw;
+
+                svg{
+                    width: 22vw * @px2vw;
+                    height: 22vw * @px2vw;
+                }
             }
         }
 }

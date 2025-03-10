@@ -3,7 +3,9 @@
 ?>
     <div class="projects__single-project">
         <div class="projects__single-projects__img">
-            <img src="<?= $img ?>" alt="<?= $title ?>">
+            <a href="/view.php">
+                <img src="<?= $img ?>" alt="<?= $title ?>">
+            </a>
             <?= file_get_contents('img/find.svg') ?>
         </div>
         <div>

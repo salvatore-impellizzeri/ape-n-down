@@ -2,9 +2,9 @@
     function Menu_item($title, $class, $link) {
 ?>
     <a href="<?php $link ?>" class="<?= $class ?> menu__item">
-        <h1 class="title">
+        <div class="menu__item__text">
             <?= $title ?>
-        </h1>
+        </div>
     </a>
 <?php 
     }

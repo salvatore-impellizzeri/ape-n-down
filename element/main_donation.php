@@ -21,7 +21,7 @@
         Card(
             "codice iban:",
             "0000000000000000",
-            "card--larger card--lighter card--rotation-l mb-180 mt-120"
+            "card--larger card--lighter card--rotation-l mb-180 mt-120",
             "",
             "",
             "",

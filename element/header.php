@@ -13,7 +13,7 @@
             <?= file_get_contents('img/logo.svg') ?>
         </a>
     </div>
-    <button>
+    <button class="header__donation">
         <a href="/donation.php">
             <?= file_get_contents('img/icons/heart.svg') ?> Dona ora
         </a>

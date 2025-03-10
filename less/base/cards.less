@@ -40,9 +40,13 @@
 
 .card--larger{
     text-align: center;
-    max-width: 1400vw * @px2vw;
+    width: 1400vw * @px2vw;
     margin: 0 auto;
     padding: 120vw * @px2vw 277vw * @px2vw;
+
+    > *{
+        .no-shadow;
+    }
 }
 
 .card--border{

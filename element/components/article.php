@@ -6,7 +6,7 @@
             <?= $upper_text ?>
         </p>
         <p>
-            <?= $lower_text ?>
+            <?= nl2br($lower_text) ?>
         </p>
     </article>
 <?php 

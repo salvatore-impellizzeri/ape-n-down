@@ -12,7 +12,7 @@ body{
 }
 
 main{
-    padding-top: 180vw * @px2vw;
+    padding-top: clamp(180px, 180vw * @px2vw, 180px);
     height: auto;
     display: flex;
     flex-grow: 1;

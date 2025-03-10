@@ -3,7 +3,7 @@
     left: 0;
     top: 0;
     width: 100vw;
-    height: clamp(80px, 10vh, 120vw * @px2vw);
+    height: clamp(100px, 120vw * @px2vw, 120px);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,7 +11,7 @@
 
         &__logo {
             display: flex;
-            height: clamp(40px, 8vh, 62vw * @px2vw);
+            height: clamp(60px, 62vw * @px2vw, 62px);
     
             a {
                 max-height: 100%;
@@ -29,17 +29,17 @@
 
         button{
             background-color: black;
-            border-radius: clamp(8px, 2vw, 12vw * @px2vw);
+            border-radius: clamp(8px, 12vw * @px2vw, 12px);
             font-weight: 500;
 
             svg{
-                width: clamp(16px, 3vw, 22vw * @px2vw);
+                width: clamp(18px, 22vw * @px2vw, 22px);
                 height: auto;
             }
 
             a{
-                padding: clamp(4px, 2vh, 8vw * @px2vw) clamp(8px, 4vw, 16vw * @px2vw);
-                font-size: clamp(12px, 2vw, 18vw * @px2vw);
+                padding: clamp(8px, 8vw * @px2vw, 8px) clamp(16px, 16vw * @px2vw, 16px);
+                font-size: clamp(18px, 18vw * @px2vw, 18px);
                 color: white;
                 font-family: @second-font;
                 letter-spacing: 0.02em;
@@ -49,8 +49,8 @@
                 gap: 8vw * @px2vw;
 
                 svg{
-                    width: 22vw * @px2vw;
-                    height: 22vw * @px2vw;
+                    width: clamp(22px, 22vw * @px2vw, 22px);
+                    height: auto;
                 }
             }
         }

@@ -1,27 +1,25 @@
 const swiper = new Swiper('.others__card-container', {
-    loop: true,              // Permette lo scorrimento ciclico
-    slidesPerView: 3,        // Numero di elementi da visualizzare
-    centeredSlides: true,    // Centra la slide attiva
-    spaceBetween: 20,        // Spazio tra le slide
+    loop: true,              
+    slidesPerView: 3,        
+    centeredSlides: true,   
+    spaceBetween: 20,    
+    initialSlide: 1,    
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
     breakpoints: {
         1024: {
-            slidesPerView: 3, // 3 elementi visibili su schermi più grandi
+            slidesPerView: 3, 
         },
         768: {
-            slidesPerView: 2, // 2 elementi visibili su schermi più piccoli
+            slidesPerView: 2,
         },
         480: {
-            slidesPerView: 1, // 1 elemento visibile su schermi molto piccoli
+            slidesPerView: 1,
         },
     }
 });
-
-
-
 
 const secondSwiper = new Swiper('[data-account-product-slider]', {
     slidesPerView: 3,

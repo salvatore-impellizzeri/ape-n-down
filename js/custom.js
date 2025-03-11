@@ -1,18 +1,31 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const swiper = new Swiper(".others__card-container", {
-        loop: true,
-        slidesPerView: 3, 
-        spaceBetween: 20, 
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-            768: { slidesPerView: 2, spaceBetween: 30 }, 
-            1024: { slidesPerView: 3, spaceBetween: 40 } 
+const swiper = new Swiper(".others__card-container", {
+    loop: true,
+    slidesPerView: 3,
+    centeredSlides: true, 
+    spaceBetween: 20,
+    initialSlide: 1,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    on: {
+        slideChangeTransitionEnd: function () {
+            document.querySelectorAll(".swiper-slide").forEach(slide => {
+                let card = slide.querySelector(".others__card-container__card");
+                card.classList.remove("others__card-container__card--large");
+                card.classList.add("others__card-container__card--small");
+            });
+
+            let activeSlide = document.querySelector(".swiper-slide-active");
+            if (activeSlide) {
+                let centerCard = activeSlide.querySelector(".others__card-container__card");
+                centerCard.classList.remove("others__card-container__card--small");
+                centerCard.classList.add("others__card-container__card--large");
+            }
         }
-    });
+    }
 });
+
 
 const secondSwiper = new Swiper('[data-account-product-slider]', {
     slidesPerView: 3,

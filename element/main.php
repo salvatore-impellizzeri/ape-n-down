@@ -82,27 +82,34 @@
                         Person_card(
                             "img/person-smaller.png",
                             "Nome Cognome",
-                            "others__card-container__card--small"
-                        )
-                    ?>
-                    <?php 
-                        Person_card(
-                            "img/person.png",
-                            "Nome Cognome",
-                            "others__card-container__card--large"
+                            ""
                         )
                     ?>
                     <?php 
                         Person_card(
                             "img/person-smaller.png",
                             "Nome Cognome",
-                            "others__card-container__card--small"
+                            ""
+                        )
+                    ?>
+                    <?php 
+                        Person_card(
+                            "img/person-smaller.png",
+                            "Nome Cognome",
+                            ""
+                        )
+                    ?>
+                    <?php 
+                        Person_card(
+                            "img/person-smaller.png",
+                            "Nome Cognome",
+                            ""
                         )
                     ?>
                 </div>
                 <!-- Navigazione Swiper -->
-                <div class="swiper-button-prev">Prev</div>
-                <div class="swiper-button-next">Next</div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
     </section>

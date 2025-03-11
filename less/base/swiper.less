@@ -5,30 +5,29 @@
 
 .swiper {
     width: 100%;
-    max-width: 1500px;
-    height: 800px;
-    padding: 20px;
+    max-width: clamp(800px, 1500vw * @px2vw, 1500px);
+    height: clamp(400px, 800vw * @px2vw , 800px);
     position: relative;
 }
 
 .swiper-wrapper {
     display: flex;
     align-items: center;
-    gap: 20px; 
+    gap: clamp(10px, 20vw * @px2vw, 20px); 
 }
 
 .swiper-slide {
-    width: 500px;
+    width: clamp(200px, 500vw * @px2vw,500px);
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     text-align: center;
     .m-0;
-    gap: 20px;
+    gap: clamp(10px, 20vw * @px2vw, 20px);
 
     p{
-        font-size: 23px;
+        .px-rem(23);
     }
 
     button{
@@ -36,8 +35,8 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 45px;
-        height: 45px;
+        width: clamp(20px, 45vw * @px2vw, 45px);
+        height: clamp(20px, 45vw * @px2vw, 45px);
         border-radius: 5px;
         background-color: @bg-color;
         display: flex;
@@ -46,32 +45,42 @@
         transition: all 0.3s ease-in-out;
 
         svg{
-            height: 20px;
+            height: clamp(10px, 20vw * @px2vw, 20px);
             width: auto;
             position: relative;
-            left: 1px;
+            left: 1vw * @px2vw;
             transition: all 0.3s ease-in-out;
         }
     }
 }
 
 .swiper-slide-active .swiper-card {
-    width: 530px; 
-    height: 660px; 
+    width: clamp(240px, 530vw * @px2vw, 530px); 
+    height: clamp(290px, 660vw * @px2vw, 660px); 
     transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
 
     img{
-        width: 444px;
-        height: 681px;
+        width: clamp(200px, 444vw * @px2vw, 444px);
+        height: clamp(300px, 685vw * @px2vw, 685px);
         transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+    }
+
+    button{
+        width: clamp(30px, 60vw * @px2vw, 60px);
+        height: clamp(30px, 60vw * @px2vw, 60px);
+
+        svg{
+            height: clamp(14px, 26vw * @px2vw, 26px);
+            width: auto;
+        }
     }
 }
 
 .swiper-card {
-    width: 400px;
-    height: 495px;
+    width: clamp(180px, 400vw * @px2vw, 400px);
+    height: clamp(222px, 495vw * @px2vw, 495px);
     background-color: #f0f0f0;
-    border-radius: 20px;
+    border-radius: clamp(20px, 40vw * @px2vw, 40px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,10 +89,10 @@
 }
 
 .swiper-card img {
-    width: 333px;
-    height: 510px;
+    width: clamp(150px, 333vw * @px2vw, 333px);
+    height: clamp(230px, 514vw * @px2vw, 514px);
     position: absolute;
-    bottom: -2px;
+    bottom: -2vw * @px2vw;
     transition: width 0.3s ease-in-out, height 0.3s ease-in-out; 
 }
 
@@ -95,9 +104,16 @@
 }
 
 .swiper-button-prev {
-    left: 10px;
+    left: -50px;
 }
 
 .swiper-button-next {
-    right: 10px;
+    right: -50px;
+}
+
+@media (max-width: 768px) {
+    .swiper-button-prev, 
+    .swiper-button-next {
+        display: none; 
+    }
 }

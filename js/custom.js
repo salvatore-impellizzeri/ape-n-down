@@ -10,16 +10,19 @@ const swiper = new Swiper('.others__card-container', {
     },
     breakpoints: {
         1024: {
-            slidesPerView: 3, 
+            slidesPerView: 3,
         },
         768: {
-            slidesPerView: 2,
+            slidesPerView: 1.5,
+            centeredSlides: true
         },
         480: {
-            slidesPerView: 1,
+            slidesPerView: 1.5, 
+            centeredSlides: true
         },
     }
 });
+
 
 const secondSwiper = new Swiper('[data-account-product-slider]', {
     slidesPerView: 3,

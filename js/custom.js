@@ -1,30 +1,26 @@
-const swiper = new Swiper(".others__card-container", {
-    loop: true,
-    slidesPerView: 3,
-    centeredSlides: true, 
-    spaceBetween: 20,
-    initialSlide: 1,
+const swiper = new Swiper('.others__card-container', {
+    loop: true,              // Permette lo scorrimento ciclico
+    slidesPerView: 3,        // Numero di elementi da visualizzare
+    centeredSlides: true,    // Centra la slide attiva
+    spaceBetween: 20,        // Spazio tra le slide
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
-    on: {
-        slideChangeTransitionEnd: function () {
-            document.querySelectorAll(".swiper-slide").forEach(slide => {
-                let card = slide.querySelector(".others__card-container__card");
-                card.classList.remove("others__card-container__card--large");
-                card.classList.add("others__card-container__card--small");
-            });
-
-            let activeSlide = document.querySelector(".swiper-slide-active");
-            if (activeSlide) {
-                let centerCard = activeSlide.querySelector(".others__card-container__card");
-                centerCard.classList.remove("others__card-container__card--small");
-                centerCard.classList.add("others__card-container__card--large");
-            }
-        }
+    breakpoints: {
+        1024: {
+            slidesPerView: 3, // 3 elementi visibili su schermi più grandi
+        },
+        768: {
+            slidesPerView: 2, // 2 elementi visibili su schermi più piccoli
+        },
+        480: {
+            slidesPerView: 1, // 1 elemento visibile su schermi molto piccoli
+        },
     }
 });
+
+
 
 
 const secondSwiper = new Swiper('[data-account-product-slider]', {

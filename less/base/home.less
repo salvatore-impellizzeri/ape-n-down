@@ -19,65 +19,7 @@
     .name{
         font-size: clamp(14px, 23vw * @px2vw, 23px);
     }
-
-    .swiper{
-        padding: 50px 0;
-        width: 90vw;
-        height: auto;
-        position: relative;
-    }
-
-    .swiper-button-left,
-    .swiper-button-right{
-        color: black;
-    }
-
-    .swiper-button-left{
-        left: 0;
-    }
-
-    .swiper-button-right{
-        right: 0;
-    }
-
-    .swiper-slide-active{
-        .others__card-container__card--large;
-    }
-    
-    .swiper-slide-next,
-    .swiper-slide-prev{
-        .others__card-container__card--small;
-    }
 }
-
-.others__card-container__card--small {
-    width: clamp(115px, 400vw * @px2vw, 400px); 
-    height: clamp(150px, 490vw * @px2vw, 490px);
-    transition: all 0.3s ease-in-out;
-
-    img {
-        transition: all 0.3s ease-in-out;
-        width: clamp(105px, 333.34vw * @px2vw, 333.34px);
-        height: clamp(160px, 510vw * @px2vw, 510px);
-        position: absolute;
-        bottom: -2vw * @px2vw;
-    }
-}
-
-.others__card-container__card--large {
-    width: clamp(150px, 530vw * @px2vw, 530px);
-    height: clamp(200px, 650vw * @px2vw, 650px);
-    transition: all 0.3s ease-in-out;
-
-    img {
-        transition: all 0.3s ease-in-out;
-        width: clamp(140px, 444.45vw * @px2vw, 444.45px);
-        height: clamp(212px, 681vw * @px2vw, 681px);
-        position: absolute;
-        bottom: -2vw * @px2vw;
-    }
-}
-
 
 .others__section{
     display: flex;
@@ -98,25 +40,6 @@
     position: absolute;
     top: -143vw * @px2vw;
     clip-path: ellipse(60% 50% at 50% 50%);
-}
-
-.others__card-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 86vw * @px2vw;
-}
-
-.others__card-container__card{
-    display: flex;
-    justify-content: center;
-    width: 530vw * @px2vw;
-    height: 620vw * @px2vw;
-    background-color: white;
-    border-radius: 40vw * @px2vw;
-    position: relative;
-    margin-bottom: 20vw * @px2vw;
-    overflow-y: visible;
 }
 
 // .others__card-container__card--small {

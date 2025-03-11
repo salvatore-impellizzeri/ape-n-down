@@ -3,7 +3,7 @@
     include 'components/article.php';
     include 'components/card.php';
 ?>
-<main>
+<main class="donation">
     <?php 
         Title(
             "Dona ora",

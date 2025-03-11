@@ -11,26 +11,24 @@
     }
 
     &__single-project{
-        // background: transparent;
-        // box-shadow: @shadow;
-        // overflow: hidden;
-        // background-color: black;
         display: flex;
         flex-direction: column;
         text-align: left;
-        gap: clamp(12px, 28vw * @px2vw, 28px);
+        gap: clamp(20px, 58vw * @px2vw, 58px);
 
         .projects__single-projects__img{
             position: relative;
-            width: 100%;
-            height: auto;
+            width: clamp(100%, 780vw * @px2vw, 780px);
+            height: clamp(200px, 600vw * @px2vw, 600px);
+            background-color: @bg-darker-yellow;
+            border-radius: clamp(20px, 40vw * @px2vw, 40px);
             
             svg{
                 width: clamp(100px, 153vw * @px2vw, 153px);
                 height: clamp(80px, 140vw * @px2vw, 140px);
                 position: absolute;
-                bottom: 0;
-                right: 0;
+                bottom: clamp(2px, 6vw * @px2vw, 6px);
+                right: clamp(2px, 6vw * @px2vw, 6px);
                 transform: translate(20%,15%);
             }
         }

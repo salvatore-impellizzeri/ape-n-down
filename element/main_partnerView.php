@@ -5,15 +5,12 @@
 ?>
 
 <main class="view">
-    <p>
-        18.02.2024
-    </p>
     <?php 
-        Title("Evento afad", "container-L", "")    
+        Title("Nome Partner", "container-L", "")    
     ?>
     <div class="container-L">
         <div class="view__container-img">
-            <img src="img/project1.png" alt="Immagine Progetto">
+            <img src="" alt="Immagine Progetto">
         </div>
     </div>
     <?php 
@@ -28,29 +25,23 @@
         Title("gallery","container-M mt-223", "font-69")
     ?>
     <div class="view__carousel">
-        <div>
-            <?php Carousel(
-                "img/project1.png", 
-                "Prima Pagina", 
-                "view__carousel__img--small"
-                ) 
-            ?>
-        </div>
-        <div>
-            <?php Carousel(
-                "img/project1.png", 
-                "Seconda Pagina", 
-                "view__carousel__img--large"
-                ) 
-            ?>
-        </div>
-        <div>
-            <?php Carousel(
-                "img/project1.png", 
-                "Terza Pagina",
-                "view__carousel__img--small"
-                ) 
-            ?>
-        </div>
+        <?php Carousel(
+            "", 
+            "Prima Slide", 
+            "view__carousel__img--small"
+            ) 
+        ?>
+        <?php Carousel(
+            "", 
+            "Seconda Slide", 
+            "view__carousel__img--large"
+            ) 
+        ?>
+        <?php Carousel(
+            "", 
+            "Terza Slide",
+            "view__carousel__img--small"
+            ) 
+        ?>
     </div>
 </main>

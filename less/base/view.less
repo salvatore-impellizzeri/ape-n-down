@@ -7,7 +7,16 @@
 
     > :first-child {
         font-weight: 500;
-        font-size: clamp(10 px, 28vw * @px2vw, 28px);
+        .px-rem(28);
+        // font-size: clamp(10 px, 28vw * @px2vw, 28px);
+    }
+
+    .view__container-img{
+        width: 100%;
+        height: clamp(500px, 936vw * @px2vw, 936px);
+        background-color: @bg-darker-yellow;
+        border-radius: clamp(20px, 40vw * @px2vw, 40px);
+        overflow: hidden;
     }
 
     .view__carousel {

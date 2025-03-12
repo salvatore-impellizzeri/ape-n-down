@@ -9,9 +9,10 @@
 }
 
 .menu__item{
-    background: @bg-light-yellow;
-    padding: 18vw * @px2vw 90vw * @px2vw;
-    border-radius: 20vw * @px2vw;
+    background: @bg-light-yellow;   
+    padding: clamp(12px, 18vw * @px2vw, 18px) clamp(40px, 90vw * @px2vw, 90px);
+    border-radius: clamp(10px, 20vw * @px2vw, 20px);
+    display: flex;
 
     &__text{
         line-height: 1em;
@@ -20,7 +21,7 @@
         color: @black;
         font-weight: bold;  
         text-transform: uppercase;
-        font-size: clamp(20px, 80vw * @px2vw, 80px) !important;
+        font-size: clamp(30px, 80vw * @px2vw, 80px) !important;
     }
 }
 

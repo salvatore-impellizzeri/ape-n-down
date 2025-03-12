@@ -17,7 +17,7 @@ const swiper = new Swiper('.swiper--home', {
 
 const swiper_view = new Swiper('.swiper--view', {
     loop: true,              
-    slidesPerView: 2,        
+    slidesPerView: 1.4,        
     centeredSlides: true,  
     initialSlide: 1,    
     navigation: {

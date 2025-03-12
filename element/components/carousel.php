@@ -1,7 +1,9 @@
 <?php 
-    function Carousel($img, $alt, $img_class) {
+    function Carousel($img, $alt) {
 ?>
-    <img class="<?= $img_class ?>" src="<?= $img ?>" alt="<?= $alt ?>">
+    <div class="swiper-slide swiper-slide--view">
+            <img src="<?= $img ?>" alt="<?= $alt ?>">
+    </div>
 <?php 
     }
 ?>

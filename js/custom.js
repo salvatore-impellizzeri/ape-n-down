@@ -1,4 +1,4 @@
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.swiper--home', {
     loop: true,              
     slidesPerView: 2,        
     centeredSlides: true,   
@@ -12,20 +12,23 @@ const swiper = new Swiper('.swiper', {
             slidesPerView: 3,
         }
     }
-    
 });
 
 
-const secondSwiper = new Swiper('[data-account-product-slider]', {
-    slidesPerView: 3,
-    spaceBetween: 20,
+const swiper_view = new Swiper('.swiper--view', {
+    loop: true,              
+    slidesPerView: 2,        
+    centeredSlides: true,  
+    initialSlide: 1,    
     navigation: {
-        nextEl: '[data-account-product-slider-next]',
-        prevEl: '[data-account-product-slider-prev]',
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
-    pagination: {
-        el: '.swiper-pagination',
-    },
+    breakpoints: {
+        550: {
+            slidesPerView: 2,
+        }
+    }
 });
 
 Fancybox.bind("[data-fancybox]", {

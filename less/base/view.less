@@ -1,7 +1,6 @@
 .view {
-
     > :first-child,
-    .title{
+    .title {
         text-align: center;
     }
 
@@ -10,35 +9,43 @@
         font-size: clamp(10px, 28vw * @px2vw, 28px);
     }
 
-    .view__container-img{
+    .swiper--view {
         width: 100%;
-        height: auto;
-        background-color: @bg-darker-yellow;
-        border-radius: clamp(20px, 40vw * @px2vw, 40px);
+        height: clamp(320px, 620vw * @px2vw, 620px);
+        margin: clamp(30px, 83vw * @px2vw, 83px) auto clamp(80px, 180vw * @px2vw, 180px);
+        position: relative;
         overflow: hidden;
-    }
-
-    .view__carousel {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 140vw * @px2vw;
-        overflow-x: hidden;
-        margin: 83vw * @px2vw auto 180vw * @px2vw;
-
-        .view__carousel__img--large{
-            width: clamp(250px, 780vw * @px2vw, 780px);
-            height: auto;
+    
+        .swiper-wrapper {
+            display: flex;
+            align-items: center;
         }
+    
+        .swiper-slide--view {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease-in-out; 
 
-        .view__carousel__img--small{
-            width: clamp(160px, 624vw * @px2vw, 624px);
+            img{
+                width: clamp(250px, 624vw * @px2vw, 624px);
+                height: auto;
+                transition: all 0.3s ease-in-out; 
+            }
+        }
+    
+        .swiper-slide-active {
             height: auto;
+            transition: all 0.3s ease-in-out; 
+
+            img{
+                width: clamp(310px, 780vw * @px2vw, 780px) !important;
+                transition: all 0.3s ease-in-out; 
+            }
         }
     }
+    
 }
-
-// CHIEDERE AD ALEX PERCHE' NON FUNZIZONA SE CREO UN ALTRO FILE LESS
 
 article {
     @media (max-width: @tablet-s) {
@@ -50,13 +57,13 @@ article {
     display: flex;
     flex-direction: column;
 
-    p{
+    p {
         text-align: left;
     }
 
-    p:first-of-type { 
+    p:first-of-type {
         font-size: clamp(18px, 55vw * @px2vw, 55px);
-        width: 1225vw * @px2vw;
+        width: clamp(300px, 1225vw * @px2vw, 100%);
         font-weight: 500;
 
         @media (max-width: @tablet-s) {

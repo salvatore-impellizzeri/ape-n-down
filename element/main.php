@@ -76,8 +76,7 @@
             <p>
                 Ci hanno scelto:
             </p>
-            <div class="other__section--swiper">
-                <div class="swiper">
+                <div class="swiper swiper--home">
                     <div class="swiper-wrapper">
                         <?php 
                             Person_card(

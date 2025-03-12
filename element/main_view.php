@@ -27,30 +27,31 @@
     <?php 
         Title("gallery","container-M mt-223", "font-69")
     ?>
-    <div class="view__carousel">
-        <div>
-            <?php Carousel(
-                "img/project1.png", 
-                "Prima Pagina", 
-                "view__carousel__img--small"
-                ) 
-            ?>
+    <div class="swiper swiper--view">
+        <div class="swiper-wrapper">
+                <?php Carousel(
+                    "img/project1.png", 
+                    "Prima Pagina", 
+                    ) 
+                ?>
+                <?php Carousel(
+                    "img/project1.png", 
+                    "Seconda Pagina", 
+                    ) 
+                ?>
+                <?php Carousel(
+                    "img/project1.png", 
+                    "Terza Pagina",
+                    ) 
+                ?>
+                <?php Carousel(
+                    "img/project1.png", 
+                    "Terza Pagina",
+                    ) 
+                ?>
         </div>
-        <div>
-            <?php Carousel(
-                "img/project1.png", 
-                "Seconda Pagina", 
-                "view__carousel__img--large"
-                ) 
-            ?>
-        </div>
-        <div>
-            <?php Carousel(
-                "img/project1.png", 
-                "Terza Pagina",
-                "view__carousel__img--small"
-                ) 
-            ?>
-        </div>
+        <!-- Navigazione Swiper -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </div>
 </main>

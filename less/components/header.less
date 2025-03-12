@@ -34,9 +34,10 @@
                 width: 104px;
             }
             width: fit-content;
-            background-color: black;
+            background-color: @black;
             border-radius: clamp(8px, 12vw * @px2vw, 12px);
             font-weight: 500;
+            transition: all 0.3s ease-in-out;
 
             svg{
                 width: clamp(18px, 22vw * @px2vw, 22px);
@@ -68,5 +69,25 @@
 
         &__donation{
             justify-self: end;
+        }
+
+        &.invert-colors {
+            background-color: transparent !important;
+
+            &__logo svg path {
+                fill: @bg-color !important; 
+            }
+
+            button {
+                background-color: @bg-light-yellow !important; 
+
+                a {
+                    color: @black;
+                }
+            }
+    
+            svg path{
+                fill: @bg-color !important; 
+            }
         }
 }

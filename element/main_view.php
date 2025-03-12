@@ -29,26 +29,26 @@
     ?>
     <div class="swiper swiper--view">
         <div class="swiper-wrapper">
-                <?php Carousel(
-                    "img/project1.png", 
-                    "Prima Pagina", 
-                    ) 
-                ?>
-                <?php Carousel(
-                    "img/project1.png", 
-                    "Seconda Pagina", 
-                    ) 
-                ?>
-                <?php Carousel(
-                    "img/project1.png", 
-                    "Terza Pagina",
-                    ) 
-                ?>
-                <?php Carousel(
-                    "img/project1.png", 
-                    "Terza Pagina",
-                    ) 
-                ?>
+            <?php Carousel(
+                "img/project1.png", 
+                "Prima Slide", 
+                ) 
+            ?>
+            <?php Carousel(
+                "img/project1.png", 
+                "Seconda Slide", 
+                ) 
+            ?>
+            <?php Carousel(
+                "img/project1.png", 
+                "Terza Slide",
+                ) 
+            ?>
+            <?php Carousel(
+                "img/project1.png", 
+                "Quarta Slide",
+                ) 
+            ?>
         </div>
         <!-- Navigazione Swiper -->
         <div class="swiper-button-prev"></div>

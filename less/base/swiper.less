@@ -101,3 +101,42 @@
         display: none; 
     }
 }
+
+
+
+.swiper--view {
+    width: 100%;
+    height: clamp(230px, 630vw * @px2vw, 630px);
+    margin-top: clamp(7px, 83vw * @px2vw, 83px);
+    margin-bottom: clamp(35px, 180vw * @px2vw, 180px);
+    position: relative;
+    overflow: hidden;
+
+    .swiper-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    .swiper-slide--view {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease-in-out; 
+
+        img{
+            width: clamp(220px, 624vw * @px2vw, 624px);
+            height: auto;
+            transition: all 0.3s ease-in-out; 
+        }
+    }
+
+    .swiper-slide-active {
+        height: auto;
+        transition: all 0.3s ease-in-out; 
+
+        img{
+            width: clamp(310px, 780vw * @px2vw, 780px) !important;
+            transition: all 0.3s ease-in-out; 
+        }
+    }
+}

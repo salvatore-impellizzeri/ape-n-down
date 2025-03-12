@@ -10,7 +10,7 @@
     ?>
     <div class="container-L">
         <div class="view__container-img">
-            <img src="" alt="Immagine Progetto">
+            <img src="" alt="Immagine Partner">
         </div>
     </div>
     <?php 
@@ -24,24 +24,31 @@
     <?php 
         Title("gallery","container-M mt-223", "font-69")
     ?>
-    <div class="view__carousel">
-        <?php Carousel(
-            "", 
-            "Prima Slide", 
-            "view__carousel__img--small"
-            ) 
-        ?>
-        <?php Carousel(
-            "", 
-            "Seconda Slide", 
-            "view__carousel__img--large"
-            ) 
-        ?>
-        <?php Carousel(
-            "", 
-            "Terza Slide",
-            "view__carousel__img--small"
-            ) 
-        ?>
+    <div class="swiper swiper--view">
+        <div class="swiper-wrapper">
+            <?php Carousel(
+                "", 
+                "Prima Slide", 
+                ) 
+            ?>
+            <?php Carousel(
+                "", 
+                "Seconda Slide", 
+                ) 
+            ?>
+            <?php Carousel(
+                "", 
+                "Terza Slide",
+                ) 
+            ?>
+            <?php Carousel(
+                "", 
+                "Quarta Slide",
+                ) 
+            ?>
+        </div>
+        <!-- Navigazione Swiper -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </div>
 </main>

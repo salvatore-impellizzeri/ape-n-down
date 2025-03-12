@@ -31,24 +31,25 @@ const swiper_view = new Swiper('.swiper--view', {
     }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const header = document.querySelector(".header");
-    const footer = document.querySelector(".footer");
+// document.addEventListener("DOMContentLoaded", function () {
+//     const header = document.querySelector(".header");
+//     const footer = document.querySelector(".footer");
 
-    const observer = new IntersectionObserver(
-        ([entry]) => {
-            if (entry.isIntersecting) {
-                header.classList.add("invert-colors");
-            } else {
-                header.classList.remove("invert-colors");
-            }
-        },
-        { threshold: 0.88 }
-    );
+//     const observer = new IntersectionObserver(
+//         ([entry]) => {
+//             if (entry.boundingClientRect.top <= 60) {
+//                 header.classList.add("invert-colors");
+//             } else {
+//                 header.classList.remove("invert-colors");
+//             }
+//         },
+//         {
+//             rootMargin: "-60px 0px 0px 0px",
+//         }
+//     );
 
-    observer.observe(footer);
-});
-
+//     observer.observe(footer);
+// });
 
 
 Fancybox.bind("[data-fancybox]", {

@@ -9,7 +9,7 @@
     <!-- TITLE -->
     <?php 
         Title(
-            "apen'down: un progetto per l'inclusione e l'opportunità", 
+            "apen'down: un progetto <img class='square-s' src='img/project1.png' alt='img'> per l'inclusione <img class='square-s' src='img/img2.png' alt='img'> e l'opportunità", 
             "container-L justify", 
             "text-shadow"
         )
@@ -52,7 +52,13 @@
 
     <!-- SECOND BIG TITLE -->
     <?php 
-        Title("scopri i nostri eventi passati e futuri", "container-M mt-74 inline justify", "")
+        Title("scopri <img class='rectangle' src='img/img3.png' alt='img'> i nostri eventi passati
+            <img class='square-l' src='img/img3.png' alt='img'>
+            <br> 
+            e futuri", 
+            "container-M mt-74 inline justify", 
+            ""
+        )
     ?>
 
     <!-- OTHERS -->

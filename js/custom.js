@@ -1,6 +1,6 @@
 const swiper = new Swiper('.swiper--home', {
     loop: true,              
-    slidesPerView: 2,        
+    slidesPerView: 1.6,        
     centeredSlides: true,   
     initialSlide: 1,    
     navigation: {
@@ -9,6 +9,10 @@ const swiper = new Swiper('.swiper--home', {
     },
     breakpoints: {
         550: {
+            slidesPerView: 2.1,
+        },
+
+        700: {
             slidesPerView: 3,
         }
     }

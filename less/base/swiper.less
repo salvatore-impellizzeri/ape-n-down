@@ -5,21 +5,12 @@
 
 .swiper {
     width: 100%;
-    max-width: clamp(800px, 1505vw * @px2vw, 1505px);
     height: clamp(400px, 800vw * @px2vw , 800px);
     position: relative;
 }
 
-.swiper-wrapper {
-    display: flex;
-    align-items: center;
-    margin: auto;
-    position: relative;
-    gap: clamp(20px, 70vw * @px2vw, 70px); 
-}
-
 .swiper-slide {
-    width: clamp(200px, 500vw * @px2vw,500px);
+    width: clamp(200px, 500vw * @px2vw, 500px);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -29,7 +20,7 @@
     gap: clamp(10px, 20vw * @px2vw, 20px);
 
     p{
-        .px-rem(23);
+        font-size: clamp(12px, 23vw * @px2vw, 23px);
     }
 
     button{
@@ -57,13 +48,13 @@
 }
 
 .swiper-slide-active .swiper-card {
-    width: clamp(240px, 530vw * @px2vw, 530px); 
-    height: clamp(290px, 660vw * @px2vw, 660px); 
+    width: clamp(200px, 530vw * @px2vw, 530px); 
+    height: clamp(250px, 660vw * @px2vw, 660px); 
     transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
 
     img{
-        width: clamp(200px, 444vw * @px2vw, 444px);
-        height: clamp(300px, 685vw * @px2vw, 685px);
+        width: auto;
+        height: clamp(260px, 685vw * @px2vw, 685px);
         transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
     }
 
@@ -79,8 +70,8 @@
 }
 
 .swiper-card {
-    width: clamp(180px, 400vw * @px2vw, 400px);
-    height: clamp(222px, 495vw * @px2vw, 495px);
+    width: clamp(140px, 400vw * @px2vw, 400px);
+    height: clamp(182px, 495vw * @px2vw, 495px);
     background-color: #f0f0f0;
     border-radius: clamp(20px, 40vw * @px2vw, 40px);
     display: flex;
@@ -88,30 +79,19 @@
     align-items: center;
     position: relative;
     transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+    
+    img {
+        width: auto;
+        height: clamp(190px, 514vw * @px2vw, 514px);
+        position: absolute;
+        bottom: -2vw * @px2vw;
+        transition: width 0.3s ease-in-out, height 0.3s ease-in-out; 
+    }
 }
 
-.swiper-card img {
-    width: clamp(150px, 333vw * @px2vw, 333px);
-    height: clamp(230px, 514vw * @px2vw, 514px);
-    position: absolute;
-    bottom: -2vw * @px2vw;
-    transition: width 0.3s ease-in-out, height 0.3s ease-in-out; 
-}
-
-.swiper-button-prev, .swiper-button-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: @black;
-    overflow: visible;
-}
-
-.swiper-button-prev {
-    left: 0px;
-}
-
+.swiper-button-prev,
 .swiper-button-next {
-    right: 0px;
+    color: @black;
 }
 
 @media (max-width: 768px) {

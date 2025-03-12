@@ -1,26 +1,18 @@
-const swiper = new Swiper('.others__card-container', {
+const swiper = new Swiper('.swiper', {
     loop: true,              
-    slidesPerView: 3,        
+    slidesPerView: 2,        
     centeredSlides: true,   
-    spaceBetween: 20,    
     initialSlide: 1,    
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
     breakpoints: {
-        1024: {
+        550: {
             slidesPerView: 3,
-        },
-        768: {
-            slidesPerView: 1.5,
-            centeredSlides: true
-        },
-        480: {
-            slidesPerView: 1.5, 
-            centeredSlides: true
-        },
+        }
     }
+    
 });
 
 

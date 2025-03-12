@@ -76,40 +76,42 @@
             <p>
                 Ci hanno scelto:
             </p>
-            <div class="swiper others__card-container">
-                <div class="swiper-wrapper">
-                    <?php 
-                        Person_card(
-                            "img/person-smaller.png",
-                            "Nome Cognome",
-                            ""
-                        )
-                    ?>
-                    <?php 
-                        Person_card(
-                            "img/person-smaller.png",
-                            "Nome Cognome",
-                            ""
-                        )
-                    ?>
-                    <?php 
-                        Person_card(
-                            "img/person-smaller.png",
-                            "Nome Cognome",
-                            ""
-                        )
-                    ?>
-                    <?php 
-                        Person_card(
-                            "img/person-smaller.png",
-                            "Nome Cognome",
-                            ""
-                        )
-                    ?>
+            <div class="other__section--swiper">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <?php 
+                            Person_card(
+                                "img/person-smaller.png",
+                                "Nome Cognome",
+                                ""
+                            )
+                        ?>
+                        <?php 
+                            Person_card(
+                                "img/person-smaller.png",
+                                "Nome Cognome",
+                                ""
+                            )
+                        ?>
+                        <?php 
+                            Person_card(
+                                "img/person-smaller.png",
+                                "Nome Cognome",
+                                ""
+                            )
+                        ?>
+                        <?php 
+                            Person_card(
+                                "img/person-smaller.png",
+                                "Nome Cognome",
+                                ""
+                            )
+                        ?>
+                    </div>
+                    <!-- Navigazione Swiper -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
-                <!-- Navigazione Swiper -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
             </div>
         </div>
     </section>

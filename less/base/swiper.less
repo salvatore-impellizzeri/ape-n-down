@@ -29,66 +29,67 @@
             }
         }
     }
-}
 
-.swiper-slide--home {
-    width: clamp(200px, 500vw * @px2vw, 500px);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    .m-0;
-    gap: clamp(10px, 20vw * @px2vw, 20px);
-
-    p{
-        font-size: clamp(12px, 23vw * @px2vw, 23px);
+    .swiper-slide--home {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        .m-0;
+        gap: clamp(10px, 20vw * @px2vw, 20px);
+    
+        p{
+            font-size: clamp(12px, 23vw * @px2vw, 23px);
+        }
+    
+        button{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: clamp(20px, 45vw * @px2vw, 45px);
+            height: clamp(20px, 45vw * @px2vw, 45px);
+            border-radius: 5px;
+            background-color: @bg-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease-in-out;
+    
+            svg{
+                height: clamp(10px, 20vw * @px2vw, 20px);
+                width: auto;
+                position: relative;
+                left: 1vw * @px2vw;
+                transition: all 0.3s ease-in-out;
+            }
+        }
     }
-
-    button{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: clamp(20px, 45vw * @px2vw, 45px);
-        height: clamp(20px, 45vw * @px2vw, 45px);
-        border-radius: 5px;
-        background-color: @bg-color;
+    
+    .swiper-card {
+        width: clamp(140px, 400vw * @px2vw, 400px);
+        height: clamp(182px, 495vw * @px2vw, 495px);
+        background-color: #f0f0f0;
+        border-radius: clamp(20px, 40vw * @px2vw, 40px);
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: all 0.3s ease-in-out;
-
-        svg{
-            height: clamp(10px, 20vw * @px2vw, 20px);
+        position: relative;
+        transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+        
+        img {
             width: auto;
-            position: relative;
-            left: 1vw * @px2vw;
-            transition: all 0.3s ease-in-out;
+            height: clamp(190px, 514vw * @px2vw, 514px);
+            position: absolute;
+            bottom: -2vw * @px2vw;
+            transition: width 0.3s ease-in-out, height 0.3s ease-in-out; 
         }
     }
 }
 
 
-.swiper-card {
-    width: clamp(140px, 400vw * @px2vw, 400px);
-    height: clamp(182px, 495vw * @px2vw, 495px);
-    background-color: #f0f0f0;
-    border-radius: clamp(20px, 40vw * @px2vw, 40px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
-    
-    img {
-        width: auto;
-        height: clamp(190px, 514vw * @px2vw, 514px);
-        position: absolute;
-        bottom: -2vw * @px2vw;
-        transition: width 0.3s ease-in-out, height 0.3s ease-in-out; 
-    }
-}
+
 
 .swiper-button-prev,
 .swiper-button-next {

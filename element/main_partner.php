@@ -9,7 +9,7 @@
         Title(
             "tutti i nostri partner",
             "container-L justify",
-            "text-shadow"
+            ""
         )
     ?>
 
@@ -20,7 +20,7 @@
                 "",
                 "Nome Partner",
                 "",
-                "/parterView.php"
+                "/partnerView.php"
             )
         ?>
 
@@ -29,7 +29,7 @@
                 "",
                 "Nome Partner",
                 "",
-                "/parterView.php"
+                "/partnerView.php"
             )
         ?>
 
@@ -38,7 +38,7 @@
                 "",
                 "Nome Partner",
                 "",
-                "/parterView.php"
+                "/partnerView.php"
             )
         ?>
 
@@ -47,7 +47,7 @@
                 "",
                 "Nome Partner",
                 "",
-                "/parterView.php"
+                "/partnerView.php"
             )
         ?>
     </div>

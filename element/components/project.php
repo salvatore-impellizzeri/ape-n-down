@@ -10,7 +10,7 @@
             <?= file_get_contents('img/find.svg') ?>
 
             <!-- OVERLAY -->
-            <div class="overlay"></div>
+            <div class="overlay overlay--45"></div>
         </a>
         <!-- INFO -->
         <div>

@@ -2,10 +2,10 @@
     function Card($title, $text, $container_class, $writer, $articleName, $link) {
 ?>
     <div class="card <?= $container_class ?>">
-        <h1 class="text-shadow">
+        <h1>
             <?= $title ?>
         </h1>
-        <p class="text-shadow">
+        <p>
             <?= $text ?>
         </p>
         <?php 

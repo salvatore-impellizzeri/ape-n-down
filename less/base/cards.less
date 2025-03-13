@@ -1,5 +1,5 @@
 .card{
-    border-radius: 40vw * @px2vw;
+    border-radius: clamp(20px, 40vw * @px2vw, 40px);
 
     h1{
         font-size: clamp(23px, 69vw * @px2vw, 69px);
@@ -71,14 +71,30 @@
 .card--about{
     text-align: left;
 
+    h1{
+        font-size: clamp(20px, 44vw * @px2vw, 44px);
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
     > * {
         text-shadow: none;
     }
 
+    p:first-of-type{
+        font-size: clamp(16px, 23vw * @px2vw, 23px);
+    }
+
+    p{
+        width: 100%;
+        margin: 0;
+    }
+
     p:last-of-type{
-        font-size: 18vw * @px2vw;
+        font-size: clamp(12px, 18vw * @px2vw, 18px);
         letter-spacing: 0.02em;
-        margin: 32vw * @px2vw 0 40vw * @px2vw;
+        margin: clamp(13px, 32vw * @px2vw, 32px) 0 clamp(20px, 40vw * @px2vw, 40px);
     }
 
     > * {
@@ -89,24 +105,43 @@
         text-align: left;
         
         a{
+            font-weight: 500;
             background-color: @black;
-            padding: 8vw * @px2vw 16vw * @px2vw;
+            padding: clamp(6px, 8vw * @px2vw, 8px) clamp(14px, 16vw * @px2vw, 16px);
             color: white;
-            border-radius: 12vw * @px2vw;
-            font-size: 18vw * @px2vw;
+            border-radius: clamp(6px, 12vw * @px2vw, 12px);
+            font-size: clamp(11px, 18vw * @px2vw, 18px);
         }
     }
 }
 
 .card--about--lighter{
-    width: 1540vw * @px2vw;
+    width: clamp(200px, 1540vw * @px2vw, 1540px);
     background: @bg-light-yellow;
-    padding: 100vw * @px2vw 320vw * @px2vw;
+    padding: clamp(20px, 100vw * @px2vw, 100px) clamp(20px, 320vw * @px2vw, 320px);
+
+    @media (max-width: 600px) {
+        padding: 30px 50px;
+    }
+
+    @media (max-width: 800px) {
+        padding: 40px 60px;
+    }
 }
 
 .card--about--darker{
+    width: clamp(280px, 1640vw * @px2vw, 1640px);
     background: @bg-darker-yellow;
-    padding: 113vw * @px2vw 373vw * @px2vw;
+    padding: clamp(20px, 113vw * @px2vw, 113px) clamp(20px, 373vw * @px2vw, 373px);
     transform: rotate(-2deg);
+
+    @media (max-width: 600px) {
+        padding: 30px 50px;
+    }
+
+    @media (max-width: 800px) {
+        padding: 40px 60px;
+    }
 }
+
 

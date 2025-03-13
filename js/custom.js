@@ -23,14 +23,22 @@ const swiper_view = new Swiper('.swiper--view', {
     loop: true,              
     slidesPerView: 1.4,        
     centeredSlides: true,  
-    initialSlide: 1,    
+    initialSlide: 1, 
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
     breakpoints: {
-        550: {
-            slidesPerView: 2,
+        430: {
+            slidesPerView: 1.6,
+        },
+
+        500: {
+            slidesPerView: 1.8,
+        },
+
+        680: {
+            slidesPerView: 2
         }
     }
 });

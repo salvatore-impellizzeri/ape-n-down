@@ -1,4 +1,5 @@
 .view {
+
     > :first-child,
     .title {
         text-align: center;
@@ -7,6 +8,15 @@
     > :first-child {
         font-weight: 500;
         font-size: clamp(10px, 28vw * @px2vw, 28px);
+    }
+
+    .view__container-img{
+        width: clamp(200px, 1640vw * @px2vw, 1640px);
+        height: auto;
+
+        img{
+            object-fit: cover;
+        };
     }
 }
 

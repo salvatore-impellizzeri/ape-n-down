@@ -86,28 +86,28 @@
                     <div class="swiper-wrapper">
                         <?php 
                             Person_card(
-                                "img/person-smaller.png",
+                                "img/person.png",
                                 "Nome Cognome",
                                 ""
                             )
                         ?>
                         <?php 
                             Person_card(
-                                "img/person-smaller.png",
+                                "img/person.png",
                                 "Nome Cognome",
                                 ""
                             )
                         ?>
                         <?php 
                             Person_card(
-                                "img/person-smaller.png",
+                                "img/person.png",
                                 "Nome Cognome",
                                 ""
                             )
                         ?>
                         <?php 
                             Person_card(
-                                "img/person-smaller.png",
+                                "img/person.png",
                                 "Nome Cognome",
                                 ""
                             )

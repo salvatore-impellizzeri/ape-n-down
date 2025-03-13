@@ -108,7 +108,23 @@
 
 .swiper-button-prev,
 .swiper-button-next {
-    color: @black;
+    color: black;
+    padding: 0 20px;
+    height: 100%;
+    bottom: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.swiper-button-prev{
+    left: 0;
+    background: linear-gradient(to right, @bg-darker-yellow, transparent);
+}
+
+.swiper-button-next {
+    right: 0;
+    background: linear-gradient(to left, @bg-darker-yellow, transparent);
 }
 
 @media (max-width: 768px) {

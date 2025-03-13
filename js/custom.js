@@ -1,3 +1,5 @@
+// SWIPER
+
 const swiper = new Swiper('.swiper--home', {
     loop: true,              
     slidesPerView: 1.6,        
@@ -49,13 +51,11 @@ const swiper_marquee = new Swiper('.swiper--marquee', {
     initialSlide: 5,
     speed: 6000,
     autoplay: {
-      delay: 0,
+      delay: 1,
       disableOnInteaction: false,
     },
     loop: true,
     slidesPerView: "auto",
-    freeMode: true,
-    allowTouchMove: false,
 });
 
 // document.addEventListener("DOMContentLoaded", function () {

@@ -148,18 +148,19 @@
             }
         }
 
-        .swiper-slide-active .swiper-card {
-            height: auto;
-            width: clamp(310px, 780vw * @px2vw, 780px) !important;
-            transition: all 0.3s ease-in-out; 
+    }
     
-            img{
-                width: 100%;
-                height: 100%; 
-            }
+    .swiper-slide-active .swiper-card {
+        height: auto;
+        width: clamp(310px, 780vw * @px2vw, 780px);
+        transition: all 0.3s ease-in-out; 
+
+        img{
+            width: 100%;
+            height: 100%; 
         }
     }
-
+    
     .swiper-slide-prev .overlay--full,
     .swiper-slide-next .overlay--full {
         opacity: 1;

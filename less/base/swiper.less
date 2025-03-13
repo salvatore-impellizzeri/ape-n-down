@@ -141,11 +141,14 @@
 
         .swiper-card{
             width: clamp(220px, 624vw * @px2vw, 624px);
-            height: auto;
+            height: clamp(150px, 480vw * @px2vw, 480px);
             transition: all 0.3s ease-in-out; 
             position: relative;
+            background-color: @bg-darker-yellow;
+            border-radius: clamp(20px, 40vw * @px2vw, 40px);
 
             img{
+                object-fit: cover;
                 width: 100%;
                 height: 100%; 
             }
@@ -153,11 +156,13 @@
     }
     
     .swiper-slide-active .swiper-card {
-        height: auto;
+        border-radius: clamp(20px, 40vw * @px2vw, 40px);
+        height: clamp(200px, 600vw * @px2vw, 600px);
         width: clamp(310px, 780vw * @px2vw, 780px);
         transition: all 0.3s ease-in-out; 
 
         img{
+            object-fit: cover;
             width: 100%;
             height: 100%; 
         }

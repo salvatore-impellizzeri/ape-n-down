@@ -88,16 +88,27 @@ dd{
 // CONTAINER
 
 .container-L{
-    margin-bottom: 80vw * @px2vw;
-    padding: 0px 140vw * @px2vw;
-    height: auto;
+    margin-bottom: clamp(20px, 80vw * @px2vw, 80px);
+    padding: 0px clamp(0px, 140vw * @px2vw, 140px);
     position: relative;
+
+    @media (min-width: 1921px) {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1920px;
+    }
 }
 
 .container-M{
-    padding: 0px 265vw * @px2vw;
+    padding: 0px clamp(0px, 265vw * @px2vw, 265px);
     height: auto;
     position: relative;
+
+    @media (min-width: 1921px) {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1920px;
+    }
 }
 
 // OVERLAY

@@ -112,7 +112,7 @@ blockquote{
 }
 
 .my-180{
-    margin: 180vw * @px2vw 0;
+    margin: clamp(70px, 180vw * @px2vw, 180px) 0;
 }
 
 .mb-180{
@@ -145,7 +145,7 @@ blockquote{
 
 .title{
     line-height: 100% !important;
-    font-size: 168vw * @px2vw;
+    font-size: clamp(35px, 168vw * @px2vw, 168px);
     font-weight: bold;
     text-transform: uppercase;
     color: black;
@@ -164,4 +164,15 @@ blockquote{
 
 .underline{
     text-decoration: underline;
+}
+
+.icon-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg{
+        width: clamp(40px, 140vw * @px2vw, 140px);
+        height: auto;
+    }
 }

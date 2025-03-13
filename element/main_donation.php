@@ -6,8 +6,8 @@
 <main class="donation">
     <?php 
         Title(
-            "Dona ora",
-            "container-L center", 
+            file_get_contents('img/icons/heart.svg') . " Dona ora", 
+            "container-L", 
             ""
         ) 
     ?>

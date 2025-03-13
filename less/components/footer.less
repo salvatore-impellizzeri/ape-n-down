@@ -17,7 +17,8 @@
         background-color: @bg-light-yellow; 
     }
 
-    .container-L{
+    .container-fluid{
+        padding: 0px clamp(50px, 140vw * @px2vw, 140px);
         display: flex;
         flex-direction: column;
         gap: 242vw * @px2vw;
@@ -91,7 +92,7 @@
                 color: @yellow;
                 margin: 0;
                 line-height: 0.01em;
-                font-size: clamp(6px, 12vw * @px2vw, 12px);
+                font-size: clamp(6px, 12vw * @px2vw, 25px);
             }
         }
     }

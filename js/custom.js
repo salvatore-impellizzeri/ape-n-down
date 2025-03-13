@@ -35,6 +35,21 @@ const swiper_view = new Swiper('.swiper--view', {
     }
 });
 
+const swiper_marquee = new Swiper('.swiper--marquee', {
+    spaceBetween: 120,
+    centeredSlides: true,
+    initialSlide: 5,
+    speed: 6000,
+    autoplay: {
+      delay: 0,
+      disableOnInteaction: false,
+    },
+    loop: true,
+    slidesPerView: "auto",
+    freeMode: true,
+    allowTouchMove: false,
+});
+
 // document.addEventListener("DOMContentLoaded", function () {
 //     const header = document.querySelector(".header");
 //     const footer = document.querySelector(".footer");

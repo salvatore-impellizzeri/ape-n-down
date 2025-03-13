@@ -11,7 +11,7 @@
 }
 
 article {
-    @media (max-width: @tablet-s) {
+    @media (max-width: @tablet-l) {
         margin-top: 0;
         margin-bottom: 20px;
     }
@@ -29,7 +29,7 @@ article {
         width: clamp(300px, 1225vw * @px2vw, 100%);
         font-weight: 500;
 
-        @media (max-width: @tablet-s) {
+        @media (max-width: @tablet-l) {
             width: 100%;
         }
     }
@@ -37,10 +37,10 @@ article {
     p:last-of-type {
         display: grid;
         align-self: flex-end;
-        font-size: clamp(13px, 28vw * @px2vw, 28px);
+        font-size: clamp(14px, 28vw * @px2vw, 28px);
         width: clamp(100px, 671vw * @px2vw, 671px);
 
-        @media (max-width: @tablet-s) {
+        @media (max-width: @tablet-l) {
             width: 100%;
         }
     }

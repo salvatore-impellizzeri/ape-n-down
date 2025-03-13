@@ -5,7 +5,7 @@
         <h1>
             <?= $title ?>
         </h1>
-        <p class="<?= ($_SERVER['REQUEST_URI'] === '/work.php') ? 'underline' : '' ?>">
+        <p <?= ($_SERVER['REQUEST_URI'] === '/work.php') ? 'class="underline"' : null ?>>
             <?= $text ?>
         </p>
         <?php 

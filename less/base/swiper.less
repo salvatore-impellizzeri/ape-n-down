@@ -109,22 +109,71 @@
 .swiper-button-prev,
 .swiper-button-next {
     color: black;
-    padding: 0 20px;
     height: 100%;
     bottom: 50%;
     transform: translateY(-50%);
-    width: 50px;
+    width: clamp(20px, 50vw * @px2vw, 50px);
     transition: all 0.3s ease-in-out;
 }
 
-.swiper-button-prev{
+.swiper-button-prev {
     left: 0;
+    padding-right: clamp(20px, 80vw * @px2vw, 80px);
+    padding-left: clamp(30px, 50vw * @px2vw, 50px);
+}
+
+.swiper-button-prev::before {
+    content: "";
+    position: absolute;
+    inset: 0;
     background: linear-gradient(to right, @bg-darker-yellow, transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: -1;
+
+    -webkit-mask-image: linear-gradient(to bottom, transparent, white 30%, white 70%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, white 30%, white 70%, transparent);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after{
+    font-size: clamp(30px, 45vw * @px2vw, 45px);
+}
+
+.swiper-button-prev:hover::before {
+    opacity: 1; 
+}
+
+.swiper-button-prev:hover{
+    padding-left: clamp(20px, 35vw * @px2vw, 35px);
 }
 
 .swiper-button-next {
     right: 0;
+    padding-left: clamp(20px, 80vw * @px2vw, 80px);
+    padding-right: clamp(30px, 50vw * @px2vw, 50px);
+}
+
+
+.swiper-button-next::before {
+    content: "";
+    position: absolute;
+    inset: 0;
     background: linear-gradient(to left, @bg-darker-yellow, transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: -1;
+
+    -webkit-mask-image: linear-gradient(to bottom, transparent, white 30%, white 70%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, white 30%, white 70%, transparent);
+}
+
+.swiper-button-next:hover::before {
+    opacity: 1; 
+}
+
+.swiper-button-next:hover{
+    padding-right: clamp(20px, 35vw * @px2vw, 35px);
 }
 
 @media (max-width: 768px) {

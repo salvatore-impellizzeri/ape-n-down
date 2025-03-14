@@ -2,7 +2,7 @@
     $extraClass = $extraClass ?? '';
 ?>
 
-<header class="header z-100">
+<header class="header z-100 fadeInFromTop">
     <button>
         <a href="/menu.php">
             <?= file_get_contents('img/icons/menu.svg') ?>

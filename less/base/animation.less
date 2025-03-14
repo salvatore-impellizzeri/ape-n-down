@@ -1,0 +1,53 @@
+@keyframes fadeInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-40%); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeInFromTop{
+    animation: fadeInFromTop 1.2s ease-out forwards;
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.opacity{
+    animation: opacity 0.8s ease-out forwards;
+}
+
+@keyframes firstCard{
+    from {
+        transform: rotate(-7deg) scale(2.5);
+    }
+    to {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+.firstCard{
+    animation: firstCard 1.2s ease-out forwards;
+}
+
+@keyframes secondCard{
+    from {
+        transform: rotate(7deg) scale(2.5);
+    }
+    to {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+.secondCard{
+    animation: secondCard 1.2s ease-out forwards;
+}

@@ -9,7 +9,7 @@
     <!-- TITLE -->
     <?php 
         Title(
-            "apen'down: un progetto <img class='square-s' src='img/project1.png' alt='img'> per l'inclusione <img class='square-s' src='img/img2.png' alt='img'> e l'opportunità", 
+            "apen'down: un progetto <img class='square-s firstCard' src='img/project1.png' alt='img'> per l'inclusione <img class='square-s secondCard' src='img/img2.png' alt='img'> e l'opportunità", 
             "container-L justify", 
             "text-shadow"
         )

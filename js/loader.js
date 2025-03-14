@@ -11,25 +11,22 @@ class ObserverAnimation {
         this.attachEvents();
     }
 
-    visibilityChanged (isVisible, entry) {
-
+    visibilityChanged(isVisible, entry) {
         this.isInView = isVisible;
-
-        if(this.isInView & entry.intersectionRatio > 0) {
+    
+        if (this.isInView && entry.intersectionRatio > 0) {
             this.positionClass = 'is-in';
-        }
-        else {
-            if(entry.boundingClientRect.y < 0) {
+        } else {
+            if (entry.boundingClientRect.y < 0) {
                 this.positionClass = 'is-out is-out--up';
-            }
-            else {
+            } else {
                 this.positionClass = 'is-out is-out--down';
             }
         }
 
         return this.positionClass;
-
     }
+    
 
     observerScroll() {
         // IntersectionObserver Supported

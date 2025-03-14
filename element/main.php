@@ -52,13 +52,19 @@
 
     <!-- SECOND BIG TITLE -->
     <?php 
-        Title("scopri <img class='rectangle' src='img/img3.png' alt='img'> i nostri eventi passati
+        Title("scopri 
+        <img class='rectangle' src='img/img3.png' alt='img'>
+        i nostri eventi passati
+        <span class='img-wrapper'>
             <img class='square-l' src='img/img3.png' alt='img'>
-            <br> 
-            e futuri", 
-            "container-M mt-74 inline justify", 
-            ""
-        )
+            <img class='svg' src='img/find.svg' alt='find'>
+        </span>
+        <br> 
+        e futuri", 
+        "container-M mt-74 inline justify", 
+        ""
+    );
+    
     ?>
 
     <!-- OTHERS -->

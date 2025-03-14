@@ -14,3 +14,17 @@
         
     }
 }
+
+.img-wrapper {
+    position: absolute;
+    bottom: 0px;
+    right: clamp(15px, 77vw * @px2vw, 77px);
+
+    .svg{
+        position: absolute;
+        bottom: clamp(-10px, -25vw * @px2vw, -25px);
+        right: clamp(-10px, -25vw * @px2vw, -25px);
+        width: clamp(40px, 175vw * @px2vw, 175px);
+        height: auto;
+    }
+}

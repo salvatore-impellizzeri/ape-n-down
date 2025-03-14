@@ -46,16 +46,22 @@ const swiper_view = new Swiper('.swiper--view', {
 });
 
 const swiper_marquee = new Swiper('.swiper--marquee', {
-    spaceBetween: 120,
+    spaceBetween: 80,
     centeredSlides: true,
     initialSlide: 5,
-    speed: 6000,
+    speed: 2700,
     autoplay: {
       delay: 1,
       disableOnInteaction: false,
     },
     loop: true,
     slidesPerView: "auto",
+
+    breakpoints: {
+        1200: {
+            spaceBetween: 120,
+        }
+    }
 });
 
 // document.addEventListener("DOMContentLoaded", function () {

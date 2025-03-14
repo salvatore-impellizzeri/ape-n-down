@@ -77,6 +77,26 @@
             Sponsors("I nostri sostenitori:")
         ?>
 
+        <!-- <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/sponsor-1.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/sponsor-1.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/sponsor-1.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/sponsor-1.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/sponsor-1.png" alt="">
+                </div>
+            </div>
+        </div> -->
+
         <!-- SCELTO -->
         <div class="z-10 others__section">
             <p>

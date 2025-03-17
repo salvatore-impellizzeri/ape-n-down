@@ -5,11 +5,15 @@
     include 'components/person_card.php';
 ?>
 
-<main>
+<main class="home">
     <!-- TITLE -->
     <?php 
         Title(
-            "apen'down: un progetto <img class='square-s firstCard' src='img/project1.png' alt='img'> per l'inclusione <img class='square-s secondCard' src='img/img2.png' alt='img'> e l'opportunità", 
+            "<span class='opacity'>apen'down: un progetto</span> 
+            <img class='square-s firstCard' src='img/project1.png' alt='img'> 
+            <span class='opacity'>per l'inclusione</span> 
+            <img class='square-s secondCard' src='img/img2.png' alt='img'> 
+            <span class='opacity'>e l'opportunità</span>", 
             "container-L justify", 
             "text-shadow"
         )
@@ -52,19 +56,19 @@
 
     <!-- SECOND BIG TITLE -->
     <?php 
-        Title("scopri 
-        <img class='rectangle' src='img/img3.png' alt='img'>
-        i nostri eventi passati
-        <span class='img-wrapper'>
-            <img class='square-l' src='img/img3.png' alt='img'>
-            <img class='svg' src='img/find.svg' alt='find'>
-        </span>
-        <br> 
-        e futuri", 
-        "container-M mt-74 inline justify", 
-        ""
-    );
-    
+        Title(
+            "<span class='opacity'>scopri</span> 
+            <img class='rectangle' src='img/img3.png' alt='img'>
+            <span class='opacity'>i nostri eventi passati</span>
+            <span class='img-wrapper'>
+                <img class='square-l' src='img/img3.png' alt='img'>
+                <img class='svg' src='img/find.svg' alt='find'>
+            </span>
+            <br> 
+            <span class='opacity'>e futuri</span>", 
+            "container-M mt-74 inline justify", 
+            ""
+        );
     ?>
 
     <!-- OTHERS -->

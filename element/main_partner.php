@@ -3,7 +3,7 @@
     include 'components/project.php';
 ?>
 
-<main>
+<main class="partner">
     <!-- TITLE -->
     <?php 
         Title(

@@ -2,10 +2,10 @@
     include 'components/title.php';
     include 'components/card.php';
 ?>
-<main class="mb-180">
+<main class="mb-180 about">
     <?php 
         Title(
-            "parlano di noi..",
+            "<span>parlano di noi..</span>",
             "container-L center",
             ""
         ) 

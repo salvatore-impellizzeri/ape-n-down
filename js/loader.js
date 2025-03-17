@@ -95,3 +95,17 @@ window.addEventListener('load', function(){
 		loadSite();
 	}
 });
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".firstInfoCard", {
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".firstInfoCard",
+      start: "top 80%", 
+      end: "top 30%",
+      scrub: true,
+    }
+  });

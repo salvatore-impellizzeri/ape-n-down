@@ -26,7 +26,7 @@
                 "Cos'è?", 
                 "Apen'down è una cooperativa sociale che mira all'inserimento lavorativo, dapprima in ambito ristorazione e successivamente 
                 in altri settori di servizio, delle persone con disabilità.", 
-                "card--medium card--rotation-l card--darker",
+                "card--medium card--rotation-l card--darker firstInfoCard",
                 "",
                 "",
                 "",

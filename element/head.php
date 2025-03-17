@@ -19,6 +19,5 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/js/fancybox.js"></script>
     <script src="/js/loader.js" charset="utf-8"></script>
-
-
+    <script src="gsap/gsap.min.js"></script>
 </head>

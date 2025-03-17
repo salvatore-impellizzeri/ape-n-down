@@ -4,8 +4,7 @@
     align-items: center;
     flex-direction: column;
     max-height: calc(100vh - (180vw * @px2vw) - (18vw * @px2vw * 7));
-    margin-top: 180vw * @px2vw;
-    .p-0;
+    padding-top: clamp(100px, 120vw * @px2vw, 120px);
 }
 
 .menu__item{

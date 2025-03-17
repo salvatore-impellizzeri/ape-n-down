@@ -54,13 +54,28 @@
 
 @keyframes translateToTop {
     from {
-        transform: translateY(-50px);
+        transform: translateY(100px);
+        opacity: 0;
     }
     to {
         transform: translateY(0);
+        opacity: 1;
     }
 }
 
 .translateToTop{
-    animation: translateToTop 1s ease-out forwards;
+    animation: translateToTop 0.8s ease-in-out forwards;
+}
+
+@keyframes rounded {
+    from {
+        clip-path: ellipse(60% 90% at 50% 90%);  
+    }
+    to {
+        clip-path: ellipse(60% 50% at 50% 50%);
+    }
+}
+
+.vector {
+    animation: rounded 1s ease-in-out forwards;
 }

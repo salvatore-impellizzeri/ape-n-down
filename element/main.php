@@ -72,10 +72,10 @@
     ?>
 
     <!-- OTHERS -->
-    <section class="others">
+    <section class="others translateToTop">
         
         <!-- VECTOR -->
-        <div class="others__vector">
+        <div class="others__vector vector">
         </div>
 
         <?php

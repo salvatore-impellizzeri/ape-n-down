@@ -20,13 +20,13 @@
     ?>
 
     <!-- CARDS -->
-    <section class="container-L my-180">
+    <section class="container-L cardContainer my-180">
         <?php 
             Card(
                 "Cos'è?", 
                 "Apen'down è una cooperativa sociale che mira all'inserimento lavorativo, dapprima in ambito ristorazione e successivamente 
                 in altri settori di servizio, delle persone con disabilità.", 
-                "card--medium card--rotation-l card--darker firstInfoCard",
+                "card--medium card--rotation-l card--darker card-1",
                 "",
                 "",
                 "",
@@ -36,7 +36,7 @@
             Card(
                 "il progetto", 
                 "Il progetto Apen'Down vuole proporsi come possibilità di formazione e di occupazione lavorativa, credendo che l'occupazione lavorativa sia un percorso consigliabile e praticabile per le persone con disabilità e che sia altresì un diritto di tutti.", 
-                "card--larger card--lighter card--translate-1 z-10",
+                "card--larger card--lighter card--translate-1 z-10 card-2",
                 "",
                 "",
                 "",
@@ -46,7 +46,7 @@
             Card(
                 "l'obbiettivo", 
                 "Apen'down vuole costruire un futuro per tutti i giovani e adulti con disabilità attraverso l'integrazione lavorativa inizialmente con stand all'interno di Fiere ed eventi di Verona fino ad arrivare all'ambizioso progetto della gestione di un bar.", 
-                "card--medium card--rotation-r card--black card--translate-2 z-20",
+                "card--medium card--rotation-r card--black card--translate-2 z-20 card-3",
                 "",
                 "",
                 "",

@@ -96,16 +96,52 @@ window.addEventListener('load', function(){
 	}
 });
 
-gsap.registerPlugin(ScrollTrigger);
+document.addEventListener("DOMContentLoaded", function () {
+    gsap.registerPlugin(ScrollTrigger);
 
-gsap.from(".firstInfoCard", {
-    opacity: 0,
-    y: 50,
-    duration: 1,
-    scrollTrigger: {
-      trigger: ".firstInfoCard",
-      start: "top 80%", 
-      end: "top 30%",
-      scrub: true,
-    }
-  });
+    // Pin dell'intero container delle card
+    gsap.from(".cardContainer", {
+        scrollTrigger: {
+            trigger: ".cardContainer",
+            start: "top 15%", 
+            end: "bottom 70%",
+            pin: true,
+            pinSpacing: true,
+            scrub: 1, 
+        }
+    });
+
+    gsap.from(".card-1", {
+        y: 300,
+        scrollTrigger: {
+            trigger: ".card-1",
+            start: "top 100%",
+            end: "top 70%",
+            scrub: 1,
+        }
+    })
+
+    gsap.from(".card-2", {
+        y: 600,
+        scrollTrigger: {
+            trigger: ".card-2",
+            start: "top 85%",
+            end: "top 70%",
+            scrub: 1,
+        }    
+    })
+
+    // Timeline per le card
+    let tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".card-3",
+            start: "top 85%",
+            end: "top 70%",
+            scrub: 1,
+        }
+    });
+
+    tl.from(".card-3", { y: 400 });
+
+    tl.to(".card-2", { y: "-=115px" }, "<");
+});

@@ -4,7 +4,7 @@ const swiper = new Swiper('.swiper--home', {
     loop: true,              
     slidesPerView: 1.6,        
     centeredSlides: true,   
-    initialSlide: 1,    
+    initialSlide: 1,   
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',

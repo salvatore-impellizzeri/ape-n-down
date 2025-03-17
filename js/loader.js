@@ -99,49 +99,68 @@ window.addEventListener('load', function(){
 document.addEventListener("DOMContentLoaded", function () {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Pin dell'intero container delle card
-    gsap.from(".cardContainer", {
-        scrollTrigger: {
-            trigger: ".cardContainer",
-            start: "top 15%", 
-            end: "bottom 70%",
+    const cards = gsap.utils.toArray(".card");
+
+    cards.forEach((card, i) => {
+        ScrollTrigger.create({
+            trigger: card,
+            start: "top center",
+            end:"top bottom",
             pin: true,
-            pinSpacing: true,
-            scrub: 1, 
-        }
+            pinSpacing: false,
+            endTrigger: ".endy-trendy",
+            markers: true,
+            scrub: true,
+        })
+
+        gsap.from(card, {
+            yPercent: 50,
+            scrollTrigger: {
+                trigger: card,
+                start: "top bottom",
+                end: "top center",
+                scrub: 1,
+            }
+        })
     });
 
-    gsap.from(".card-1", {
-        y: 300,
-        scrollTrigger: {
-            trigger: ".card-1",
-            start: "top 100%",
-            end: "top 70%",
-            scrub: 1,
-        }
-    })
+    // Pin dell'intero container delle card
+    //  
+       
 
-    gsap.from(".card-2", {
-        y: 600,
-        scrollTrigger: {
-            trigger: ".card-2",
-            start: "top 85%",
-            end: "top 70%",
-            scrub: 1,
-        }    
-    })
+    // gsap.from(".card-1", {
+    //     y: 300,
+    //     scrollTrigger: {
+    //         trigger: ".card-1",
+    //         start: "top bottom",
+    //         end: "top bottom+=300",
+    //         scrub: 1,
+    //     }
+    // })
+
+    // gsap.from(".card-2", {
+    //     y: 600,
+    //     scrollTrigger: {
+    //         trigger: ".card-2",
+    //         start: "top bottom+=200",
+    //         end: "top bottom+=100",
+    //         scrub: 1,
+    //         markers: true,
+    //     }    
+    // })
+    
+    // gsap.from(".card-3", { y: 400 });
 
     // Timeline per le card
-    let tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".card-3",
-            start: "top 85%",
-            end: "top 70%",
-            scrub: 1,
-        }
-    });
+    // let tl = gsap.timeline({
+    //     scrollTrigger: {
+    //         trigger: ".card-3",
+    //         start: "top bottom+=250",
+    //         end: "top bottom+=100",
+    //         scrub: 1,
+    //     }
+    // });
 
-    tl.from(".card-3", { y: 400 });
 
-    tl.to(".card-2", { y: "-=115px" }, "<");
+    // tl.to(".card-2", { y: "-=115px" }, "<");
 });

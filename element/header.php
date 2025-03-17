@@ -1,10 +1,10 @@
 <?php
-    $extraClass = $extraClass ?? '';
+    include 'components/menu.php';
 ?>
 
 <header class="header z-100 fadeInFromTop">
-    <button>
-        <a href="/menu.php">
+    <button class="menu-toggle">
+        <a>
             <?= file_get_contents('img/icons/menu.svg') ?>
             <span>
                 Menu

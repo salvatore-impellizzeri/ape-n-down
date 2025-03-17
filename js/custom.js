@@ -63,6 +63,14 @@ const swiper_marquee = new Swiper('.swiper--marquee', {
         }
     }
 });
+document.addEventListener("DOMContentLoaded", function (){
+    const menu = document.querySelector(".menu-container");
+    const menuToggle = document.querySelector(".menu-toggle");
+
+    menuToggle.addEventListener('click', function () {
+        menu.classList.toggle('open');
+    });
+})
 
 // document.addEventListener("DOMContentLoaded", function () {
 //     const header = document.querySelector(".header");

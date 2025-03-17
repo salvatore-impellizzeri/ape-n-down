@@ -1,10 +1,18 @@
 .menu-container {
-    display: flex;
+    display: none;
+    position: fixed;
+    top: -100%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     max-height: calc(100vh - (180vw * @px2vw) - (18vw * @px2vw * 7));
     padding-top: clamp(100px, 120vw * @px2vw, 120px);
+    transition: all 0.3s ease-in-out;
+}
+
+.menu.open {
+    display: flex;
+    transform: translateX(0);
 }
 
 .menu__item{

@@ -1,8 +1,9 @@
 <?php 
-    include 'components/menu_item.php'
+    include 'components/menu_item.php';
+    function menu(){
 ?>
 
-<main class="menu-container">
+<div class="menu-container">
     <?php 
         Menu_item(
             "home",
@@ -52,4 +53,8 @@
             "#"
         )
     ?>
-</main>
+</div>
+
+<?php 
+    }
+?>

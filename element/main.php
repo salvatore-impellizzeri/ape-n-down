@@ -59,7 +59,7 @@
             )
         ?> 
 
-        <div class="endy-trendy" style="display:block; width:100%; height:1px;"></div>
+        <div class="endy-trendy" style="display:block; width:100%; height:500px;"></div>
     </section>
 
     <!-- SECOND BIG TITLE -->

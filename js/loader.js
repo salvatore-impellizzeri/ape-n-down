@@ -96,38 +96,43 @@ window.addEventListener('load', function(){
 	}
 });
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     gsap.registerPlugin(ScrollTrigger);
+document.addEventListener("DOMContentLoaded", function () {
+    gsap.registerPlugin(ScrollTrigger);
 
-//     const cards = gsap.utils.toArray(".card");
+    const cards = gsap.utils.toArray(".card");
 
-//     cards.forEach((card, i) => {
-//         ScrollTrigger.create({
-//             trigger: card,
-//             start: "top center",
-//             end:"top bottom",
-//             pin: true,
-//             pinSpacing: false,
-//             endTrigger: ".endy-trendy",
-//             markers: true,
-//             scrub: true,
-//         })
+    cards.forEach((card, i) => {
+        let startOffset = 200; 
 
-//         gsap.from(card, {
-//             yPercent: 50,
-//             scrollTrigger: {
-//                 trigger: card,
-//                 start: "top bottom",
-//                 end: "top center",
-//                 scrub: 1,
-//             }
-//         })
-//     });
+        if (i === 1) startOffset += 115;
+        if (i === 2) startOffset += 200; 
 
+        ScrollTrigger.create({
+            trigger: card,
+            start: `top top+=${startOffset - 50}`,
+            end: `bottom+=500 bottom`,
+            pin: true,
+            endTrigger: ".endy-trendy",
+            markers: true,
+            scrub: true,
+        });
+
+        gsap.from(card, {
+            yPercent: (100 * i),
+            scrollTrigger: {
+                trigger: card,
+                start: `top bottom-=${startOffset - 50}`,
+                end: "top center",
+                scrub: 1,
+            }
+        });
+    });
+});
+
+    
     // Pin dell'intero container delle card
     //  
        
-
     // gsap.from(".card-1", {
     //     y: 300,
     //     scrollTrigger: {
@@ -163,4 +168,3 @@ window.addEventListener('load', function(){
 
 
     // tl.to(".card-2", { y: "-=115px" }, "<");
-// });

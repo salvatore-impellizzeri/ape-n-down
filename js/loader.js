@@ -113,12 +113,12 @@ document.addEventListener("DOMContentLoaded", function () {
             end: `bottom+=500 bottom`,
             pin: true,
             endTrigger: ".endy-trendy",
-            markers: true,
             scrub: true,
         });
 
         gsap.from(card, {
-            yPercent: (100 * i),
+            yPercent: 100,
+            ease: "power1.inOut",
             scrollTrigger: {
                 trigger: card,
                 start: `top bottom-=${startOffset - 50}`,

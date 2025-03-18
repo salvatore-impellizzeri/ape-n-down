@@ -22,6 +22,7 @@
         display: flex;
         flex-direction: column;
         gap: 242vw * @px2vw;
+        flex-grow: 1;
 
         .footer__upper{
             display: flex;
@@ -87,12 +88,13 @@
             flex-wrap: nowrap;
             justify-content: space-between;
             align-items: center;
+            margin-top: auto;
 
             p{
                 color: @yellow;
                 margin: 0;
                 line-height: 0.01em;
-                font-size: clamp(6px, 12vw * @px2vw, 25px);
+                font-size: clamp(5px, 12vw * @px2vw, 25px);
             }
         }
     }

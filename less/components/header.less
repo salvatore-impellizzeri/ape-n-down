@@ -5,9 +5,11 @@
     width: 100vw;
     height: clamp(100px, 120vw * @px2vw, 120px);
     display: grid;
+    z-index: 20;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     padding: clamp(12px, 25vw * @px2vw, 25px) clamp(10px, 80vw * @px2vw, 80px);
+    transition: opacity 0.3s ease-in-out;
 
         &__logo {
             display: flex;

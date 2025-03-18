@@ -14,15 +14,17 @@
     <?php 
         Title(
             "<span class='opacity'>apen'down: un progetto</span> 
-            <img class='square-s hover-image firstCard' src='img/project1.png' alt='img'> 
+            <img class='square-s firstCard expandable-image' src='img/project1.png' alt='img'> 
             <span class='opacity'>per l'inclusione</span> 
-            <img class='square-s hover-image secondCard' src='img/img2.png' alt='img'> 
+            <img class='square-s secondCard expandable-image' src='img/img2.png' alt='img'> 
             <span class='opacity'>e l'opportunità</span>", 
             "container-L justify", 
             "text-shadow"
         )
     ?>
 
+    <div class="overlay-img"></div>
+ 
     <!-- CARDS -->
     <section class="container-L cardContainer my-180">
         <?php 
@@ -40,7 +42,7 @@
             Card(
                 "il progetto", 
                 "Il progetto Apen'Down vuole proporsi come possibilità di formazione e di occupazione lavorativa, credendo che l'occupazione lavorativa sia un percorso consigliabile e praticabile per le persone con disabilità e che sia altresì un diritto di tutti.", 
-                "card--larger card--lighter card--translate-1 z-10 card",
+                "card--larger card--lighter card--translate-1 z-2 card",
                 "",
                 "",
                 "",
@@ -50,7 +52,7 @@
             Card(
                 "l'obbiettivo", 
                 "Apen'down vuole costruire un futuro per tutti i giovani e adulti con disabilità attraverso l'integrazione lavorativa inizialmente con stand all'interno di Fiere ed eventi di Verona fino ad arrivare all'ambizioso progetto della gestione di un bar.", 
-                "card--medium card--rotation-r card--black card--translate-2 z-20 card",
+                "card--medium card--rotation-r card--black card--translate-2 z-3 card",
                 "",
                 "",
                 "",

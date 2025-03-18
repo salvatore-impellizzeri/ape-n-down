@@ -103,6 +103,27 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// IMAGE EXPANDS
+
+document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll(".expandable-image");
+    const overlay = document.querySelector(".overlay-img");
+    const body = document.body;
+
+    images.forEach(image => {
+        image.addEventListener("click", function () {
+            image.classList.toggle('active-img');
+            if(image.classList.contains('active-img')) {
+                overlay.style.opacity = "1";
+                body.style.overflow = "hidden"; 
+            } else {
+                overlay.style.opacity = "0";
+                body.style.overflow = "auto"; 
+            }
+        });
+    })
+})
+
 // document.addEventListener("DOMContentLoaded", function () {
 //     const header = document.querySelector(".header");
 //     const footer = document.querySelector(".footer");

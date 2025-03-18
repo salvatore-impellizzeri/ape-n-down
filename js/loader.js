@@ -96,33 +96,33 @@ window.addEventListener('load', function(){
 	}
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    gsap.registerPlugin(ScrollTrigger);
+// document.addEventListener("DOMContentLoaded", function () {
+//     gsap.registerPlugin(ScrollTrigger);
 
-    const cards = gsap.utils.toArray(".card");
+//     const cards = gsap.utils.toArray(".card");
 
-    cards.forEach((card, i) => {
-        ScrollTrigger.create({
-            trigger: card,
-            start: "top center",
-            end:"top bottom",
-            pin: true,
-            pinSpacing: false,
-            endTrigger: ".endy-trendy",
-            markers: true,
-            scrub: true,
-        })
+//     cards.forEach((card, i) => {
+//         ScrollTrigger.create({
+//             trigger: card,
+//             start: "top center",
+//             end:"top bottom",
+//             pin: true,
+//             pinSpacing: false,
+//             endTrigger: ".endy-trendy",
+//             markers: true,
+//             scrub: true,
+//         })
 
-        gsap.from(card, {
-            yPercent: 50,
-            scrollTrigger: {
-                trigger: card,
-                start: "top bottom",
-                end: "top center",
-                scrub: 1,
-            }
-        })
-    });
+//         gsap.from(card, {
+//             yPercent: 50,
+//             scrollTrigger: {
+//                 trigger: card,
+//                 start: "top bottom",
+//                 end: "top center",
+//                 scrub: 1,
+//             }
+//         })
+//     });
 
     // Pin dell'intero container delle card
     //  
@@ -163,4 +163,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // tl.to(".card-2", { y: "-=115px" }, "<");
-});
+// });

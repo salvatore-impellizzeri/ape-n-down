@@ -3,16 +3,20 @@
     include 'components/card.php';
     include 'components/sponsors.php';
     include 'components/person_card.php';
+    include 'components/cursor.php';
 ?>
 
 <main class="home">
+    <!-- CURSOR HOVER -->
+    <?php cursor() ?>
+
     <!-- TITLE -->
     <?php 
         Title(
             "<span class='opacity'>apen'down: un progetto</span> 
-            <img class='square-s firstCard' src='img/project1.png' alt='img'> 
+            <img class='square-s hover-image firstCard' src='img/project1.png' alt='img'> 
             <span class='opacity'>per l'inclusione</span> 
-            <img class='square-s secondCard' src='img/img2.png' alt='img'> 
+            <img class='square-s hover-image secondCard' src='img/img2.png' alt='img'> 
             <span class='opacity'>e l'opportunità</span>", 
             "container-L justify", 
             "text-shadow"
@@ -60,10 +64,10 @@
     <?php 
         Title(
             "<span class='opacity'>scopri</span> 
-            <img class='rectangle' src='img/img3.png' alt='img'>
+            <img class='rectangle hover-image' src='img/img3.png' alt='img'>
             <span class='opacity'>i nostri eventi passati</span>
             <span class='img-wrapper'>
-                <img class='square-l' src='img/img3.png' alt='img'>
+                <img class='square-l hover-image' src='img/img3.png' alt='img'>
                 <img class='svg' src='img/find.svg' alt='find'>
             </span>
             <br> 
@@ -131,5 +135,4 @@
             </div>
         </div>
     </section>
-    
 </main>

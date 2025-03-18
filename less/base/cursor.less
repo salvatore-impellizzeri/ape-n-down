@@ -1,0 +1,16 @@
+.cursor-hover {
+    background-color: black;
+    position: absolute;
+    z-index: 50;
+    line-height: 100%;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    font-size: 21.6vw * @px2vw;
+    color: white;
+    border-radius: 14.4vw * @px2vw;
+    padding: 9.6vw * @px2vw 19.2vw * @px2vw;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    will-change: transform;
+}

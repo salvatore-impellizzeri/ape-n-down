@@ -1,9 +1,8 @@
 <?php 
-    include 'components/menu_item.php';
-    function menu(){
+    function Menu(){
 ?>
 
-<div class="menu-container">
+<div id="menu" class="menu-container">
     <?php 
         Menu_item(
             "home",

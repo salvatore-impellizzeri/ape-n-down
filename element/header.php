@@ -1,5 +1,6 @@
 <?php
     include 'components/menu.php';
+    include 'components/menu_item.php';
 ?>
 
 <header class="header z-100 fadeInFromTop">
@@ -24,5 +25,5 @@
             </span>
         </a>
     </button>
-
 </header>
+<?php Menu() ?>

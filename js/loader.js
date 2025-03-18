@@ -104,16 +104,17 @@ document.addEventListener("DOMContentLoaded", function () {
     cards.forEach((card, i) => {
         let startOffset = 200; 
 
-        if (i === 1) startOffset += 115;
-        if (i === 2) startOffset += 200; 
+        // if (i === 1) startOffset += 115;
+        // if (i === 2) startOffset += 200; 
 
         ScrollTrigger.create({
             trigger: card,
-            start: `top top+=${startOffset - 50}`,
-            end: `bottom+=500 bottom`,
+            start: `top-=${i * 90} top+=200`,
+            end: `bottom+=500 bottom-=100`,
             pin: true,
             endTrigger: ".endy-trendy",
             scrub: true,
+            markers: true
         });
 
         gsap.from(card, {
@@ -121,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
             ease: "power1.inOut",
             scrollTrigger: {
                 trigger: card,
-                start: `top bottom-=${startOffset - 50}`,
+                start: `top bottom-=${startOffset}`,
                 end: "top center",
                 scrub: 1,
             }

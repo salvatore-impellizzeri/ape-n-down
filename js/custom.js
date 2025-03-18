@@ -86,10 +86,14 @@ document.addEventListener("DOMContentLoaded", function (){
 document.addEventListener("DOMContentLoaded", function () {
     const box = document.querySelector(".cursor-hover");
     const images = document.querySelectorAll(".hover-image");
+    const texts = document.querySelectorAll('.text-hover');
 
     images.forEach(image => {
         image.addEventListener("mouseenter", function () {
             box.style.opacity = "1"; 
+            texts.forEach(text => {
+                text.style.setProperty('opacity', '0.5', 'important');
+            });
         });
 
         image.addEventListener("mousemove", function (e) {
@@ -99,6 +103,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         image.addEventListener("mouseleave", function () {
             box.style.opacity = "0"; 
+            texts.forEach(text => {
+                text.style.setProperty('opacity', '1', 'important');
+            });
         });
     });
 });

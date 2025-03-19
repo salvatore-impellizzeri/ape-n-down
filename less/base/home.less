@@ -52,15 +52,17 @@
     height: clamp(100px, 243vw * @px2vw, 243px);
     width: clamp(200px, 400vw * @px2vw, 400px);
     border-radius: clamp(20px, 40vw * @px2vw, 40px);
-    object-fit: cover;
     display: inline-block;
 }
 
 .square-l{
-    border-radius: clamp(20px, 40vw * @px2vw, 40px);
     height: clamp(60px, 332vw * @px2vw, 332px);
     width: clamp(80px, 400vw * @px2vw, 400px);
-    object-fit: cover;
+    border-radius: clamp(20px, 40vw * @px2vw, 40px);
+
+    img:first-of-type {
+        border-radius: clamp(20px, 40vw * @px2vw, 40px);
+    }
 }
 
 .text-img-container{

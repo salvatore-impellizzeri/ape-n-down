@@ -89,11 +89,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const texts = document.querySelectorAll('.text-hover');
 
     images.forEach(image => {
+        const svg = image.querySelector(".svg");
+
         image.addEventListener("mouseenter", function () {
             box.style.opacity = "1"; 
             texts.forEach(text => {
                 text.style.setProperty('opacity', '0.5', 'important');
             });
+            
+            if (svg) {
+                svg.classList.remove("zoomOut");  
+                svg.classList.add("zoomIn");    
+            }
         });
 
         image.addEventListener("mousemove", function (e) {
@@ -106,9 +113,15 @@ document.addEventListener("DOMContentLoaded", function () {
             texts.forEach(text => {
                 text.style.setProperty('opacity', '1', 'important');
             });
+
+            if (svg) {
+                svg.classList.remove("zoomIn");  
+                svg.classList.add("zoomOut");   
+            }
         });
     });
 });
+
 
 // IMAGE EXPANDS
 
@@ -149,6 +162,14 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+
+
+
+
+
+
+
 
 
 

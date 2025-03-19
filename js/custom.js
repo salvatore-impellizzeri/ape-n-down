@@ -135,11 +135,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     const header = document.querySelector(".header");
+    const menuToggle = document.querySelector(".menu-toggle");
 
-    if (window.location.pathname.includes("contacts")) {
-        header.classList.add("invert-colors");
+    function updateHeaderColor() {
+        if (window.location.pathname.includes("contacts")) {
+            header.classList.add("invert-colors");
+        }
     }
+
+    updateHeaderColor();
+
+    menuToggle.addEventListener("click", function () {
+        header.classList.toggle("invert-colors");
+    }); 
 });
+
 
 
 Fancybox.bind("[data-fancybox]", {

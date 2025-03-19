@@ -56,6 +56,8 @@ const swiper_marquee = new Swiper('.swiper--marquee', {
     },
     loop: true,
     slidesPerView: "auto",
+    allowTouchMove: false,
+    touchMoveStopPropagation: false,
 
     breakpoints: {
         1200: {

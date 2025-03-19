@@ -2,10 +2,8 @@ class ObserverAnimation {
     constructor(el) {
         // Elements
         this.$el = el;
-        this.isInView = true;
-        this.positionClass = 'is-out is-out--down';
-        this.observer = null;
-
+        this.isInView = false;
+        this.positionClass = 'is-out'; // Elemento fuori dalla vista inizialmente
         this.currClass = this.$el.className;
 
         this.attachEvents();
@@ -13,93 +11,60 @@ class ObserverAnimation {
 
     visibilityChanged(isVisible, entry) {
         this.isInView = isVisible;
-    
+
+        // Se l'elemento è visibile nella viewport, aggiungi la classe 'is-in' (entrata)
         if (this.isInView && entry.intersectionRatio > 0) {
             this.positionClass = 'is-in';
         } else {
+            // Se l'elemento non è visibile, applica la classe di uscita
             if (entry.boundingClientRect.y < 0) {
-                this.positionClass = 'is-out is-out--up';
+                this.positionClass = 'slideOutUp'; // Animazione di uscita verso l'alto
             } else {
-                this.positionClass = 'is-out is-out--down';
+                this.positionClass = 'slideOutDown'; // Animazione di uscita verso il basso
             }
         }
 
         return this.positionClass;
     }
-    
 
     observerScroll() {
         // IntersectionObserver Supported
-        let options = {};
-
-        options = {
-            root: null,
-			rootMargin: "0px",
-			threshold: 0.1
+        let options = {
+            root: null, // Usando il viewport come root
+            rootMargin: "0px", // Nessun margine
+            threshold: 0.1 // Attiva l'osservazione quando il 10% dell'elemento è visibile
         };
 
-        // Create new IntersectionObserver
+        // Crea il nuovo IntersectionObserver
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
-
                 let posClass = this.visibilityChanged(entry.isIntersecting, entry);
-
+                // Modifica la classe dell'elemento in base alla visibilità
                 this.$el.className = this.currClass + ' ' + posClass;
-
             });
         }, options);
 
-        // Start observing
-        observer.observe(this.$el)
-
+        // Inizia a osservare l'elemento
+        observer.observe(this.$el);
     }
 
     attachEvents() {
-
         this.observerScroll();
     }
-
 }
 
-var initObserver = function() {
-    boxElements = document.querySelectorAll('[data-animated]');
-    boxElements.forEach((el, i) => {
-        new ObserverAnimation(el);
-    });
-}
-
-var initScroll = function() {
-    //classe aggiuntiva scroll
-    $(document).on('scroll', () => {
-        $('body').toggleClass('body--scroll', $(document).scrollTop() > 0);
-    });
-}
-
-
-var start = new Date().getTime(),
-	boxElements = null,
-	observer = null,
-
-	loadSite = function(){
-
-		document.querySelector('body').classList.add('loading-done');
-
-        initObserver();
-        initScroll();
-	};
-
-window.addEventListener('load', function(){
-	if((new Date().getTime() - start ) < 2000){
-	 	window.setTimeout(loadSite, 2000 - (new Date().getTime() - start ));
-	} else {
-		loadSite();
-	}
+// Applica il comportamento di animazione agli elementi
+document.querySelectorAll('.animatable').forEach((el) => {
+    new ObserverAnimation(el);
 });
+
+
+// CARDS GSAP
 
 document.addEventListener("DOMContentLoaded", function () {
     gsap.registerPlugin(ScrollTrigger);
 
-    const cards = gsap.utils.toArray(".card");
+    const cards = gsap.utils.toArray(".card-gsap");
 
     cards.forEach((card, i) => {
         let startOffset = 200; 

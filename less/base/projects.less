@@ -1,10 +1,11 @@
 .projects {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 59vw * @px2vw;
+    column-gap: clamp(20px, 62vw * @px2vw, 59px);
     row-gap: clamp(50px, 99vw * @px2vw, 99px);
     margin-top: 80vw * @px2vw;
     margin-bottom: clamp(50px, 147vw * @px2vw, 147px);
+    align-items: start !important;
 
     @media (max-width: @tablet-s) {
         grid-template-columns: 1fr;
@@ -14,7 +15,7 @@
         display: flex;
         flex-direction: column;
         text-align: left;
-        gap: clamp(20px, 58vw * @px2vw, 58px);
+        gap: clamp(15px, 28vw * @px2vw, 28px);  
 
         .projects__single-projects__img{
             position: relative;
@@ -49,15 +50,14 @@
 
     & p:first-of-type{
         font-size: clamp(14px, 18vw * @px2vw, 18px);
-        font-weight: 500;
     }
 
     & p:last-of-type{
         font-size: clamp(40px, 55vw * @px2vw, 55px);
-        font-weight: 500;
     }
 
     p{
+        font-weight: 500;
         .m-0;
     }
 }

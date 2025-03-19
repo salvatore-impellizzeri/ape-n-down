@@ -137,17 +137,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const header = document.querySelector(".header");
     const menuToggle = document.querySelector(".menu-toggle");
 
-    function updateHeaderColor() {
-        if (window.location.pathname.includes("contacts")) {
-            header.classList.add("invert-colors");
+    if (window.location.pathname.includes("contacts")) {
+        function updateHeaderColor() {
+            header.classList.add("invert-colors");  
         }
+
+        updateHeaderColor(); 
+
+        menuToggle.addEventListener("click", function () {
+            header.classList.toggle("invert-colors"); 
+        });
     }
-
-    updateHeaderColor();
-
-    menuToggle.addEventListener("click", function () {
-        header.classList.toggle("invert-colors");
-    }); 
 });
 
 

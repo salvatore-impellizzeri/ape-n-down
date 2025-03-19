@@ -66,14 +66,14 @@
     <?php 
         Title(
             "<span class='opacity text-hover'>scopri</span> 
-            <span class=''>
+            <a href='/progetti.php'>
                 <img class='rectangle hover-image' src='img/img3.png' alt='img'>
-            </span>    
+            </a>    
             <span class='opacity text-hover'>i nostri eventi passati</span>
-            <span class='img-wrapper'>
+            <a href='/progetti.php' class='img-wrapper'>
                 <img class='square-l hover-image' src='img/img3.png' alt='img'>
                 <img class='svg' src='img/find.svg' alt='find'>
-            </span>
+            </a>
             <br> 
             <span class='opacity text-hover'>e futuri</span>", 
             "container-M mt-74 inline justify", 

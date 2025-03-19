@@ -115,7 +115,6 @@ document.addEventListener("DOMContentLoaded", function () {
             pin: true,
             endTrigger: ".endy-trendy",
             scrub: true,
-            markers: true
         });
 
         gsap.from(card, {

@@ -16,7 +16,7 @@ const swiper = new Swiper('.swiper--home', {
 
         700: {
             slidesPerView: 3,
-        }
+        },
     }
 });
 
@@ -117,28 +117,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
-// IMAGE EXPANDS
-
-document.addEventListener("DOMContentLoaded", function () {
-    const images = document.querySelectorAll(".expandable-image");
-    const overlay = document.querySelector(".overlay-img");
-    const body = document.body;
-
-    images.forEach(image => {
-        image.addEventListener("click", function () {
-            image.classList.toggle('active-img');
-            if(image.classList.contains('active-img')) {
-                overlay.style.opacity = "1";
-                body.style.overflow = "hidden"; 
-            } else {
-                overlay.style.opacity = "0";
-                body.style.overflow = "auto"; 
-            }
-        });
-    })
-})
-
 // CONTACTS HEADER
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -158,7 +136,46 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// IMAGE ANIMATION GSAP
+// IMAGE FIRST TITLE
+
+document.addEventListener("DOMContentLoaded", function () {
+    gsap.registerPlugin(Flip);
+
+    const image = document.querySelector(".img-expands");
+    const container2 = document.querySelector(".overlay-img");
+
+    let hasScrolled = false;
+
+    // Funzione che si attiva quando si scrolla
+    function onScroll() {
+        if (!hasScrolled) {
+
+            const state = Flip.getState(image);
+
+            container2.appendChild(image);
+
+            Flip.from(state, {
+                duration: 0.5,
+                ease: "power2.inOut",
+                scale: true,
+                absolute: true
+            })
+
+            gsap.to(".overlay-img", {
+                opacity: 1,
+                ease: "power2.inOut",
+                delay: 0.3
+            })
+
+            hasScrolled = true;
+        }
+    }
+
+    window.addEventListener("scroll", onScroll);
+});
+
+
+// IMAGE ANIMATION EVENTS GSAP
 
 document.addEventListener("DOMContentLoaded", function() {
     gsap.from(".img-wrapper-1", {
@@ -170,14 +187,14 @@ document.addEventListener("DOMContentLoaded", function() {
         width: 400,
         duration: 0.5,
         ease: "power2.inOut",
-        delay: 0.5  
+        delay: 1 
     });
 
     gsap.from(".img-wrapper-1 img:first-of-type", {
         borderRadius: 20,
         duration: 0.5,
         ease: "power2.inOut",
-        delay: 0.5  
+        delay: 1 
     });
 
     gsap.from(".img-wrapper-2", {
@@ -189,21 +206,21 @@ document.addEventListener("DOMContentLoaded", function() {
         width: 350,
         duration: 0.5,
         ease: "power2.inOut",
-        delay: 0.5  
+        delay: 1 
     });
 
     gsap.from(".img-wrapper-2 img:first-of-type", {
         borderRadius: 20,
         duration: 0.5,
         ease: "power2.inOut",
-        delay: 0.5  
+        delay: 1 
     });
 
     gsap.from(".text-hover", {
         opacity: 0,
         duration: 1,
         ease: "power2.inOut",
-        delay: 0.5
+        delay: 1
     });
 
     const hoverImages = document.querySelectorAll('.hover-image');

@@ -14,16 +14,21 @@
     <?php 
         Title(
             "<span class='opacity'>apen'down: un progetto</span> 
-            <img class='square-s firstCard expandable-image' src='img/project1.png' alt='img'> 
+            <span class='square-s container-title-img'>
+                <img class='firstCard' src='img/project1.png' alt='img'> 
+                <img class='firstCard square-s img-expands' src='img/project1.png' alt='img'> 
+            </span>
             <span class='opacity'>per l'inclusione</span> 
-            <img class='square-s secondCard expandable-image' src='img/img2.png' alt='img'> 
+            <img class='square-s secondCard' src='img/img2.png' alt='img'> 
             <span class='opacity'>e l'opportunità</span>", 
             "container-L justify", 
             "text-shadow"
         )
     ?>
 
-    <div class="overlay-img"></div>
+    <div class="overlay-img">
+
+    </div>
  
     <!-- CARDS -->
     <section class="container-L cardContainer my-180">

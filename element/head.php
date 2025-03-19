@@ -19,5 +19,6 @@
     <script src="/js/fancybox.js"></script>
     <script src="/js/loader.js" charset="utf-8"></script>
     <script src="js/gsap/gsap.min.js"></script>
+    <script src="js/gsap/Flip.min.js"></script>
     <script src="js/gsap/ScrollTrigger.min.js"></script>
 </head>

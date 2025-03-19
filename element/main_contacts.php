@@ -15,7 +15,7 @@
 
             <!-- SOCIALS & INFO -->
             <div class="footer__upper__socials">
-                <a href="#">
+                <a href="#"> 
                     <button class="button--icon">
                         <?= file_get_contents('img/socials/instagram.svg') ?>
                     </button>

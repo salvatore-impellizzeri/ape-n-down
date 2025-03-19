@@ -74,14 +74,18 @@
         }
 
         &.invert-colors {
-            background-color: transparent !important;
+            background-color: transparent;
+
+            .menu-toggle svg {
+                fill: @black; 
+            }
 
             .header__logo svg path {
-                fill: @bg-color !important; 
+                fill: @bg-color; 
             }
 
             button {
-                background-color: @bg-light-yellow !important; 
+                background-color: @bg-light-yellow; 
 
                 a {
                     color: @black;

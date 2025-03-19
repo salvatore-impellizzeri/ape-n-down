@@ -131,25 +131,15 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 })
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     const header = document.querySelector(".header");
-//     const footer = document.querySelector(".footer");
+// CONTACTS HEADER
 
-//     const observer = new IntersectionObserver(
-//         ([entry]) => {
-//             if (entry.boundingClientRect.top <= 60) {
-//                 header.classList.add("invert-colors");
-//             } else {
-//                 header.classList.remove("invert-colors");
-//             }
-//         },
-//         {
-//             rootMargin: "-60px 0px 0px 0px",
-//         }
-//     );
+document.addEventListener("DOMContentLoaded", function () {
+    const header = document.querySelector(".header");
 
-//     observer.observe(footer);
-// });
+    if (window.location.pathname.includes("contacts")) {
+        header.classList.add("invert-colors");
+    }
+});
 
 
 Fancybox.bind("[data-fancybox]", {

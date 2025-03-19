@@ -88,16 +88,12 @@ document.addEventListener("DOMContentLoaded", function (){
 document.addEventListener("DOMContentLoaded", function () {
     const box = document.querySelector(".cursor-hover");
     const images = document.querySelectorAll(".hover-image");
-    const texts = document.querySelectorAll('.text-hover');
 
     images.forEach(image => {
         const svg = image.querySelector(".svg");
 
         image.addEventListener("mouseenter", function () {
             box.style.opacity = "1"; 
-            texts.forEach(text => {
-                text.style.setProperty('opacity', '0.5', 'important');
-            });
             
             if (svg) {
                 svg.classList.remove("zoomOut");  
@@ -112,9 +108,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         image.addEventListener("mouseleave", function () {
             box.style.opacity = "0"; 
-            texts.forEach(text => {
-                text.style.setProperty('opacity', '1', 'important');
-            });
 
             if (svg) {
                 svg.classList.remove("zoomIn");  
@@ -165,8 +158,73 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+// IMAGE ANIMATION GSAP
 
+document.addEventListener("DOMContentLoaded", function() {
+    gsap.from(".img-wrapper-1", {
+        x: -570,   
+        y: 100,  
+        rotate: -2, 
+        scale: 2,
+        height: 300,
+        width: 400,
+        duration: 0.5,
+        ease: "power2.inOut",
+        delay: 0.5  
+    });
 
+    gsap.from(".img-wrapper-1 img:first-of-type", {
+        borderRadius: 20,
+        duration: 0.5,
+        ease: "power2.inOut",
+        delay: 0.5  
+    });
+
+    gsap.from(".img-wrapper-2", {
+        x: -250,   
+        y: -200,  
+        rotate: 2, 
+        scale: 2,
+        height: 300,
+        width: 350,
+        duration: 0.5,
+        ease: "power2.inOut",
+        delay: 0.5  
+    });
+
+    gsap.from(".img-wrapper-2 img:first-of-type", {
+        borderRadius: 20,
+        duration: 0.5,
+        ease: "power2.inOut",
+        delay: 0.5  
+    });
+
+    gsap.from(".text-hover", {
+        opacity: 0,
+        duration: 1,
+        ease: "power2.inOut",
+        delay: 0.5
+    });
+
+    const hoverImages = document.querySelectorAll('.hover-image');
+    hoverImages.forEach(hoverImage => {
+        hoverImage.addEventListener('mouseenter', function() {
+            gsap.to('.text-hover', {
+                opacity: 0.5,
+                duration: 0.3,
+                ease: "power2.inOut"
+            });
+        });
+    
+        hoverImage.addEventListener('mouseleave', function() {
+            gsap.to('.text-hover', {
+                opacity: 1,
+                duration: 0.3,
+                ease: "power2.inOut"
+            });
+        });
+    });
+});
 
 
 

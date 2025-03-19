@@ -16,6 +16,7 @@
 
 .img-wrapper-1{
     position: relative;
+    .z-2;
 
     img:first-of-type {
         width: 100%;
@@ -33,6 +34,7 @@
 }
 
 .img-wrapper-2 {
+    .z-3;
     position: absolute;
     bottom: 0px;
     right: clamp(15px, 77vw * @px2vw, 77px);
@@ -102,9 +104,4 @@
 
 body.no-scroll {
     overflow: hidden; 
-}
-
-.text-hover{
-    opacity: 1;
-    transition: all 0.3s ease-in-out;
 }

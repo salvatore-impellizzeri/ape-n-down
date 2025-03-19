@@ -65,18 +65,18 @@
     <!-- SECOND BIG TITLE -->
     <?php 
         Title(
-            "<span class='opacity text-hover'>scopri</span> 
+            "<span class='text-hover'>scopri</span> 
             <a href='/progetti.php' class='rectangle hover-image img-wrapper-1'>
                 <img src='img/img3.png' alt='img'>
                 <img class='svg' src='img/find.svg' alt='find'>
             </a>    
-            <span class='opacity text-hover'>i nostri eventi passati</span>
+            <span class='text-hover'>i nostri eventi passati</span>
             <a href='/progetti.php' class='square-l hover-image img-wrapper-2'>
                 <img src='img/img3.png' alt='img'>
                 <img class='svg' src='img/find.svg' alt='find'>
             </a>
             <br> 
-            <span class='opacity text-hover'>e futuri</span>", 
+            <span class='text-hover'>e futuri</span>", 
             "container-M mt-74 inline justify", 
             ""
         );

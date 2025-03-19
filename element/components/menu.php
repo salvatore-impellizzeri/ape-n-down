@@ -49,7 +49,7 @@
         Menu_item(
             "contatti",
             "menu__item--r",
-            "#"
+            "/contacts.php"
         )
     ?>
 </div>

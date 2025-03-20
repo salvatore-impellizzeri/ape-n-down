@@ -162,8 +162,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const state = Flip.getState(image);
 
-            image.style.width = "100%";
-            image.style.height = "100%";
+            image.style.setProperty("width", "100%", "important");
+            image.style.setProperty("height", "100%", "important");
+
+            if (window.innerWidth > 1920) {
+                image.style.maxWidth = "1920px";
+                image.style.display = "block";
+                image.style.margin = "auto";
+            }
 
             container2.appendChild(image);
 
@@ -195,8 +201,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Aggiungi l'evento di scroll
     window.addEventListener("wheel", function (event) {
         if (canScroll && !firstScrollDone) {
-            // Impedisce lo scroll predefinito
-            event.preventDefault();
 
             // Imposta il flag per il primo scroll
             firstScrollDone = true;
@@ -204,7 +208,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Imposta l'opacità di .overlay-img a 0 appena inizia lo scroll
             gsap.to(".overlay-img", {
                 opacity: 0,
-                delay: 0.1,
+                delay: 0.3,
                 duration: 0.3, 
                 ease: "power2.inOut",
             });

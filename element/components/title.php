@@ -3,7 +3,7 @@
 
     $current_page = basename($_SERVER['PHP_SELF'], ".php");
 ?>
-     <section class="<?= $container_class ?> animatable">
+     <section class="<?= $container_class ?>">
         <p class="title <?= $p_class ?>">
             <?= $text ?>
         </p>

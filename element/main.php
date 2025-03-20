@@ -16,7 +16,6 @@
             "<span class='opacity'>apen'down: un progetto</span> 
             <span class='square-s container-title-img'>
                 <img class='firstCard' src='img/project1.png' alt='img'> 
-                <img class='firstCard square-s img-expands' src='img/project1.png' alt='img'> 
             </span>
             <span class='opacity'>per l'inclusione</span> 
             <img class='square-s secondCard' src='img/img2.png' alt='img'> 
@@ -27,7 +26,9 @@
     ?>
 
     <div class="overlay-img">
-
+        <div class="overlay-img__bg">
+            
+        </div>
     </div>
  
     <!-- CARDS -->

@@ -87,18 +87,18 @@
         left: 0;
         width: 100%;
         height: 100vh;
-        background: transparent;
-        opacity: 1;
         pointer-events: none;
         z-index: 60;
         padding: clamp(40px, 80vw * @px2vw, 80px);
-        transition: opacity 0.3s ease-in-out;
 
-        .img-expanded{
-            border-radius: 40vw * @px2vw;
-            object-fit: cover;
-            object-position: center -45px; 
+        .overlay-img__bg{
+            background-color: @bg-color;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
+            transition: opacity 0.3s ease-in-out;
         }
     }

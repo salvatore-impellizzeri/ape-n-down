@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     gsap.registerPlugin(Flip);
 
-    const image = document.querySelector(".img-expands");
+    const image = document.querySelector(".container-title-img");
     const container2 = document.querySelector(".overlay-img");
 
     let hasScrolled = false;
@@ -152,19 +152,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const state = Flip.getState(image);
 
+            image.style.width = "100%";
+            image.style.height = "100%";
+
             container2.appendChild(image);
 
             Flip.from(state, {
                 duration: 0.5,
                 ease: "power2.inOut",
                 scale: true,
-                absolute: true
+                absolute: true,
             })
 
-            gsap.to(".overlay-img", {
+            gsap.to(".overlay-img__bg", {
                 opacity: 1,
+                duration: 0.2,
                 ease: "power2.inOut",
-                delay: 0.3
             })
 
             hasScrolled = true;
@@ -173,6 +176,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener("scroll", onScroll);
 });
+
+// REMOVING ANIMATION ON FIRSTCARD 
+
+document.querySelector(".firstCard").addEventListener("animationend", function () {
+    this.classList.remove("firstCard"); 
+});
+
 
 
 // IMAGE ANIMATION EVENTS GSAP

@@ -144,11 +144,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const image = document.querySelector(".container-title-img");
     const container2 = document.querySelector(".overlay-img");
 
-    let hasScrolled = false;
+    let hasAnimated = false;
+    let canScroll = false; // Flag per il controllo dello scroll
+    let firstScrollDone = false; // Flag per il primo scroll
 
-    // Funzione che si attiva quando si scrolla
-    function onScroll() {
-        if (!hasScrolled) {
+    // Disabilita lo scroll all'inizio
+    document.body.style.overflow = "hidden";
+
+    function startAnimation() {
+        if (!hasAnimated) {
+            // Mostra il container prima di partire con l'animazione
+            gsap.to(".container-title-img--block", {
+                display: "inline-block", // Cambia il display a inline-block
+                duration: 0.2, // Breve durata per il cambiamento
+                ease: "power2.inOut"
+            });
 
             const state = Flip.getState(image);
 
@@ -158,24 +168,63 @@ document.addEventListener("DOMContentLoaded", function () {
             container2.appendChild(image);
 
             Flip.from(state, {
-                duration: 0.5,
+                duration: 0.8,
                 ease: "power2.inOut",
                 scale: true,
                 absolute: true,
-            })
+            });
 
             gsap.to(".overlay-img__bg", {
                 opacity: 1,
                 duration: 0.2,
                 ease: "power2.inOut",
-            })
+                onComplete: function () {
+                    // Riabilita lo scroll dopo l'animazione
+                    document.body.style.overflow = "auto";
+                    canScroll = true; 
+                }
+            });
 
-            hasScrolled = true;
+            hasAnimated = true;
         }
     }
 
-    window.addEventListener("scroll", onScroll);
+    // Attende 3,5 secondi prima di eseguire l'animazione
+    setTimeout(startAnimation, 3500);
+
+    // Aggiungi l'evento di scroll
+    window.addEventListener("wheel", function (event) {
+        if (canScroll && !firstScrollDone) {
+            // Impedisce lo scroll predefinito
+            event.preventDefault();
+
+            // Imposta il flag per il primo scroll
+            firstScrollDone = true;
+
+            // Imposta l'opacità di .overlay-img a 0 appena inizia lo scroll
+            gsap.to(".overlay-img", {
+                opacity: 0,
+                delay: 0.1,
+                duration: 0.3, 
+                ease: "power2.inOut",
+            });
+
+            let scrolled = false; 
+
+            window.addEventListener('scroll', () => {
+                if (!scrolled && window.scrollY > 0) {
+                    window.scrollBy({
+                        top: window.innerHeight,
+                        behavior: 'smooth' 
+                    });
+
+                    scrolled = true;
+                }
+            });          
+        }
+    });
 });
+
 
 // REMOVING ANIMATION ON FIRSTCARD 
 

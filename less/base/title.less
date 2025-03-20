@@ -79,7 +79,8 @@ body.no-scroll {
     overflow: hidden; 
 }
 
-.container-title-img{
+.container-title-img,
+.container-title-img--block{
     position: relative;
     z-index: 1;
 
@@ -88,14 +89,8 @@ body.no-scroll {
         width: 100%;
         height: 100%;
     }
+}
 
-    .img-expands{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: 62;
-    }
+.container-title-img--block{
+    display: none;
 }

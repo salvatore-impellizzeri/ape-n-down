@@ -1,72 +1,3 @@
-class ObserverAnimation {
-    constructor(el) {
-        // Elements
-        this.$el = el;
-        this.isInView = true;
-        this.positionClass = 'is-out is-out--down';
-        this.observer = null;
-
-        this.currClass = this.$el.className;
-
-        this.attachEvents();
-    }
-
-    visibilityChanged(isVisible, entry) {
-        this.isInView = isVisible;
-    
-        if (this.isInView && entry.intersectionRatio > 0) {
-            this.positionClass = 'is-in';
-        } else {
-            if (entry.boundingClientRect.y < 0) {
-                this.positionClass = 'is-out is-out--up';
-            } else {
-                this.positionClass = 'is-out is-out--down';
-            }
-        }
-
-        return this.positionClass;
-    }
-    
-
-    observerScroll() {
-        // IntersectionObserver Supported
-        let options = {};
-
-        options = {
-            root: null,
-			rootMargin: "0px",
-			threshold: 0.1
-        };
-
-        // Create new IntersectionObserver
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-
-                let posClass = this.visibilityChanged(entry.isIntersecting, entry);
-
-                this.$el.className = this.currClass + ' ' + posClass;
-
-            });
-        }, options);
-
-        // Start observing
-        observer.observe(this.$el)
-
-    }
-
-    attachEvents() {
-        this.observerScroll();
-    }
-
-}
-
-var initObserver = function() {
-    boxElements = document.querySelectorAll('[data-animated]');
-    boxElements.forEach((el, i) => {
-        new ObserverAnimation(el);
-    });
-}
-
 var initScroll = function() {
     //classe aggiuntiva scroll
     $(document).on('scroll', () => {
@@ -74,31 +5,16 @@ var initScroll = function() {
     });
 }
 
-
-var start = new Date().getTime(),
-	boxElements = null,
-	observer = null,
-
-	loadSite = function(){
-
-		document.querySelector('body').classList.add('loading-done');
-
-        initObserver();
-        initScroll();
-	};
-
 window.addEventListener('load', function(){
-	if((new Date().getTime() - start ) < 2000){
-	 	window.setTimeout(loadSite, 2000 - (new Date().getTime() - start ));
-	} else {
-		loadSite();
-	}
+    document.querySelector('body').classList.add('loading-done');
+
+    initScroll();
 });
 
 // CARDS GSAP
 
 document.addEventListener("DOMContentLoaded", function () {
-    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger, Flip);
 
     const cards = gsap.utils.toArray(".card-gsap");
 

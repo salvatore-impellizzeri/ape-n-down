@@ -138,96 +138,98 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // IMAGE FIRST TITLE
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     gsap.registerPlugin(Flip);
+document.addEventListener("DOMContentLoaded", function () {
 
-//     const image = document.querySelector(".container-title-img");
-//     const container2 = document.querySelector(".overlay-img");
+    const image = document.querySelector(".container-title-img img");
+    const container2 = document.querySelector(".overlay-img");
 
-//     let hasAnimated = false;
-//     let canScroll = false; // Flag per il controllo dello scroll
-//     let firstScrollDone = false; // Flag per il primo scroll
+    let hasAnimated = false;
+    let canScroll = false; // Flag per il controllo dello scroll
+    let firstScrollDone = false; // Flag per il primo scroll
 
-//     // Disabilita lo scroll all'inizio
-//     document.body.style.overflow = "hidden";
+    // Disabilita lo scroll all'inizio nella home
+    if (window.location.pathname === "/" || window.location.pathname === "/main.php") {
+        document.body.style.overflow = "hidden";
+    }    
 
-//     function startAnimation() {
-//         if (!hasAnimated) {
-//             // Mostra il container prima di partire con l'animazione
-//             gsap.to(".container-title-img--block", {
-//                 display: "inline-block", 
-//                 duration: 0.2,
-//                 ease: "power2.inOut"
-//             });
+    function startAnimation() {
+        if (!hasAnimated) {
 
-//             const state = Flip.getState(image);
+            const state = Flip.getState(image);
 
-//             image.style.setProperty("width", "100%", "important");
-//             image.style.setProperty("height", "100%", "important");
+            gsap.to(".square-s__img", {
+                opacity: 1, 
+                duration: 0.5,
+                ease: "power2.inOut",
+                onStart: function () {
+                    document.querySelector(".square-s__img").style.visibility = "visible";
+                }
+            });
+            
 
-//             if (window.innerWidth > 1920) {
-//                 image.style.maxWidth = "1920px";
-//                 image.style.display = "block";
-//                 image.style.margin = "auto";
-//             }
+            if (window.innerWidth > 1920) {
+                image.style.maxWidth = "1920px";
+                image.style.display = "block";
+                image.style.margin = "auto";
+            }
 
-//             container2.appendChild(image);
+            container2.appendChild(image);
 
-//             Flip.from(state, {
-//                 duration: 0.8,
-//                 ease: "power2.inOut",
-//                 scale: true,
-//                 absolute: true,
-//             });
+            Flip.from(state, {
+                duration: 0.8,
+                ease: "power2.inOut",
+                scale: true,
+                absolute: true,
+            });
 
-//             gsap.to(".overlay-img__bg", {
-//                 opacity: 1,
-//                 duration: 0.2,
-//                 ease: "power2.inOut",
-//                 onComplete: function () {
-//                     // Riabilita lo scroll dopo l'animazione
-//                     document.body.style.overflow = "auto";
-//                     canScroll = true; 
-//                 }
-//             });
+            gsap.to(".overlay-img__bg", {
+                opacity: 1,
+                duration: 0.2,
+                ease: "power2.inOut",
+                onComplete: function () {
+                    // Riabilita lo scroll dopo l'animazione
+                    document.body.style.overflow = "auto";
+                    canScroll = true; 
+                }
+            });
 
-//             hasAnimated = true;
-//         }
-//     }
+            hasAnimated = true;
+        }
+    }
 
-//     // Attende 3,5 secondi prima di eseguire l'animazione
-//     setTimeout(startAnimation, 3500);
+    // Attende 3,5 secondi prima di eseguire l'animazione
+    setTimeout(startAnimation, 3500);
 
-//     // Aggiungi l'evento di scroll
-//     window.addEventListener("wheel", function (event) {
-//         if (canScroll && !firstScrollDone) {
+    // Aggiungi l'evento di scroll
+    window.addEventListener("wheel", function (event) {
+        if (canScroll && !firstScrollDone) {
 
-//             // Imposta il flag per il primo scroll
-//             firstScrollDone = true;
+            // Imposta il flag per il primo scroll
+            firstScrollDone = true;
 
-//             // Imposta l'opacità di .overlay-img a 0 appena inizia lo scroll
-//             gsap.to(".overlay-img", {
-//                 opacity: 0,
-//                 delay: 0.3,
-//                 duration: 0.3, 
-//                 ease: "power2.inOut",
-//             });
+            // Imposta l'opacità di .overlay-img a 0 appena inizia lo scroll
+            gsap.to(".overlay-img", {
+                opacity: 0,
+                zIndex: -10,
+                duration: 0.3, 
+                ease: "power2.inOut",
+            });
 
-//             let scrolled = false; 
+            let scrolled = false; 
 
-//             window.addEventListener('scroll', () => {
-//                 if (!scrolled && window.scrollY > 0) {
-//                     window.scrollBy({
-//                         top: window.innerHeight,
-//                         behavior: 'smooth' 
-//                     });
+            window.addEventListener('scroll', () => {
+                if (!scrolled && window.scrollY > 0) {
+                    window.scrollBy({
+                        top: window.innerHeight,
+                        behavior: 'smooth' 
+                    });
 
-//                     scrolled = true;
-//                 }
-//             });          
-//         }
-//     });
-// });
+                    scrolled = true;
+                }
+            });          
+        }
+    });
+});
 
 
 // REMOVING ANIMATION ON FIRSTCARD 
@@ -242,31 +244,39 @@ document.querySelector(".firstCard").addEventListener("animationend", function (
 
 document.addEventListener("DOMContentLoaded", function() {
 
-    const mm = gsap.matchMedia();
+    gsap.from(".img-wrapper-1", {
+        x: "-35vw",   
+        y: "10vw",  
+        rotate: -2, 
+        scale: 2,
+        height: "18vw",
+        width: "23vw",
+        duration: 0.5,
+        ease: "power2.inOut",
+        delay: 1 
+    });
 
-        gsap.from(".img-wrapper-1", {
-            x: "-35vw",   
-            y: "10vw",  
-            rotate: -2, 
-            scale: 2,
-            height: "18vw",
-            width: "23vw",
-            duration: 0.5,
-            ease: "power2.inOut",
-            delay: 1 
-        });
+    // x: "-35vw",   
+    // y: "10vw",  
+    // rotate: -2, 
+    // scale: 2,
+    // height: "18vw",
+    // width: "23vw",
+    // duration: 0.5,
+    // ease: "power2.inOut",
+    // delay: 1 
 
-        gsap.from(".img-wrapper-2", {
-            x: "-12vw",   
-            y: "-3vw",  
-            rotate: 2, 
-            scale: 2,
-            height: "18vw",
-            width: "20vw",
-            duration: 0.5,
-            ease: "power2.inOut",
-            delay: 1 
-        });
+    gsap.from(".img-wrapper-2", {
+        x: "-12vw",   
+        y: "-3vw",  
+        rotate: 2, 
+        scale: 2,
+        height: "18vw",
+        width: "20vw",
+        duration: 0.5,
+        ease: "power2.inOut",
+        delay: 1 
+    });
 
 
     gsap.from(".img-wrapper-1 img:first-of-type", {
@@ -312,7 +322,18 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+// FOOTER
 
+document.addEventListener("DOMContentLoaded", function () {
+    const footer = document.querySelector(".footer__animation");
+
+    gsap.from(footer, {
+        scale: 0.8, 
+        transformOrigin: "bottom center",
+        duration: 1,
+        ease: "power2.inOut"
+    });
+})
 
 
 

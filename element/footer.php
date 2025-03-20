@@ -3,6 +3,7 @@ $extraClass = $extraClass ?? null;
 ?>
 
 <footer class="footer <?= $extraClass ?>">
+    <div class="footer__animation"></div>
     <div class="container-fluid">
 
         <!-- UPPER FOOTER -->

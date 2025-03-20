@@ -16,9 +16,7 @@
             "<span class='opacity'>apen'down: un progetto</span> 
             <span class='square-s container-title-img'>
                 <img class='firstCard' src='img/project1.png' alt='img'> 
-            </span>
-            <span class='square-s container-title-img--block'>
-                <img src='img/project1.png' alt='img'> 
+                <img class='square-s__img' src='img/project1.png' alt='img'> 
             </span>
             <span class='opacity'>per l'inclusione</span> 
             <img class='square-s secondCard' src='img/img2.png' alt='img'> 

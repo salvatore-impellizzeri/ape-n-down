@@ -1,7 +1,7 @@
     .others{
         position: relative;
-        top: 100px;
-        margin-top: (380vw + ((143vw + 203vw)/2)) * @px2vw;
+        top: clamp(20px, 100vw * @px2vw ,100px);
+        margin-top: clamp(170px, (380vw + ((143vw + 203vw)/2)) * @px2vw, (380px + ((143px + 203px)/2)));
         display: flex;
         flex-direction: column;
         gap: clamp(50px, 180vw * @px2vw, 180px);
@@ -29,7 +29,7 @@
         overflow: hidden;
         width: 100%;
         position: relative;
-        bottom: 300px;
+        bottom: clamp(70px, 300vw * @px2vw, 300px);
     }
 
     .others__vector{
@@ -37,7 +37,7 @@
         width: 100%;
         height: clamp(100px, 400vw * @px2vw, 400px); 
         position: absolute;
-        top: -380vw * @px2vw;
+        top: clamp(-380px, -380vw * @px2vw, -100px);
         display: flex;
         justify-content: center;
 

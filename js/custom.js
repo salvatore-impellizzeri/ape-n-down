@@ -251,9 +251,10 @@ document.addEventListener("DOMContentLoaded", function() {
         transform: "rotate(0deg) scale(1)",
         height: "100%",
         width: "100%",
+        pointerEvents: "visible",
         duration: 0.5,
         ease: "power2.inOut",
-        delay: 4
+        delay: 1
     });
     
     gsap.from(".img-wrapper-2", {
@@ -263,23 +264,10 @@ document.addEventListener("DOMContentLoaded", function() {
         scale: 2,
         width: "clamp(300px, 350vw * @px2vw, 350px)",
         height: "clamp(200px, 300vw * @px2vw, 300px)",
+        pointerEvents: "none",
         duration: 0.5,
         ease: "power2.inOut",
-        delay: 4 
-    });
-
-
-    gsap.to(".img-wrapper-1 img:first-of-type", {
-        borderRadius: "10%",
-        duration: 0.5,
-        ease: "power2.inOut",
-    });
-
-
-    gsap.to(".img-wrapper-2 img:first-of-type", {
-        borderRadius: "10%",
-        duration: 0.5,
-        ease: "power2.inOut",
+        delay: 1
     });
 
     gsap.from(".text-hover", {

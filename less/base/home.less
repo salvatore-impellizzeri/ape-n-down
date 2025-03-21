@@ -1,13 +1,14 @@
     .others{
         position: relative;
-        margin-top: (180vw + ((143vw + 203vw)/2)) * @px2vw;
+        top: 100px;
+        margin-top: (380vw + ((143vw + 203vw)/2)) * @px2vw;
         display: flex;
         flex-direction: column;
         gap: clamp(50px, 180vw * @px2vw, 180px);
         align-items: center;
         background-color: @bg-light-yellow;
         padding-top: (143vw / 2) * @px2vw;
-        padding-bottom: clamp(50px, 180vw * @px2vw, 180px);
+        // padding-bottom: clamp(50px, 180vw * @px2vw, 180px);
 
         p{
             text-align: center;
@@ -27,15 +28,25 @@
         font-size: clamp(18px, 44vw * @px2vw, 44px);
         overflow: hidden;
         width: 100%;
+        position: relative;
+        bottom: 300px;
     }
 
     .others__vector{
-        background-color: @bg-light-yellow;
+        overflow-x: hidden;
         width: 100%;
-        height: (143vw + 203vw) * @px2vw; 
+        height: clamp(100px, 400vw * @px2vw, 400px); 
         position: absolute;
-        top: -143vw * @px2vw;
-        clip-path: ellipse(60% 50% at 50% 50%);
+        top: -380vw * @px2vw;
+        display: flex;
+        justify-content: center;
+
+        svg{
+            width: 100%;
+            height: 100%;
+            transform: rotate(180deg);
+            .vector;
+        }
     }
 
     .square-s{

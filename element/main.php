@@ -86,7 +86,7 @@
             </a>
             <br> 
             <span class='text-hover'>e futuri</span>", 
-            "container-M mt-74 inline justify", 
+            "container-M mt-74 inline justify secondTitleAnimation", 
             ""
         );
     ?>
@@ -95,7 +95,8 @@
     <section class="others translateToTop">
         
         <!-- VECTOR -->
-        <div class="others__vector vector">
+        <div class="others__vector">
+            <?= file_get_contents('img/icons/curve.svg') ?>
         </div>
 
         <?php

@@ -254,7 +254,7 @@ document.addEventListener("DOMContentLoaded", function() {
         pointerEvents: "visible",
         duration: 0.5,
         ease: "power2.inOut",
-        delay: 1
+        delay: 1,     
     });
     
     gsap.from(".img-wrapper-2", {
@@ -267,7 +267,7 @@ document.addEventListener("DOMContentLoaded", function() {
         pointerEvents: "none",
         duration: 0.5,
         ease: "power2.inOut",
-        delay: 1
+        delay: 1,
     });
 
     gsap.from(".text-hover", {

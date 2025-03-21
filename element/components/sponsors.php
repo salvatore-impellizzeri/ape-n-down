@@ -1,7 +1,7 @@
 <?php
     function Sponsors($title) {
 ?>
-    <div class="z-10 others__section">
+    <div class="z-10 others__section translateToTop animate">
         <p>
             <?= $title ?>
         </p>

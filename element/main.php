@@ -13,15 +13,15 @@
     <!-- TITLE -->
     <?php 
         Title(
-            "<span class='opacity'>apen'down: un progetto</span> 
+            "<span class='opacity animate'>apen'down: un progetto</span> 
             <span class='square-s container-title-img'>
-                <img class='firstCard' src='img/project1.png' alt='img'> 
+                <img class='firstCard animate' src='img/project1.png' alt='img'> 
                 <img class='square-s__img' src='img/project1.png' alt='img'> 
             </span>
-            <span class='opacity'>per l'inclusione</span> 
+            <span class='opacity animate'>per l'inclusione</span> 
             <img class='square-s secondCard' src='img/img2.png' alt='img'> 
-            <span class='opacity'>e l'opportunità</span>", 
-            "container-L justify", 
+            <span class='opacity animate'>e l'opportunità</span>", 
+            "container-L animate justify", 
             "text-shadow"
         )
     ?>
@@ -72,31 +72,34 @@
     <!-- SECOND BIG TITLE -->
     <?php 
         Title(
-            "<span class='text-hover'>scopri</span> 
-            <span class='container-hover'>
-                <a href='/progetti.php' class='rectangle hover-image img-wrapper-1'>
+            "<span class='text-hover animate'>scopri</span> 
+            <span class='container-hover animate'>
+                <a href='/progetti.php' class='rectangle animate hover-image img-wrapper-1'>
                     <img src='img/img3.png' alt='img'>
                     <img class='svg' src='img/find.svg' alt='find'>
                 </a>    
             </span>
             <span class='text-hover'>i nostri eventi passati</span>
-            <a href='/progetti.php' class='square-l hover-image img-wrapper-2'>
+            <a href='/progetti.php' class='square-l animate hover-image img-wrapper-2'>
                 <img src='img/img3.png' alt='img'>
                 <img class='svg' src='img/find.svg' alt='find'>
             </a>
             <br> 
-            <span class='text-hover'>e futuri</span>", 
-            "container-M mt-74 inline justify secondTitleAnimation", 
+            <span class='text-hove animater'>e futuri</span>", 
+            "container-M animate mt-74 inline justify secondTitleAnimation", 
             ""
         );
     ?>
 
     <!-- OTHERS -->
-    <section class="others translateToTop">
+    <section class="others">
         
         <!-- VECTOR -->
         <div class="others__vector">
-            <?= file_get_contents('img/icons/curve.svg') ?>
+            <?php 
+                $svg = file_get_contents('img/icons/curve.svg');  
+                echo str_replace('<svg', '<svg class="animate vector"', $svg);
+            ?>
         </div>
 
         <?php

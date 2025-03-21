@@ -73,10 +73,12 @@
     <?php 
         Title(
             "<span class='text-hover'>scopri</span> 
-            <a href='/progetti.php' class='rectangle hover-image img-wrapper-1'>
-                <img src='img/img3.png' alt='img'>
-                <img class='svg' src='img/find.svg' alt='find'>
-            </a>    
+            <span class='container-hover'>
+                <a href='/progetti.php' class='rectangle hover-image img-wrapper-1'>
+                    <img src='img/img3.png' alt='img'>
+                    <img class='svg' src='img/find.svg' alt='find'>
+                </a>    
+            </span>
             <span class='text-hover'>i nostri eventi passati</span>
             <a href='/progetti.php' class='square-l hover-image img-wrapper-2'>
                 <img src='img/img3.png' alt='img'>

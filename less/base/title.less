@@ -14,23 +14,36 @@
     }
 }
 
-.img-wrapper-1{
+.container-hover{
+    width: clamp(100px, 400vw * @px2vw, 400px);
+    height: clamp(50px, 243vw * @px2vw, 243px);
     position: relative;
-    .z-2;
+    display: inline-block;
 
-    img:first-of-type {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .svg{
+    .img-wrapper-1{
         position: absolute;
-        bottom: clamp(-16px, -16vw * @px2vw, -6px);
-        right: clamp(-16px, -16vw * @px2vw, -6px);
-        width: clamp(40px, 120vw * @px2vw, 120px);
-        height: auto;
-    }    
+        .z-2;
+        right: clamp(80px, 560vw * @px2vw, 560px);
+        top: clamp(20px, 200vw * @px2vw, 200px);
+        width: 85%;
+        height: 135%;
+        transform: rotate(-4deg) scale(2);
+    
+        img:first-of-type {
+            border-radius: clamp(10px, 52vw * @px2vw, 52px);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    
+        .svg{
+            position: absolute;
+            bottom: clamp(-16px, -16vw * @px2vw, -6px);
+            right: clamp(-16px, -16vw * @px2vw, -6px);
+            width: clamp(40px, 120vw * @px2vw, 120px);
+            height: auto;
+        }    
+    }
 }
 
 .img-wrapper-2 {
@@ -40,6 +53,7 @@
     right: clamp(15px, 77vw * @px2vw, 77px);
 
     img:first-of-type {
+        border-radius: clamp(10px, 52vw * @px2vw, 52px);
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -82,14 +96,6 @@ body.no-scroll {
 .container-title-img{
     position: relative;
     z-index: 1;
-
-    .square-s__img{
-        position: absolute;
-        top: 0;
-        left: 0;
-        visibility: hidden;
-        opacity: 0;
-    }
 
     img{
         object-fit: cover;

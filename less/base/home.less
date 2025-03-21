@@ -47,27 +47,25 @@
         img{
             border-radius: clamp(10px, 40vw * @px2vw, 40px);
         }
+
+        .square-s__img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            visibility: hidden;
+            opacity: 0;
+        }
     }
 
     .rectangle{
         height: clamp(100px, 243vw * @px2vw, 243px);
         width: clamp(200px, 400vw * @px2vw, 400px);
-        border-radius: clamp(20px, 40vw * @px2vw, 40px);
         display: inline-block;
-
-        img:first-of-type {
-            border-radius: clamp(20px, 40vw * @px2vw, 40px);
-        }
     }
 
     .square-l{
         height: clamp(60px, 332vw * @px2vw, 332px);
         width: clamp(80px, 400vw * @px2vw, 400px);
-        border-radius: clamp(20px, 40vw * @px2vw, 40px);
-
-        img:first-of-type {
-            border-radius: clamp(20px, 40vw * @px2vw, 40px);
-        }
     }
 
     .text-img-container{
@@ -107,4 +105,5 @@
             height: 100%;
             transition: opacity 0.3s ease-in-out;
         }
+        
     }

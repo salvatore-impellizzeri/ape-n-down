@@ -235,9 +235,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // REMOVING ANIMATION ON FIRSTCARD 
 
-document.querySelector(".firstCard").addEventListener("animationend", function () {
-    this.classList.remove("firstCard"); 
+document.addEventListener("DOMContentLoaded", function () {
+    if (window.location.pathname === "/" || window.location.pathname.includes("index.html")) {
+        document.querySelector(".firstCard").addEventListener("animationend", function () {
+            this.classList.remove("firstCard");
+        });
+    }
 });
+
 
 
 

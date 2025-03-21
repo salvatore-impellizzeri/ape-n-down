@@ -19,6 +19,7 @@
 
         .projects__single-projects__img{
             position: relative;
+            min-height: clamp(200px, 600vw * @px2vw, 600px);
             width: 100%;
             background-color: @bg-darker-yellow;
             border-radius: clamp(20px, 40vw * @px2vw, 40px);
@@ -41,7 +42,7 @@
                 position: absolute;
                 bottom: clamp(-2px, -6vw * @px2vw, -6px);
                 right: clamp(-2px, -6vw * @px2vw, -6px);
-                transform: translate(20%,15%);
+                transform: translate(16%,15%);
             }
         }
 

@@ -85,7 +85,7 @@
                 <img class='svg' src='img/find.svg' alt='find'>
             </a>
             <br> 
-            <span class='text-hove animater'>e futuri</span>", 
+            <span class='text-hover animate'>e futuri</span>", 
             "container-M animate mt-74 inline justify secondTitleAnimation", 
             ""
         );

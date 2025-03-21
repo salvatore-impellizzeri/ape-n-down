@@ -251,6 +251,11 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function() {
 
     gsap.to(".img-wrapper-1", {
+        scrollTrigger: {
+            trigger: ".secondTitleAnimation",
+            start: "top 100%",
+            toggleActions: "play none none none"
+        },
         right: 0,   
         top: 0,  
         transform: "rotate(0deg) scale(1)",
@@ -306,15 +311,23 @@ document.addEventListener("DOMContentLoaded", function() {
 // FOOTER
 
 document.addEventListener("DOMContentLoaded", function () {
+    gsap.registerPlugin(ScrollTrigger);
+
     const footer = document.querySelector(".footer__animation");
 
     gsap.from(footer, {
-        scale: 0.8, 
+        scrollTrigger: {
+            trigger: footer,
+            start: "top 100%",
+            toggleActions: "play none none none"
+        },
+        scale: 0.9,
         transformOrigin: "bottom center",
-        duration: 1,
+        duration: 0.8,
         ease: "power2.inOut"
     });
-})
+});
+
 
 
 Fancybox.bind("[data-fancybox]", {

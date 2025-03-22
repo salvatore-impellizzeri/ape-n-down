@@ -35,35 +35,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // CARDS GSAP
 
-document.addEventListener("DOMContentLoaded", function () {
-    gsap.registerPlugin(ScrollTrigger, Flip);
+// document.addEventListener("DOMContentLoaded", function () {
+//     gsap.registerPlugin(ScrollTrigger, Flip);
 
-    const cards = gsap.utils.toArray(".card-gsap");
+//     const cards = gsap.utils.toArray(".card-gsap");
 
-    cards.forEach((card, i) => {
-        let startOffset = 200; 
+//     cards.forEach((card, i) => {
+//         let startOffset = 200; 
 
-        // if (i === 1) startOffset += 115;
-        // if (i === 2) startOffset += 200; 
+//         // if (i === 1) startOffset += 115;
+//         // if (i === 2) startOffset += 200; 
 
-        ScrollTrigger.create({
-            trigger: card,
-            start: `top-=${i * 90} top+=200`,
-            end: `bottom+=500 bottom-=100`,
-            pin: true,
-            endTrigger: ".endy-trendy",
-            scrub: true,
-        });
+//         ScrollTrigger.create({
+//             trigger: card,
+//             start: `top-=${i * 90} top+=200`,
+//             end: `bottom+=500 bottom-=100`,
+//             pin: true,
+//             endTrigger: ".endy-trendy",
+//             scrub: true,
+//         });
 
-        gsap.from(card, {
-            yPercent: 100,
-            ease: "power1.inOut",
-            scrollTrigger: {
-                trigger: card,
-                start: `top bottom-=${startOffset}`,
-                end: "top center",
-                scrub: 1,
-            }
-        });
-    });
-});
+//         gsap.from(card, {
+//             yPercent: 100,
+//             ease: "power1.inOut",
+//             scrollTrigger: {
+//                 trigger: card,
+//                 start: `top bottom-=${startOffset}`,
+//                 end: "top center",
+//                 scrub: 1,
+//             }
+//         });
+//     });
+// });

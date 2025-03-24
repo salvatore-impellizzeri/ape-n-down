@@ -254,7 +254,6 @@ document.addEventListener("DOMContentLoaded", function() {
             trigger: ".secondTitleAnimation",
             start: "center 100%",  
             toggleActions: "play none none none", 
-            markers: true, 
         },
         right: 0,   
         top: 0,  
@@ -272,8 +271,7 @@ document.addEventListener("DOMContentLoaded", function() {
         scrollTrigger: {
             trigger: ".secondTitleAnimation",
             start: "center 100%",
-            toggleActions: "play none none none",
-            markers: true,  
+            toggleActions: "play none none none", 
         },
         x: "-12vw",   
         y: "-3vw",  
@@ -290,8 +288,7 @@ document.addEventListener("DOMContentLoaded", function() {
         scrollTrigger: {
             trigger: ".secondTitleAnimation",
             start: "center 100%",
-            toggleActions: "play none none none",
-            markers: true,  
+            toggleActions: "play none none none", 
         },
         opacity: 0,
         duration: 1,

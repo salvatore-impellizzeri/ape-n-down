@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		  entry.target.classList.add('in-view');
 		  return;
 		}
-		entry.target.classList.remove('in-view');
 	  });
 	});
 

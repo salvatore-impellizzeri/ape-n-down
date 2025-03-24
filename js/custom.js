@@ -148,9 +148,9 @@ document.addEventListener("DOMContentLoaded", function () {
         let firstScrollDone = false; // Flag per il primo scroll
 
         // Disabilita lo scroll all'inizio nella home
-        if (window.location.pathname === "/" || window.location.pathname === "/main.php") {
-            document.body.style.overflow = "hidden";
-        }    
+        // if (window.location.pathname === "/" || window.location.pathname === "/main.php") {
+        //     document.body.style.overflow = "hidden";
+        // }    
 
         function startAnimation() {
             if (!hasAnimated) {
@@ -243,18 +243,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-
-
-
 // IMAGE ANIMATION EVENTS GSAP
 
 document.addEventListener("DOMContentLoaded", function() {
+    gsap.registerPlugin(ScrollTrigger); 
 
+    // Animazione della prima immagine
     gsap.to(".img-wrapper-1", {
         scrollTrigger: {
             trigger: ".secondTitleAnimation",
-            start: "top 100%",
-            toggleActions: "play none none none"
+            start: "center 100%",  
+            toggleActions: "play none none none", 
+            markers: true, 
         },
         right: 0,   
         top: 0,  
@@ -266,27 +266,40 @@ document.addEventListener("DOMContentLoaded", function() {
         ease: "power2.inOut",
         delay: 1,     
     });
-    
+
+    // Animazione della seconda immagine
     gsap.from(".img-wrapper-2", {
+        scrollTrigger: {
+            trigger: ".secondTitleAnimation",
+            start: "center 100%",
+            toggleActions: "play none none none",
+            markers: true,  
+        },
         x: "-12vw",   
         y: "-3vw",  
         rotate: 4, 
         scale: 2,
-        width: "clamp(300px, 350vw * @px2vw, 350px)",
-        height: "clamp(200px, 300vw * @px2vw, 300px)",
         pointerEvents: "none",
         duration: 0.5,
         ease: "power2.inOut",
         delay: 1,
     });
 
+    // Animazione del testo
     gsap.from(".text-hover", {
+        scrollTrigger: {
+            trigger: ".secondTitleAnimation",
+            start: "center 100%",
+            toggleActions: "play none none none",
+            markers: true,  
+        },
         opacity: 0,
         duration: 1,
         ease: "power2.inOut",
         delay: 1
     });
 
+    // Gestione degli eventi hover
     const hoverImages = document.querySelectorAll('.hover-image');
     hoverImages.forEach(hoverImage => {
         hoverImage.addEventListener('mouseenter', function() {
@@ -296,7 +309,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 ease: "power2.inOut"
             });
         });
-    
+
         hoverImage.addEventListener('mouseleave', function() {
             gsap.to('.text-hover', {
                 opacity: 1,
@@ -308,25 +321,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-// FOOTER
-
-document.addEventListener("DOMContentLoaded", function () {
-    gsap.registerPlugin(ScrollTrigger);
-
-    const footer = document.querySelector(".footer__animation");
-
-    gsap.from(footer, {
-        scrollTrigger: {
-            trigger: footer,
-            start: "top 100%",
-            toggleActions: "play none none none"
-        },
-        scale: 0.9,
-        transformOrigin: "bottom center",
-        duration: 0.8,
-        ease: "power2.inOut"
-    });
-});
 
 
 

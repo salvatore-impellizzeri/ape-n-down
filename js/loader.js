@@ -67,3 +67,23 @@ document.addEventListener("DOMContentLoaded", () => {
 //         });
 //     });
 // });
+
+// FOOTER
+
+document.addEventListener("DOMContentLoaded", function () {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const footer = document.querySelector(".footer__animation");
+
+    gsap.from(footer, {
+        scrollTrigger: {
+            trigger: footer,
+            start: "top 100%",
+            toggleActions: "play none none none"
+        },
+        scale: 0.9,
+        transformOrigin: "bottom center",
+        duration: 0.8,
+        ease: "power2.inOut"
+    });
+});

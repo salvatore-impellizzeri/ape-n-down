@@ -73,20 +73,20 @@
     <?php 
         Title(
             "<span class='text-hover animate'>scopri</span> 
-            <span class='container-hover animate'>
-                <a href='/progetti.php' class='rectangle animate hover-image img-wrapper-1'>
+            <span class='container-hover'>
+                <a href='/progetti.php' class='rectangle hover-image img-wrapper-1'>
                     <img src='img/img3.png' alt='img'>
                     <img class='svg' src='img/find.svg' alt='find'>
                 </a>    
             </span>
             <span class='text-hover'>i nostri eventi passati</span>
-            <a href='/progetti.php' class='square-l animate hover-image img-wrapper-2'>
-                <img src='img/img3.png' alt='img'>
+            <a href='/progetti.php' class='square-l hover-image img-wrapper-2'>
+                <img src='img/img3.png' alt='img'>  
                 <img class='svg' src='img/find.svg' alt='find'>
             </a>
             <br> 
             <span class='text-hover animate'>e futuri</span>", 
-            "container-M animate mt-74 inline justify secondTitleAnimation", 
+            "container-M mt-74 inline justify secondTitleAnimation", 
             ""
         );
     ?>

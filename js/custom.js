@@ -89,32 +89,34 @@ document.addEventListener("DOMContentLoaded", function () {
     const box = document.querySelector(".cursor-hover");
     const images = document.querySelectorAll(".hover-image");
 
-    images.forEach(image => {
-        const svg = image.querySelector(".svg");
-
-        image.addEventListener("mouseenter", function () {
-            box.style.opacity = "1"; 
-            
-            if (svg) {
-                svg.classList.remove("zoomOut");  
-                svg.classList.add("zoomIn");    
-            }
+    if(images) {
+        images.forEach(image => {
+            const svg = image.querySelector(".svg");
+    
+            image.addEventListener("mouseenter", function () {
+                box.style.opacity = "1"; 
+                
+                if (svg) {
+                    svg.classList.remove("zoomOut");  
+                    svg.classList.add("zoomIn");    
+                }
+            });
+    
+            image.addEventListener("mousemove", function (e) {
+                box.style.left = e.pageX + 10 + "px"; 
+                box.style.top = e.pageY - 50 + "px";
+            });
+    
+            image.addEventListener("mouseleave", function () {
+                box.style.opacity = "0"; 
+    
+                if (svg) {
+                    svg.classList.remove("zoomIn");  
+                    svg.classList.add("zoomOut");   
+                }
+            });
         });
-
-        image.addEventListener("mousemove", function (e) {
-            box.style.left = e.pageX + 10 + "px"; 
-            box.style.top = e.pageY - 50 + "px";
-        });
-
-        image.addEventListener("mouseleave", function () {
-            box.style.opacity = "0"; 
-
-            if (svg) {
-                svg.classList.remove("zoomIn");  
-                svg.classList.add("zoomOut");   
-            }
-        });
-    });
+    }
 });
 
 // CONTACTS HEADER
@@ -142,94 +144,96 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const image = document.querySelector(".container-title-img img");
         const container2 = document.querySelector(".overlay-img");
+        
+        if(image) {
+            let hasAnimated = false;
+            let canScroll = false; // Flag per il controllo dello scroll
+            let firstScrollDone = false; // Flag per il primo scroll
 
-        let hasAnimated = false;
-        let canScroll = false; // Flag per il controllo dello scroll
-        let firstScrollDone = false; // Flag per il primo scroll
+            // Disabilita lo scroll all'inizio nella home
+            // if (window.location.pathname === "/" || window.location.pathname === "/main.php") {
+            //     document.body.style.overflow = "hidden";
+            // }    
 
-        // Disabilita lo scroll all'inizio nella home
-        // if (window.location.pathname === "/" || window.location.pathname === "/main.php") {
-        //     document.body.style.overflow = "hidden";
-        // }    
-
-        function startAnimation() {
-            if (!hasAnimated) {
-
-                const state = Flip.getState(image);
-
-                gsap.to(".square-s__img", {
-                    opacity: 1, 
-                    duration: 0.5,
-                    ease: "power2.inOut",
-                    onStart: function () {
-                        document.querySelector(".square-s__img").style.visibility = "visible";
+            function startAnimation() {
+                if (!hasAnimated) {
+    
+                    const state = Flip.getState(image);
+    
+                    gsap.to(".square-s__img", {
+                        opacity: 1, 
+                        duration: 0.5,
+                        ease: "power2.inOut",
+                        onStart: function () {
+                            document.querySelector(".square-s__img").style.visibility = "visible";
+                        }
+                    });
+                    
+    
+                    if (window.innerWidth > 1920) {
+                        image.style.maxWidth = "1920px";
+                        image.style.display = "block";
+                        image.style.margin = "auto";
                     }
-                });
-                
-
-                if (window.innerWidth > 1920) {
-                    image.style.maxWidth = "1920px";
-                    image.style.display = "block";
-                    image.style.margin = "auto";
+    
+                    container2.appendChild(image);
+    
+                    Flip.from(state, {
+                        duration: 0.8,
+                        ease: "power2.inOut",
+                        scale: true,
+                        absolute: true,
+                    });
+    
+                    gsap.to(".overlay-img__bg", {
+                        opacity: 1,
+                        duration: 0.2,
+                        ease: "power2.inOut",
+                        onComplete: function () {
+                            // Riabilita lo scroll dopo l'animazione
+                            document.body.style.overflow = "auto";
+                            canScroll = true; 
+                        }
+                    });
+    
+                    hasAnimated = true;
                 }
-
-                container2.appendChild(image);
-
-                Flip.from(state, {
-                    duration: 0.8,
-                    ease: "power2.inOut",
-                    scale: true,
-                    absolute: true,
-                });
-
-                gsap.to(".overlay-img__bg", {
-                    opacity: 1,
-                    duration: 0.2,
-                    ease: "power2.inOut",
-                    onComplete: function () {
-                        // Riabilita lo scroll dopo l'animazione
-                        document.body.style.overflow = "auto";
-                        canScroll = true; 
-                    }
-                });
-
-                hasAnimated = true;
             }
+    
+            // Attende 3,5 secondi prima di eseguire l'animazione
+            setTimeout(startAnimation, 3500);
+    
+            // Aggiungi l'evento di scroll
+            window.addEventListener("wheel", function (event) {
+                if (canScroll && !firstScrollDone) {
+    
+                    // Imposta il flag per il primo scroll
+                    firstScrollDone = true;
+    
+                    // Imposta l'opacità di .overlay-img a 0 appena inizia lo scroll
+                    gsap.to(".overlay-img", {
+                        opacity: 0,
+                        zIndex: -10,
+                        duration: 0.3, 
+                        delay: 0.3,
+                        ease: "power2.inOut",
+                    });
+    
+                    let scrolled = false; 
+    
+                    window.addEventListener('scroll', () => {
+                        if (!scrolled && window.scrollY > 0) {
+                            window.scrollBy({
+                                top: window.innerHeight,
+                                behavior: 'smooth' 
+                            });
+    
+                            scrolled = true;
+                        }
+                    });          
+                }
+            });
         }
-
-        // Attende 3,5 secondi prima di eseguire l'animazione
-        setTimeout(startAnimation, 3500);
-
-        // Aggiungi l'evento di scroll
-        window.addEventListener("wheel", function (event) {
-            if (canScroll && !firstScrollDone) {
-
-                // Imposta il flag per il primo scroll
-                firstScrollDone = true;
-
-                // Imposta l'opacità di .overlay-img a 0 appena inizia lo scroll
-                gsap.to(".overlay-img", {
-                    opacity: 0,
-                    zIndex: -10,
-                    duration: 0.3, 
-                    delay: 0.3,
-                    ease: "power2.inOut",
-                });
-
-                let scrolled = false; 
-
-                window.addEventListener('scroll', () => {
-                    if (!scrolled && window.scrollY > 0) {
-                        window.scrollBy({
-                            top: window.innerHeight,
-                            behavior: 'smooth' 
-                        });
-
-                        scrolled = true;
-                    }
-                });          
-            }
-        });
     });
 
 
@@ -246,75 +250,78 @@ document.addEventListener("DOMContentLoaded", function () {
 // IMAGE ANIMATION EVENTS GSAP
 
 document.addEventListener("DOMContentLoaded", function() {
-    gsap.registerPlugin(ScrollTrigger); 
 
-    // Animazione della prima immagine
-    gsap.to(".img-wrapper-1", {
-        scrollTrigger: {
-            trigger: ".secondTitleAnimation",
-            start: "center 100%",  
-            toggleActions: "play none none none", 
-        },
-        right: 0,   
-        top: 0,  
-        transform: "rotate(0deg) scale(1)",
-        height: "100%",
-        width: "100%",
-        pointerEvents: "visible",
-        duration: 0.5,
-        ease: "power2.inOut",
-        delay: 1,     
-    });
-
-    // Animazione della seconda immagine
-    gsap.from(".img-wrapper-2", {
-        scrollTrigger: {
-            trigger: ".secondTitleAnimation",
-            start: "center 100%",
-            toggleActions: "play none none none", 
-        },
-        x: "-12vw",   
-        y: "-3vw",  
-        rotate: 4, 
-        scale: 2,
-        pointerEvents: "none",
-        duration: 0.5,
-        ease: "power2.inOut",
-        delay: 1,
-    });
-
-    // Animazione del testo
-    gsap.from(".text-hover", {
-        scrollTrigger: {
-            trigger: ".secondTitleAnimation",
-            start: "center 100%",
-            toggleActions: "play none none none", 
-        },
-        opacity: 0,
-        duration: 1,
-        ease: "power2.inOut",
-        delay: 1
-    });
-
-    // Gestione degli eventi hover
-    const hoverImages = document.querySelectorAll('.hover-image');
-    hoverImages.forEach(hoverImage => {
-        hoverImage.addEventListener('mouseenter', function() {
-            gsap.to('.text-hover', {
-                opacity: 0.5,
-                duration: 0.3,
-                ease: "power2.inOut"
+    if (window.location.pathname === "/" || window.location.pathname.includes("index.html")) {
+        gsap.registerPlugin(ScrollTrigger); 
+    
+        // Animazione della prima immagine
+        gsap.to(".img-wrapper-1", {
+            scrollTrigger: {
+                trigger: ".secondTitleAnimation",
+                start: "center 100%",  
+                toggleActions: "play none none none", 
+            },
+            right: 0,   
+            top: 0,  
+            transform: "rotate(0deg) scale(1)",
+            height: "100%",
+            width: "100%",
+            pointerEvents: "visible",
+            duration: 0.5,
+            ease: "power2.inOut",
+            delay: 1,     
+        });
+    
+        // Animazione della seconda immagine
+        gsap.from(".img-wrapper-2", {
+            scrollTrigger: {
+                trigger: ".secondTitleAnimation",
+                start: "center 100%",
+                toggleActions: "play none none none", 
+            },
+            x: "-12vw",   
+            y: "-3vw",  
+            rotate: 4, 
+            scale: 2,
+            pointerEvents: "none",
+            duration: 0.5,
+            ease: "power2.inOut",
+            delay: 1,
+        });
+    
+        // Animazione del testo
+        gsap.from(".text-hover", {
+            scrollTrigger: {
+                trigger: ".secondTitleAnimation",
+                start: "center 100%",
+                toggleActions: "play none none none", 
+            },
+            opacity: 0,
+            duration: 1,
+            ease: "power2.inOut",
+            delay: 1
+        });
+    
+        // Gestione degli eventi hover
+        const hoverImages = document.querySelectorAll('.hover-image');
+        hoverImages.forEach(hoverImage => {
+            hoverImage.addEventListener('mouseenter', function() {
+                gsap.to('.text-hover', {
+                    opacity: 0.5,
+                    duration: 0.3,
+                    ease: "power2.inOut"
+                });
+            });
+    
+            hoverImage.addEventListener('mouseleave', function() {
+                gsap.to('.text-hover', {
+                    opacity: 1,
+                    duration: 0.3,
+                    ease: "power2.inOut"
+                });
             });
         });
-
-        hoverImage.addEventListener('mouseleave', function() {
-            gsap.to('.text-hover', {
-                opacity: 1,
-                duration: 0.3,
-                ease: "power2.inOut"
-            });
-        });
-    });
+    }
 });
 
 

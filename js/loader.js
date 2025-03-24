@@ -70,9 +70,10 @@ document.addEventListener("DOMContentLoaded", () => {
 // FOOTER
 
 document.addEventListener("DOMContentLoaded", function () {
+  const footer = document.querySelector(".footer__animation");
+  
+  if(footer) {
     gsap.registerPlugin(ScrollTrigger);
-
-    const footer = document.querySelector(".footer__animation");
 
     gsap.from(footer, {
         scrollTrigger: {
@@ -85,4 +86,5 @@ document.addEventListener("DOMContentLoaded", function () {
         duration: 0.8,
         ease: "power2.inOut"
     });
+  }
 });

@@ -14,21 +14,58 @@
     }
 }
 
+.container-hover-square{
+    width: clamp(90px, 400vw * @px2vw, 400px);
+    height: clamp(70px, 332vw * @px2vw, 332px);
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+    display: inline-block;
+
+    @media (max-width: @mobile-l) {
+        right: 0px;
+    }
+
+    .img-wrapper-2 {
+        .z-3;
+        position: absolute;
+        right: clamp(20px, 300vw * @px2vw, 300px);
+        top: 0;
+        width: clamp(70%, 80%, 80%);
+        height: 90%;
+        transform: rotate(4deg) scale(2);
+    
+        img:first-of-type {
+            border-radius: 10%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    
+        .svg{
+            position: absolute;
+            bottom: clamp(-25px, -25vw * @px2vw, -10px);
+            right: clamp(-25px, -25vw * @px2vw, -10px);
+            width: clamp(40px, 175vw * @px2vw, 175px);
+            height: auto;
+        }    
+    }    
+}
+
 .container-hover{
     width: clamp(100px, 400vw * @px2vw, 400px);
-    height: clamp(50px, 243vw * @px2vw, 243px);
+    height: clamp(60px, 243vw * @px2vw, 243px);
     position: relative;
     display: inline-block;
 
     .img-wrapper-1{
         position: absolute;
-        .z-2;
         right: clamp(80px, 560vw * @px2vw, 560px);
-        top: clamp(20px, 200vw * @px2vw, 200px);
-        width: 100%;
-        height: 135%;
+        top: clamp(20px, 130vw * @px2vw, 130px);
+        width: 80%;
+        height: 115%;
         transform: rotate(-4deg) scale(2);
-        pointer-events: none;
+        pointer-events: visible;
     
         img:first-of-type {
             border-radius: 10%;
@@ -47,28 +84,6 @@
     }
 }
 
-.img-wrapper-2 {
-    .z-3;
-    position: absolute;
-    bottom: 0px;
-    right: clamp(15px, 77vw * @px2vw, 77px);
-    pointer-events: visible;
-
-    img:first-of-type {
-        border-radius: 10%;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }   
-
-    .svg{
-        position: absolute;
-        bottom: clamp(-25px, -25vw * @px2vw, -10px);
-        right: clamp(-25px, -25vw * @px2vw, -10px);
-        width: clamp(40px, 175vw * @px2vw, 175px);
-        height: auto;
-    }    
-}
 
 .title{
     line-height: 100% !important;

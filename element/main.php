@@ -80,10 +80,12 @@
                 </a>    
             </span>
             <span class='text-hover'>i nostri eventi passati</span>
-            <a href='/progetti.php' class='square-l hover-image img-wrapper-2'>
-                <img src='img/img3.png' alt='img'>  
-                <img class='svg' src='img/find.svg' alt='find'>
-            </a>
+            <span class='container-hover-square'>
+                <a href='/progetti.php' class='square-l hover-image img-wrapper-2'>
+                    <img src='img/img3.png' alt='img'>  
+                    <img class='svg' src='img/find.svg' alt='find'>
+                </a>
+            </span>
             <br> 
             <span class='text-hover animate'>e futuri</span>", 
             "container-M mt-74 inline justify secondTitleAnimation", 

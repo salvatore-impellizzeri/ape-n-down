@@ -271,23 +271,40 @@ document.addEventListener("DOMContentLoaded", function() {
             ease: "power2.inOut",
             delay: 1,     
         });
-    
-        // Animazione della seconda immagine
-        gsap.from(".img-wrapper-2", {
+
+        gsap.to(".img-wrapper-2", {
             scrollTrigger: {
                 trigger: ".secondTitleAnimation",
-                start: "center 100%",
+                start: "center 100%",  
                 toggleActions: "play none none none", 
             },
-            x: "-12vw",   
-            y: "-3vw",  
-            rotate: 4, 
-            scale: 2,
-            pointerEvents: "none",
+            right: 0,   
+            bottom: 0,  
+            transform: "rotate(0deg) scale(1)",
+            height: "100%",
+            width: "100%",
+            pointerEvents: "visible",
             duration: 0.5,
             ease: "power2.inOut",
-            delay: 1,
+            delay: 1,     
         });
+    
+        // Animazione della seconda immagine
+        // gsap.from(".img-wrapper-2", {
+        //     scrollTrigger: {
+        //         trigger: ".secondTitleAnimation",
+        //         start: "center 100%",
+        //         toggleActions: "play none none none", 
+        //     },
+        //     x: "-12vw",   
+        //     y: "-3vw",  
+        //     rotate: 4, 
+        //     scale: 2,
+        //     pointerEvents: "none",
+        //     duration: 0.5,
+        //     ease: "power2.inOut",
+        //     delay: 1,
+        // });
     
         // Animazione del testo
         gsap.from(".text-hover", {
@@ -323,6 +340,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
 
 
 
